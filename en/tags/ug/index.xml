@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UG on 亲自巡山的大王</title>
+    <link>https://runofftheearth.github.io/en/tags/ug/</link>
+    <description>Recent content in UG on 亲自巡山的大王</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022-{year} [ziyue.tech](https://github.com/runofftheearth) 版权所有. </copyright>
+    <lastBuildDate>Wed, 23 Aug 2023 23:54:05 +0800</lastBuildDate>
+    <atom:link href="https://runofftheearth.github.io/en/tags/ug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NX1847安装使用</title>
+      <link>https://runofftheearth.github.io/en/blog/2023/08/nx1847%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 23 Aug 2023 23:54:05 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2023/08/nx1847%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;NX1847安装使用教程记录。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

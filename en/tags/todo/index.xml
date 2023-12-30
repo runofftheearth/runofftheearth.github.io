@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ToDo on 亲自巡山的大王</title>
+    <link>https://runofftheearth.github.io/en/tags/todo/</link>
+    <description>Recent content in ToDo on 亲自巡山的大王</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022-{year} [ziyue.tech](https://github.com/runofftheearth) 版权所有. </copyright>
+    <lastBuildDate>Wed, 31 Aug 2022 11:47:31 +0800</lastBuildDate>
+    <atom:link href="https://runofftheearth.github.io/en/tags/todo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Doing</title>
+      <link>https://runofftheearth.github.io/en/blog/2022/08/doing/</link>
+      <pubDate>Wed, 31 Aug 2022 11:47:31 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2022/08/doing/</guid>
+      <description>Now页面会随着时间和当下生活的优先级而更新，用来让别人看见这个人现在生活的重点是什么，和提醒自己专注于当下最重要的事。</description>
+    </item>
+  </channel>
+</rss>

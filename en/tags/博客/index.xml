@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on 亲自巡山的大王</title>
+    <link>https://runofftheearth.github.io/en/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on 亲自巡山的大王</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022-{year} [ziyue.tech](https://github.com/runofftheearth) 版权所有. </copyright>
+    <lastBuildDate>Wed, 21 Jun 2023 22:43:06 +0800</lastBuildDate>
+    <atom:link href="https://runofftheearth.github.io/en/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>七 HB主题短代码</title>
+      <link>https://runofftheearth.github.io/en/blog/2023/06/%E4%B8%83-hb%E4%B8%BB%E9%A2%98%E7%9F%AD%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Wed, 21 Jun 2023 22:43:06 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2023/06/%E4%B8%83-hb%E4%B8%BB%E9%A2%98%E7%9F%AD%E4%BB%A3%E7%A0%81/</guid>
+      <description>&lt;h2 id=&#34;短代码&#34;&gt;短代码&lt;/h2&gt;&#xA;&lt;p&gt;本文将简单地介绍如何利用短代码来丰富你的内容，并列出一些可用的短代码。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>六 HB主题设置</title>
+      <link>https://runofftheearth.github.io/en/blog/2023/06/%E5%85%AD-hb%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Wed, 21 Jun 2023 21:28:25 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2023/06/%E5%85%AD-hb%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;h3 id=&#34;先决条件&#34;&gt;先决条件&lt;/h3&gt;&#xA;&lt;h4 id=&#34;构建工具&#34;&gt;构建工具&lt;/h4&gt;&#xA;&lt;p&gt;推荐尽可能地使用以下构建工具的最新版本。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>五 Hugo版本选择</title>
+      <link>https://runofftheearth.github.io/en/blog/2023/06/%E4%BA%94-hugo%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9/</link>
+      <pubDate>Wed, 21 Jun 2023 11:50:58 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2023/06/%E4%BA%94-hugo%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9/</guid>
+      <description>&lt;p&gt;之前用v0.111.0版本有许多莫名奇妙的问题，比如不能正常使用文章字数和时长统计，v0.114.0这一版看着好像还不错。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>将博客同步备份至onedrive</title>
+      <link>https://runofftheearth.github.io/en/blog/2022/10/%E5%B0%86%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E5%A4%87%E4%BB%BD%E8%87%B3onedrive/</link>
+      <pubDate>Tue, 11 Oct 2022 16:45:33 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2022/10/%E5%B0%86%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E5%A4%87%E4%BB%BD%E8%87%B3onedrive/</guid>
+      <description>&lt;p&gt;将Blog文件夹建立在OneDrive内，这样在重装系统后，只需配置好git即可重新推送到github。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>四 为博客添加waline &amp; gitalk评论功能</title>
+      <link>https://runofftheearth.github.io/en/blog/2022/07/%E5%9B%9B-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0waline-gitalk%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Thu, 28 Jul 2022 22:43:21 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2022/07/%E5%9B%9B-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0waline-gitalk%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</guid>
+      <description>&lt;p&gt;好的想法需要交流。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>三 为博客添加搜索功能</title>
+      <link>https://runofftheearth.github.io/en/blog/2022/07/%E4%B8%89-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Thu, 28 Jul 2022 01:45:41 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2022/07/%E4%B8%89-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</guid>
+      <description>&lt;p&gt;博客搭建逐渐完善，博文内容也逐渐增多，添加搜索功能可以很方便的检索内容。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>二 图床选择</title>
+      <link>https://runofftheearth.github.io/en/blog/2022/07/%E4%BA%8C-%E5%9B%BE%E5%BA%8A%E9%80%89%E6%8B%A9/</link>
+      <pubDate>Wed, 27 Jul 2022 22:47:21 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2022/07/%E4%BA%8C-%E5%9B%BE%E5%BA%8A%E9%80%89%E6%8B%A9/</guid>
+      <description>&lt;p&gt;工欲善其事，必先利其器。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>一 通过Hugo搭建博客</title>
+      <link>https://runofftheearth.github.io/en/blog/2022/07/%E4%B8%80-%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Wed, 27 Jul 2022 21:47:21 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2022/07/%E4%B8%80-%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;打算把写博客长期坚持下去，考虑到后面博文数量会慢慢增多，hexo框架会越来越捉襟见肘，于是把博客从hexo迁移至hugo。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于博客</title>
+      <link>https://runofftheearth.github.io/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 26 Jul 2022 21:47:21 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;为什么要搭建自己的博客呢？&lt;/p&gt;&#xA;&lt;p&gt;契机&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

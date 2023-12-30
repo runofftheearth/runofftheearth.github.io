@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+  <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+
+    <link rel="manifest" href="https://runofftheearth.github.io/en/manifest.webmanifest" />
+
+<meta name="description" content="评论功能" />
+
+
+
+      <link
+        rel="icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_16x16_resize_box_3.png"
+        sizes="16x16"
+        type="image/png"
+      />
+      <link
+        rel="icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_32x32_resize_box_3.png"
+        sizes="32x32"
+        type="image/png"
+      />
+      <link
+        rel="icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_150x150_resize_box_3.png"
+        sizes="150x150"
+        type="image/png"
+      />
+      <link
+        rel="apple-touch-icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_180x180_resize_box_3.png"
+        sizes="180x180"
+        type="image/png"
+      />
+      <link
+        rel="icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_192x192_resize_box_3.png"
+        sizes="192x192"
+        type="image/png"
+      />
+
+  <link
+    rel="mask-icon"
+    href="/mask-icon.svg"
+    color="#000000"
+  />
+
+
+<meta property="og:title" content="四 为博客添加waline &amp; gitalk评论功能" />
+<meta property="og:description" content="评论功能" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://runofftheearth.github.io/en/blog/2022/07/%E5%9B%9B-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0waline-gitalk%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2022-07-28T22:43:21+08:00" />
+<meta property="article:modified_time" content="2022-07-28T22:43:21+08:00" />
+
+<meta itemprop="name" content="四 为博客添加waline &amp; gitalk评论功能">
+<meta itemprop="description" content="评论功能"><meta itemprop="datePublished" content="2022-07-28T22:43:21+08:00" />
+<meta itemprop="dateModified" content="2022-07-28T22:43:21+08:00" />
+<meta itemprop="wordCount" content="585">
+<meta itemprop="keywords" content="博客," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="四 为博客添加waline &amp; gitalk评论功能"/>
+<meta name="twitter:description" content="评论功能"/>
+
+
+
+    <title>
+
+
+四 为博客添加waline &amp; gitalk评论功能 - Blog - 亲自巡山的大王</title>
+
+  
+  
+  
+
+
+    <link href="/css/hb.c5df937dfe72d08e56c5bcfbeacf6a97fee67f9ed69c97cf201e29b304035cb8.css" rel="stylesheet" />
+
+
+
+
+
+
+<script
+  src="/js/init.b980cf5ff873691f491c400ab7f55079eb2d1eef456f2eec75db7cf3d8c9dcc7.js"
+  
+    integrity="sha256-uYDPX/hzaR9JHEAKt/VQeestHu9Fby7sddt889jJ3Mc="
+  ></script>
+
+
+
+
+
+
+
+  </head>
+  <body 
+><noscript>
+  <div class="alert alert-danger text-center rounded-0" role="alert"><svg aria-hidden="true" class="bi bi-exclamation-square-fillbi bi-exclamation-square-fill hi-svg-inline me-2" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+</svg>Your browser does not support JavaScript.</div>
+</noscript>
+
+
+
+    
+<header class="hb-header"
+  >
+  
+
+  <nav class="hb-header-nav navbar navbar-expand-lg">
+    
+
+    <div
+      class="container-fluid">
+      
+
+
+  <a
+    class="navbar-brand d-flex align-items-center"
+    href="/en/">
+  <img
+    src="https://runofftheearth.github.io/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_0x64_resize_box_3.png"
+    alt="Logo"
+    width="64"
+    height="64"
+    class="hb-header-logo d-inline-block align-text-top me-2" />拯救世界去了</a>
+
+      <div class="d-flex order-5">
+        
+<div class="search-modal-toggle hb-header-search-form position-relative d-flex ms-lg-1">
+  <button
+    type="button"
+    class="hb-header-search-icon border-0 bg-transparent px-2"
+    aria-label="Toggle search">
+    <svg aria-hidden="true" class="bi bi-searchbi bi-search hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg>
+  </button>
+  <input
+    class="form-control rounded-5 d-none d-lg-block ms-lg-1"
+    placeholder="Search" />
+    <span class="hb-header-search-keys position-absolute d-none d-lg-block">
+        <kbd>CTRL</kbd>
+        <kbd>K</kbd>
+    </span>
+</div>
+
+
+
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#hb-header-content"
+          aria-controls="hb-header-content"
+          aria-label="Toggle navigation"><svg aria-hidden="true" class="bi bi-three-dotsbi bi-three-dots hi-svg-inline" fill="currentColor" height="1.25em" viewBox="0 0 16 16" width="1.25em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+</svg>
+        </button>
+        
+
+      </div>
+      <div
+        class="offcanvas offcanvas-lg offcanvas-end"
+        tabindex="-1"
+        id="hb-header-content"
+        aria-labelledby="hb-header-content-label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="hb-header-content-label">拯救世界去了</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          
+          <ul class="hb-header-menus navbar-nav flex-row flex-wrap"><li
+    class="hb-header-menu nav-item col-6 col-lg-auto">
+    <a
+      class="nav-link"
+      
+      href="https://runofftheearth.github.io/en/gallery/"
+      
+      ><svg aria-hidden="true" class="hi-svg-inline hb-header-menu-icon me-1" fill="currentColor" height="1em" viewBox="0 0 576 512" width="1em" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M160 32c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H328 280 200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg>Gallery</a>
+  </li>
+  <li class="hb-header-menu dropdown nav-item col-12 col-lg-auto active">
+    
+      <a
+        class="nav-link pe-0 d-inline-flex align-items-center active"
+        href="/en/blog/"
+        aria-current="page"
+        
+        ><svg aria-hidden="true" class="hi-svg-inline hb-header-menu-icon me-1" fill="currentColor" height="1em" viewBox="0 0 512 512" width="1em" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32zM96 144c0-26.5-21.5-48-48-48S0 117.5 0 144V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z"/></svg>Blog</a>
+      <a
+        class="nav-link ps-0 d-inline-flex"
+        href="#"
+        id="header-menu-blog"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span><svg aria-hidden="true" class="bi bi-chevron-compact-downbi bi-chevron-compact-down hi-svg-inline" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+</svg>
+      </a>
+    <ul
+      class="hb-header-submenus dropdown-menu"
+      aria-labelledby="header-menu-blog"
+      
+      data-bs-popper="none">
+<li
+  >
+    <a
+      class="hb-header-submenu dropdown-item d-flex align-items-center"
+      href="https://runofftheearth.github.io/en/archives/"
+      
+      >
+        <div
+          class="dropdown-item-icon d-flex align-items-center bg-body-secondary bg-gradient rounded me-2 p-2">
+<svg aria-hidden="true" class="bi bi-archivebi bi-archive hi-svg-inline text-primary-emphasis" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+</svg>
+
+        </div>
+      <div class="dropdown-item-content">
+        <div
+          class="dropdown-item-title mb-1">Archives</div>
+          <p class="dropdown-item-desc mb-0 text-wrap">Posts archive.</p>
+      </div></a></li>
+
+<li
+  >
+    <a
+      class="hb-header-submenu dropdown-item d-flex align-items-center"
+      href="https://runofftheearth.github.io/en/categories/"
+      
+      >
+        <div
+          class="dropdown-item-icon d-flex align-items-center bg-body-secondary bg-gradient rounded me-2 p-2">
+<svg aria-hidden="true" class="bi bi-folderbi bi-folder hi-svg-inline" fill="currentColor" height="2em" style="color: orange;" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+</svg>
+
+        </div>
+      <div class="dropdown-item-content">
+        <div
+          class="dropdown-item-title mb-1">Categories</div>
+          <p class="dropdown-item-desc mb-0 text-wrap">All of categories.</p>
+      </div></a></li>
+
+<li
+  >
+    <a
+      class="hb-header-submenu dropdown-item d-flex align-items-center"
+      href="https://runofftheearth.github.io/en/tags/"
+      
+      >
+        <div
+          class="dropdown-item-icon d-flex align-items-center bg-body-secondary bg-gradient rounded me-2 p-2">
+<svg aria-hidden="true" class="bi bi-tagsbi bi-tags hi-svg-inline" fill="currentColor" height="2em" style="color: green;" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z"/>
+  <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z"/>
+</svg>
+
+        </div>
+      <div class="dropdown-item-content">
+        <div
+          class="dropdown-item-title mb-1">Tags</div>
+          <p class="dropdown-item-desc mb-0 text-wrap">All of tags.</p>
+      </div></a></li>
+
+    </ul>
+  </li></ul>
+          
+          
+          <ul class="hb-header-panel navbar-nav flex-row flex-wrap">
+              <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                <hr class="d-lg-none my-2 text-body-50" />
+              </li>
+            
+  <li class="nav-item col-6 col-lg-auto d-flex align-items-center">
+<a
+  class="hb-social btn btn-link nav-link py-2 px-0 px-lg-2 d-flex justify-content-center align-items-center"
+  href="https://github.com/runofftheearth"
+  target="_blank"
+  rel="nofollow me"
+  title="GitHub"><svg aria-hidden="true" class="hi-svg-inline hb-social-icon" fill="currentColor" height="1em" role="img" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    <span class="hb-social-text d-lg-none ms-1">GitHub</span>
+</a>
+
+  </li>
+
+  <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-body"></div>
+    <hr class="d-lg-none my-2 text-body-50" />
+  </li>
+
+
+<li class="theme-toggle nav-item dropdown col-6 col-lg-auto d-flex flex-column justify-content-center">
+  <a
+    class="btn btn-link nav-link py-2 px-0 px-lg-2 d-flex justify-content-start justify-content-lg-center align-items-center"
+    href="#"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    title="Theme"
+  >
+    <svg aria-hidden="true" class="bi bi-circle-halfbi bi-circle-half hi-svg-inline my-1 theme-toggle-icon" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+</svg>
+    <span class="d-lg-none ms-1">Theme</span>
+  </a>
+
+  <ul class="theme-toggle-menu dropdown-menu dropdown-menu-end">
+      <li>
+        <button
+          class="theme-toggle-item dropdown-item d-flex align-items-center justify-content-center"
+          data-bs-theme-value="auto"
+        >
+          <span class="theme-toggle-item-icon me-1 d-flex align-items-center">
+            <svg aria-hidden="true" class="bi bi-circle-halfbi bi-circle-half hi-svg-inline my-1" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+</svg>
+          </span>
+          Auto
+        </button>
+      </li>
+      <li>
+        <button
+          class="theme-toggle-item dropdown-item d-flex align-items-center justify-content-center"
+          data-bs-theme-value="dark"
+        >
+          <span class="theme-toggle-item-icon me-1 d-flex align-items-center">
+            <svg aria-hidden="true" class="bi bi-moon-starsbi bi-moon-stars hi-svg-inline my-1" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278M4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+  <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+</svg>
+          </span>
+          Dark
+        </button>
+      </li>
+      <li>
+        <button
+          class="theme-toggle-item dropdown-item d-flex align-items-center justify-content-center"
+          data-bs-theme-value="light"
+        >
+          <span class="theme-toggle-item-icon me-1 d-flex align-items-center">
+            <svg aria-hidden="true" class="bi bi-brightness-highbi bi-brightness-high hi-svg-inline my-1" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+          </span>
+          Light
+        </button>
+      </li>
+  </ul>
+</li>
+
+
+
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    
+
+  </nav>
+  
+
+</header>
+
+
+
+    
+
+    <div class="hb-main container">
+  <div class="hb-blog-main-container">
+  <div class="hb-blog-main">
+    <div class="container-fluid px-0 mb-4">
+    <nav aria-label="breadcrumb">
+      <ol class="hb-breadcrumb breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/en/" title="夕晴照雪霁无暇">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/en/blog/" title="Blog">Blog</a>
+          </li><li class="breadcrumb-item active" aria-current="page">
+          <a href="/en/blog/2022/07/%E5%9B%9B-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0waline-gitalk%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" title="四 为博客添加waline &amp; gitalk评论功能">四 为博客添加waline &amp; gitalk评论功能</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+
+    <div class="hb-blog-post hb-module position-relative">
+      <div class="hb-blog-post-intro">
+        <h1 class="hb-blog-post-title mb-2">四 为博客添加waline &amp; gitalk评论功能</h1>
+        <div class="hb-blog-post-meta mb-2">
+          
+
+          <span class="hb-blog-post-date">July 28, 2022</span>
+
+          <span class="hb-blog-post-reading-time">3 min read</span>
+
+          
+      <span class="hb-blog-post-taxonomy-meta">
+        <a
+          class="hb-blog-post-taxonomy hb-blog-post-taxonomy-tag badge bg-secondary text-decoration-none fw-normal me-1"
+          href="/en/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+      </span>
+        </div>
+          <div class="hb-blog-post-desc lead mb-2">评论功能</div>
+      </div>
+      <div
+        class="hb-blog-post-toc mt-2 text-body-secondary position-sticky overflow-y-auto">
+
+  <div class="h6 d-none d-md-block">On this page</div>
+  <hr class="d-none d-md-block" />
+  <div class="d-grid d-block d-md-none mb-2">
+    <button
+      class="btn btn-light d-flex align-items-center justify-content-between collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target=".hb-blog-post-toc-collapse"
+      aria-expanded="false"
+      aria-controls="collapse-toc">
+      <span>On this page</span>
+      <svg aria-hidden="true" class="bi bi-chevron-expandbi bi-chevron-expand hi-svg-inline ms-2" fill="currentColor" height="1.25rem" viewBox="0 0 16 16" width="1.25rem" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"/>
+</svg>
+    </button>
+  </div>
+  <div class="px-2 px-md-0">
+    <div id="collapse-toc" class="collapse hb-blog-post-toc-collapse"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#方案一-waline">方案一 Waline</a>
+      <ul>
+        <li><a href="#leancloud-设置-数据库">LeanCloud 设置 (数据库)</a></li>
+        <li><a href="#vercel-部署-服务端">Vercel 部署 (服务端)</a></li>
+        <li><a href="#绑定域名-可选">绑定域名 (可选)</a></li>
+        <li><a href="#html-引入-客户端">HTML 引入 (客户端)</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案二-giscus">方案二 giscus</a>
+      <ul>
+        <li><a href="#1什么是-gitcus">1.什么是 gitcus？</a></li>
+        <li><a href="#2原理">2.原理</a></li>
+        <li><a href="#3引入-giscus">3.引入 giscus</a></li>
+      </ul>
+    </li>
+    <li><a href="#方案三-gitalk">方案三 gitalk</a></li>
+  </ul>
+</nav></div>
+  </div>
+
+
+      </div>
+      <div class="hb-blog-post-main">
+
+
+        <div
+          class="hb-blog-post-content mb-5"
+          data-bs-spy="scroll" data-bs-target="#TableOfContents">
+          <p>好的想法需要交流。</p>
+<p>关于评论系统选择哪种方案还要看你主题支持哪种。</p>
+<h2 id="方案一-waline">方案一 Waline</h2>
+<p>进入<a
+  href="https://waline.js.org"
+  
+  target="_blank" rel="noopener noreferrer">Waline</a>官网进行快速设置。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD01.png"
+    alt="4评论功能01"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<h3 id="leancloud-设置-数据库">LeanCloud 设置 (数据库)</h3>
+<ol>
+<li>
+<p><a
+  href="https://console.leancloud.app/login"
+  
+  target="_blank" rel="noopener noreferrer">登录</a> 或 <a
+  href="https://console.leancloud.app/register"
+  
+  target="_blank" rel="noopener noreferrer">注册</a> <code>LeanCloud 国际版</code> 并进入 <a
+  href="https://console.leancloud.app/apps"
+  
+  target="_blank" rel="noopener noreferrer">控制台</a></p>
+</li>
+<li>
+<p>点击左上角 <a
+  href="https://console.leancloud.app/apps"
+  
+  target="_blank" rel="noopener noreferrer">创建应用</a> 并起一个你喜欢的名字 (请选择免费的开发版):</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD02.png"
+    alt="4评论功能02"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>创建应用</center>
+</li>
+<li>
+<p>进入应用，选择左下角的 <code>设置</code> &gt; <code>应用 Key</code>。你可以看到你的 <code>APP ID</code>,<code>APP Key</code> 和 <code>Master Key</code>。请记录它们，以便后续使用。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD03.png"
+    alt="4评论功能03"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>ID 和 Key</center>
+</li>
+</ol>
+<blockquote>
+<p>国内版需要完成备案接入</p>
+<p>如果你正在使用 Leancloud 国内版 (<a
+  href="https://leancloud.cn/"
+  
+  target="_blank" rel="noopener noreferrer">leancloud.cn</a>)，我们推荐你切换到国际版 (<a
+  href="https://leancloud.app/"
+  
+  target="_blank" rel="noopener noreferrer">leancloud.app</a>)。否则，你需要为应用额外绑定<strong>已备案</strong>的域名，同时购买独立 IP 并完成备案接入:</p>
+<ul>
+<li>登录国内版并进入需要使用的应用</li>
+<li>选择 <code>设置</code> &gt; <code>域名绑定</code> &gt; <code>API 访问域名</code> &gt; <code>绑定新域名</code> &gt; 输入域名 &gt; <code>确定</code>。</li>
+<li>按照页面上的提示按要求在 DNS 上完成 CNAME 解析。</li>
+<li>购买独立 IP 并提交工单完成备案接入。(独立 IP 目前价格为 ￥ 50/个/月)</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD04.png"
+    alt="4评论功能04"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>域名设置</center>
+</blockquote>
+<h3 id="vercel-部署-服务端">Vercel 部署 (服务端)</h3>
+<p><a
+  href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwalinejs%2Fwaline%2Ftree%2Fmain%2Fexample"
+  
+  target="_blank" rel="noopener noreferrer">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://vercel.com/button"
+    alt="Vercel"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</a>Vercel</p>
+<ol>
+<li>
+<p>点击上方按钮，跳转至 Vercel 进行 Server 端部署。</p>
+<p>注</p>
+<p>如果你未登录的话，Vercel 会让你注册或登录，请使用 GitHub 账户进行快捷登录。</p>
+</li>
+<li>
+<p>输入一个你喜欢的 Vercel 项目名称并点击 <code>Create</code> 继续:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD05.png"
+    alt="4评论功能05"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>创建项目</center>
+</li>
+<li>
+<p>此时 Vercel 会基于 Waline 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD06.png"
+    alt="4评论功能06"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>deploy</center>
+<p>一两分钟后，满屏的烟花会庆祝你部署成功。此时点击 <code>Go to Dashboard</code> 可以跳转到应用的控制台。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD07.png"
+    alt="4评论功能07"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>deploy</center>
+</li>
+<li>
+<p>点击顶部的 <code>Settings</code> - <code>Environment Variables</code> 进入环境变量配置页，并配置三个环境变量 <code>LEAN_ID</code>, <code>LEAN_KEY</code> 和 <code>LEAN_MASTER_KEY</code> 。它们的值分别对应上一步在 LeanCloud 中获得的 <code>APP ID</code>, <code>APP KEY</code>, <code>Master Key</code>。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD08.png"
+    alt="4评论功能08"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>设置环境变量</center>
+<blockquote>
+<p>注</p>
+<p>如果你使用 LeanCloud 国内版，请额外配置 <code>LEAN_SERVER</code> 环境变量，值为你绑定好的域名。</p>
+</blockquote>
+</li>
+<li>
+<p>环境变量配置完成之后点击顶部的 <code>Deployments</code> 点击顶部最新的一次部署右侧的 <code>Redeploy</code> 按钮进行重新部署。该步骤是为了让刚才设置的环境变量生效。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD09.png"
+    alt="4评论功能09"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>redeploy</center>
+</li>
+<li>
+<p>此时会跳转到 <code>Overview</code> 界面开始部署，等待片刻后 <code>STATUS</code> 会变成 <code>Ready</code>。此时请点击 <code>Visit</code> ，即可跳转到部署好的网站地址，此地址即为你的服务端地址。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD10.png"
+    alt="4评论功能10"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>redeploy success</center>
+</li>
+</ol>
+<h3 id="绑定域名-可选">绑定域名 (可选)</h3>
+<ol>
+<li>
+<p>点击顶部的 <code>Settings</code> - <code>Domains</code> 进入域名配置页</p>
+</li>
+<li>
+<p>输入需要绑定的域名并点击 <code>Add</code></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD11.png"
+    alt="4评论功能11"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>Add domain</center>
+</li>
+<li>
+<p>在域名服务器商处添加新的 <code>CNAME</code> 解析记录</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CNAME</td>
+<td>example</td>
+<td>cname.vercel-dns.com</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>等待生效，你可以通过自己的域名来访问了🎉</p>
+<ul>
+<li>评论系统：example.yourdomain.com</li>
+<li>评论管理：example.yourdomain.com/ui</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD12.png"
+    alt="4评论功能12"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<center>success</center>
+</li>
+</ol>
+<h3 id="html-引入-客户端">HTML 引入 (客户端)</h3>
+<p>在你的网页中进行如下设置:</p>
+<ol>
+<li>
+<p>导入 Waline 样式 <code>https://unpkg.com/@waline/client@v2/dist/waline.css</code>。</p>
+</li>
+<li>
+<p>创建 <code>&lt;script&gt;</code> 标签使用来自 <code>https://unpkg.com/@waline/client@v2/dist/waline.mjs</code> 的 <code>init()</code>函数初始化，并传入必要的 <code>el</code> 与 <code>serverURL</code> 选项。</p>
+<ul>
+<li><code>el</code> 选项是 Waline 渲染使用的元素，你可以设置一个字符串形式的 CSS 选择器或者一个 HTMLElement 对象。</li>
+<li><code>serverURL</code> 是服务端的地址，即上一步获取到的值。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="ln"> 1</span><span class="cl">&lt;head&gt;
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">  &lt;!-- ... --&gt;
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">  &lt;link
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">    <span class="nv">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;https://unpkg.com/@waline/client@v2/dist/waline.css&#34;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  /&gt;
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">  &lt;!-- ... --&gt;
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">&lt;/head&gt;
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">&lt;body&gt;
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  &lt;!-- ... --&gt;
+</span></span><span class="line"><span class="ln">11</span><span class="cl">  &lt;div <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;waline&#34;</span>&gt;&lt;/div&gt;
+</span></span><span class="line"><span class="ln">12</span><span class="cl">  &lt;script <span class="nv">type</span><span class="o">=</span><span class="s2">&#34;module&#34;</span>&gt;
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    import <span class="o">{</span> init <span class="o">}</span> from <span class="s1">&#39;https://unpkg.com/@waline/client@v2/dist/waline.mjs&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl">    init<span class="o">({</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">      el: <span class="s1">&#39;#waline&#39;</span>,
+</span></span><span class="line"><span class="ln">17</span><span class="cl">      serverURL: <span class="s1">&#39;https://your-domain.vercel.app&#39;</span>,
+</span></span><span class="line"><span class="ln">18</span><span class="cl">    <span class="o">})</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">  &lt;/script&gt;
+</span></span><span class="line"><span class="ln">20</span><span class="cl">&lt;/body&gt;
+</span></span></code></pre></div></li>
+<li>
+<p>评论服务此时就会在你的网站上成功运行 🎉</p>
+</li>
+</ol>
+<h4 id="评论管理-管理端">评论管理 (管理端)</h4>
+<ol>
+<li>部署完成后，请访问 <code>&lt;serverURL&gt;/ui/register</code> 进行注册。首个注册的人会被设定成管理员。</li>
+<li>管理员登陆后，即可看到评论管理界面。在这里可以修改、标记或删除评论。</li>
+<li>用户也可通过评论框注册账号，登陆后会跳转到自己的档案页。</li>
+</ol>
+<h2 id="方案二-giscus">方案二 giscus</h2>
+<h3 id="1什么是-gitcus">1.什么是 gitcus？</h3>
+<p><a
+  href="https://link.juejin.cn/?target=https%3A%2F%2Fgiscus.app%2F"
+  
+  target="_blank" rel="noopener noreferrer">Giscus</a> 是由 <code>GitHub Discussions</code> 驱动的评论系统，根据官网，<code>Giscus</code>的特性有：</p>
+<ul>
+<li>开源。</li>
+<li>无跟踪，无广告，永久免费。</li>
+<li>无需数据库。全部数据均储存在 <code>GitHub Discussions</code> 中。</li>
+<li>支持自定义主题！</li>
+<li>支持多种语言。</li>
+<li>高度可配置。</li>
+<li>自动从 <code>GitHub</code> 拉取新评论与编辑。</li>
+<li>可自建服务！</li>
+</ul>
+<h3 id="2原理">2.原理</h3>
+<p><code>Giscus</code> 使用 <code>GitHub Discussions</code> 作为数据库存储博客下面的评论。</p>
+<p><code>Giscus</code> 插件加载时，会使用 <code>GitHub Discussions</code> 搜索 API 根据选定的映射方式（如 URL、pathname、 等）来查找与当前页面关联的 discussion。如果找不到匹配的 <code>discussion</code>，<code>giscus bot</code> 就会在第一次有人留下评论或回应时自动创建一个 <code>discussion</code>。</p>
+<p>要评论，访客必须按 <code>GitHub OAuth</code> 流程授权 <code>giscus app</code> 代表他发帖。或者访客也可以直接在 <code>GitHub Discussion</code> 里评论，作者可以在 <code>GitHub</code> 上管理评论。</p>
+<h3 id="3引入-giscus">3.引入 giscus</h3>
+<h4 id="31-选择一个仓库">3.1. 选择一个仓库</h4>
+<p>新建一个公开仓库。</p>
+<h4 id="32-安装-giscus">3.2. 安装 giscus</h4>
+<p>点击 <a
+  href="https://github.com/apps/giscus"
+  
+  target="_blank" rel="noopener noreferrer">这里</a> 进入 giscus app 的 安装界面，大概长这样：</p>
+<p>点击安装，会提示选择一个仓库，这里就选择上一步中指定的仓库即可，后续 giscus 就会从该仓库读取数据。</p>
+<h4 id="33开启-discussions">3.3.开启 Discussions</h4>
+<p>然后打开之前选择的仓库，进入设置界面，勾选上 Discussions 以开启该仓库的 Discussions。</p>
+<h4 id="34-从-giscus-官网获取配置信息">3.4. 从 giscus 官网获取配置信息</h4>
+<p>完成上述准备工作后就可以访问 <a
+  href="https://giscus.app/zh-CN"
+  
+  target="_blank" rel="noopener noreferrer">giscus 官网</a> 获取配置信息了，具体如下：</p>
+<blockquote>
+<p>几个标箭头的地方需要注意：</p>
+<ul>
+<li>1）填写前面选择的仓库
+<ul>
+<li>正常情况下填写后会提示满足条件，如果提示不满足条件就检查下前面几个步骤是不是有遗漏</li>
+</ul>
+</li>
+<li>2）页面和 discussion 的映射关系
+<ul>
+<li>这里一般用默认的 pathname 即可</li>
+<li>该选项主要会影响创建的 discussion 的名字</li>
+</ul>
+</li>
+<li>3）最后就是选择后面 giscus 创建的 discussion 的分类
+<ul>
+<li>一般选择 Announcements，因为 Announcements 类型的 discussion 只有管理员才有权限操作，这样便于管理</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>上面几个地方配置完成后，页面往下滑，会生成一个配置文件，主要关注以下字段：</p>
+<ul>
+<li>data-repo</li>
+<li>data-repo-id</li>
+<li>data-category</li>
+<li>data-category-id</li>
+<li>data-mapping</li>
+</ul>
+<h4 id="35-配置到博客">3.5. 配置到博客</h4>
+<p>将上面获取到的配置信息添加博客主题对应的位置即可。</p>
+<blockquote>
+<p>这里不同的主题配置方式可能不太一样，不过需要配置的即可参数应该是相同的</p>
+</blockquote>
+<pre tabindex="0"><code>[params.page.comment] enable = true [params.page.comment.giscus] # You can refer to the official documentation of giscus to use the following configuration. # 你可以参考官方文档来使用下列配置 enable = true repo = &#34;lixd/lixd.github.io&#34; repoId = &#34;xxx&#34; category = &#34;Announcements&#34; categoryId = &#34;xxxx&#34; mapping = &#34;pathname&#34; 
+</code></pre><p>配置好之后重新部署即可看到效果。</p>
+<h4 id="36-效果展示">3.6. 效果展示</h4>
+<h5 id="预览">预览</h5>
+<p>点开一篇文章，滑到底部会看到评论区，大概长这样：</p>
+<p>通过 github 登录后即可参与评论。</p>
+<h5 id="discussion">discussion</h5>
+<p>有人评论后，giscus 会自动在配置好的仓库的 discussion 里创建一条数据用于保存评论。</p>
+<p>大概长这样：</p>
+<p>在这里可以对评论进行管理~</p>
+<p>到此，整个配置就完成了，具体细节可以参考 <a
+  href="https://github.com/lixd/lixd.github.io"
+  
+  target="_blank" rel="noopener noreferrer">这个仓库</a></p>
+<blockquote>
+<p>大家可以在这里留言体验一下~ 👻</p>
+</blockquote>
+<h2 id="方案三-gitalk">方案三 gitalk</h2>
+<p>每种评论体统都有各自的优缺点，这里选择gitalk评论系统，光从名字就知道它与GitHub有关。
+​首先，打开博客根目录\themes\LoveIt\layouts\posts里的single.html文件，在底部{- /* Comment */ -}}下面添加{ {{- partial &ldquo;comment.html&rdquo; . -}}，在D:\博客根目录\themes\LoveIt\layouts\partials下创建gitalk.html文件，并复制粘贴进以下内容：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="o">{{</span> <span class="k">if</span> .Site.Params.enableGitalk <span class="o">}}</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">&lt;div <span class="nv">id</span><span class="o">=</span><span class="s2">&#34;gitalk-container&#34;</span>&gt;&lt;/div&gt;
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">&lt;link <span class="nv">rel</span><span class="o">=</span><span class="s2">&#34;stylesheet&#34;</span> <span class="nv">href</span><span class="o">=</span><span class="s2">&#34;https://unpkg.com/gitalk/dist/gitalk.css&#34;</span>&gt;
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">&lt;script <span class="nv">src</span><span class="o">=</span><span class="s2">&#34;https://unpkg.com/gitalk/dist/gitalk.min.js&#34;</span>&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">&lt;script&gt;
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">  const <span class="nv">gitalk</span> <span class="o">=</span> new Gitalk<span class="o">({</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">    clientID: <span class="s1">&#39;{{ .Site.Params.Gitalk.clientID }}&#39;</span>,
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">    clientSecret: <span class="s1">&#39;{{ .Site.Params.Gitalk.clientSecret }}&#39;</span>,
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">    repo: <span class="s1">&#39;{{ .Site.Params.Gitalk.repo }}&#39;</span>,
+</span></span><span class="line"><span class="ln">10</span><span class="cl">    owner: <span class="s1">&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span>,
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    admin: <span class="o">[</span><span class="s1">&#39;{{ .Site.Params.Gitalk.owner }}&#39;</span><span class="o">]</span>,
+</span></span><span class="line"><span class="ln">12</span><span class="cl">    id: location.pathname, // Ensure uniqueness and length less than <span class="m">50</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">    distractionFreeMode: <span class="nb">false</span> // Facebook-like distraction free mode
+</span></span><span class="line"><span class="ln">14</span><span class="cl">  <span class="o">})</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">  <span class="o">(</span><span class="k">function</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">    <span class="k">if</span> <span class="o">([</span><span class="s2">&#34;localhost&#34;</span>, <span class="s2">&#34;127.0.0.1&#34;</span><span class="o">]</span>.indexOf<span class="o">(</span>window.location.hostname<span class="o">)</span> !<span class="o">=</span> -1<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">      document.getElementById<span class="o">(</span><span class="s1">&#39;gitalk-container&#39;</span><span class="o">)</span>.innerHTML <span class="o">=</span> <span class="s1">&#39;Gitalk comments not available by default when the website is previewed locally.&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">      <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">    gitalk.render<span class="o">(</span><span class="s1">&#39;gitalk-container&#39;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">  <span class="o">})()</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">&lt;/script&gt;
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="o">{{</span> end <span class="o">}}</span>
+</span></span></code></pre></div><p>我们先注册一个GitHub账号，然后创建一个空的仓库用来存放你的评论。仓库建完以后，从设置里选择开发者选项，然后建立一个OAuth Apps见下图。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BDgitalk01.png"
+    alt="4评论功能gitalk01"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BDgitalk02.png"
+    alt="4评论功能gitalk02"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<p>上面两项要在主题配置文件修改：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="o">.</span><span class="nx">page</span><span class="o">.</span><span class="nx">comment</span><span class="o">.</span><span class="nx">gitalk</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">        <span class="nx">enable</span> <span class="o">=</span> <span class="k">true</span> <span class="c1"># 启用评论功能
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"></span>        <span class="nx">owner</span> <span class="o">=</span> <span class="s2">&#34;c2h5oc2h5&#34;</span> <span class="c1"># 用户名
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"></span>        <span class="nx">repo</span> <span class="o">=</span> <span class="s2">&#34;changyan&#34;</span> <span class="c1"># 评论仓库名
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="c1"></span>        <span class="nx">clientId</span> <span class="o">=</span> <span class="s2">&#34;xxx&#34;</span> <span class="c1"># 上图第一项
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="c1"></span>        <span class="nx">clientSecret</span> <span class="o">=</span> <span class="s2">&#34;xxx&#34;</span> <span class="c1"># 上图第二项
+</span></span></span></code></pre></div><p>最后两项是你GitHub pages 上你的博客域名，如果你和我一样绑定了域名，一定一定要把上面最后两项的地址填写你的域名，不然当你初始化评论时（第一次需要登录你的GitHub账号，在博客下面评论区的位置，登录一次以后就不用再登陆了），会跳转到你的博客首页。搭建完成如下图所示。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BDgitalk03.png"
+    alt="4评论功能gitalk03"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+<p>按照顺序设置下来基本不会遇到ERROR:NOT FOUND问题，至此评论系统就搭建好了。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <picture>
+  <img
+    class="img-fluid"
+    src="https://cdn.jsdelivr.net/gh/xinzoro/tu_chuang_1/4%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BDgitalk04.png"
+    alt="4评论功能gitalk04"
+    loading="lazy"
+    
+    
+    
+    
+    
+     />
+</picture>
+</p>
+        </div><div
+  class="hb-content-panel-wrapper position-sticky mb-3 d-flex justify-content-center">
+  <div class="hb-content-panel d-flex shadow w-auto rounded-5 bg-body">
+    
+
+    
+  <div class="hb-content-panel-item">
+    <a
+      href="#content-comments"
+      class="btn btn-link text-body"
+      title="Comments"
+      role="button"><svg aria-hidden="true" class="bi bi-chat-dotsbi bi-chat-dots hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+  <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2"/>
+</svg>
+    </a>
+  </div>
+
+    
+
+  </div>
+</div>
+
+
+<ul class="hb-blog-post-nav nav justify-content-between mb-3">
+  
+    <li class="nav-item my-1">
+      <a class="nav-link p-0 d-flex align-items-center" href="/en/blog/2022/07/%E4%B8%89-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/"><svg aria-hidden="true" class="bi bi-arrow-left-circlebi bi-arrow-left-circle hi-svg-inline me-2" fill="currentColor" height="1.5em" viewBox="0 0 16 16" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>三 为博客添加搜索功能</a>
+    </li>
+  
+  
+    <li class="nav-item my-1">
+      <a class="nav-link p-0 d-flex align-items-center" href="/en/blog/2022/07/python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8B%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">Python学习笔记之语言程序设计<svg aria-hidden="true" class="bi bi-arrow-right-circlebi bi-arrow-right-circle hi-svg-inline ms-2" fill="currentColor" height="1.5em" viewBox="0 0 16 16" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg></a>
+    </li>
+  
+</ul>
+
+
+  <div class="hb-blog-related-posts slide mb-3">
+    <div class="slide-inner row row-cols-1 row-cols-xl-2 gx-2">
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/10/%E5%B0%86%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E5%A4%87%E4%BB%BD%E8%87%B3onedrive/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="将博客同步备份至onedrive"
+        href="/en/blog/2022/10/%E5%B0%86%E5%8D%9A%E5%AE%A2%E5%90%8C%E6%AD%A5%E5%A4%87%E4%BB%BD%E8%87%B3onedrive/">将博客同步备份至onedrive</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/07/%E4%B8%89-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="三 为博客添加搜索功能"
+        href="/en/blog/2022/07/%E4%B8%89-%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">三 为博客添加搜索功能</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/07/%E4%BA%8C-%E5%9B%BE%E5%BA%8A%E9%80%89%E6%8B%A9/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="二 图床选择"
+        href="/en/blog/2022/07/%E4%BA%8C-%E5%9B%BE%E5%BA%8A%E9%80%89%E6%8B%A9/">二 图床选择</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/07/%E4%B8%80-%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="一 通过Hugo搭建博客"
+        href="/en/blog/2022/07/%E4%B8%80-%E9%80%9A%E8%BF%87hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">一 通过Hugo搭建博客</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/feature_hu0f84a211aa2a86d55b92a6fa4ce7ad09_1628951_9986d79511392a24e42038c36d24297d.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/feature_hu0f84a211aa2a86d55b92a6fa4ce7ad09_1628951_0x360_resize_box_3.0373dd896dcdc3df106141e47d6e9dd5.png"
+    alt="关于博客"
+    loading="lazy"
+    height="360"
+    width="576"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="关于博客"
+        href="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/">关于博客</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/%E4%B8%83-hb%E4%B8%BB%E9%A2%98%E7%9F%AD%E4%BB%A3%E7%A0%81/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="七 HB主题短代码"
+        href="/en/blog/2023/06/%E4%B8%83-hb%E4%B8%BB%E9%A2%98%E7%9F%AD%E4%BB%A3%E7%A0%81/">七 HB主题短代码</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/%E5%85%AD-hb%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="六 HB主题设置"
+        href="/en/blog/2023/06/%E5%85%AD-hb%E4%B8%BB%E9%A2%98%E8%AE%BE%E7%BD%AE/">六 HB主题设置</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/%E4%BA%94-hugo%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="五 Hugo版本选择"
+        href="/en/blog/2023/06/%E4%BA%94-hugo%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9/">五 Hugo版本选择</a>
+    </div>
+  </div>
+</div>
+
+        </div></div>
+    
+<button class="slide-control-left">
+  <svg aria-hidden="true" class="bi bi-arrow-left-circlebi bi-arrow-left-circle hi-svg-inline slide-control-left-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>
+  <span class="visually-hidden">Left</span>
+</button>
+<button class="slide-control-right">
+  <svg aria-hidden="true" class="bi bi-arrow-right-circlebi bi-arrow-right-circle hi-svg-inline slide-control-right-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg>
+  <span class="visually-hidden">Right</span>
+</button>
+
+  </div>
+
+
+
+
+  <div id="content-comments" class="hb-blog-post-comments mb-3">
+<div class="giscus"></div>
+
+
+  </div>
+
+
+
+      </div>
+    </div>
+    
+
+  </div>
+  <div class="hb-blog-sidebar pe-lg-1">
+  <div class="hb-module text-center bg-primary text-white p-3">
+  CUSTOM SIDEBAR WIDGET
+</div>
+
+  <div class="hb-blog-sidebar-posts hb-module">
+    <ul class="nav nav-pills nav-fill" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="featured-posts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#featured-posts"
+            type="button"
+            role="tab"
+            aria-controls="featured-posts"
+            aria-selected="true">
+            Featured
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="recent-posts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#recent-posts"
+            type="button"
+            role="tab"
+            aria-controls="recent-posts"
+            aria-selected="true">
+            Recent
+          </button>
+        </li>
+    </ul>
+
+    <div class="tab-content mt-2">
+        <div
+          class="tab-pane active"
+          id="featured-posts"
+          role="tabpanel"
+          aria-labelledby="featured-posts-tab"
+          tabindex="0">
+          <div class="slide">
+            <div class="slide-inner row row-cols-1">
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/feature_hu9771932d5ae426c8c7e526f4c3456f01_286770_796be8d49d12af98cde711a1286c236f.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/feature_hu9771932d5ae426c8c7e526f4c3456f01_286770_0x360_resize_q75_box.3e68f19bc858fedb8677397adc6e1ac4.jpg"
+    alt="在Linux/Mac下通过CFW实现透明代理"
+    loading="lazy"
+    height="360"
+    width="882"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="在Linux/Mac下通过CFW实现透明代理"
+        href="/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/">在Linux/Mac下通过CFW实现透明代理</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/%E9%9F%B3%E4%B9%90%E7%A2%B0%E6%92%9E/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2023/06/%E9%9F%B3%E4%B9%90%E7%A2%B0%E6%92%9E/feature_hufb32e575b01feb3fb62c24ecb146afd3_121526_edc0c117c99286cf4866661c6a4f48db.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2023/06/%E9%9F%B3%E4%B9%90%E7%A2%B0%E6%92%9E/feature_hufb32e575b01feb3fb62c24ecb146afd3_121526_0x360_resize_q75_box.d829b8d627ac10fcb6cb701f0be77788.jpg"
+    alt="音乐碰撞"
+    loading="lazy"
+    height="360"
+    width="576"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="音乐碰撞"
+        href="/en/blog/2023/06/%E9%9F%B3%E4%B9%90%E7%A2%B0%E6%92%9E/">音乐碰撞</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/10/%E5%92%8C%E6%97%B6%E9%97%B4%E8%B5%9B%E8%B7%91/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2022/10/%E5%92%8C%E6%97%B6%E9%97%B4%E8%B5%9B%E8%B7%91/feature_hu36f6260a2b69fab2e51caf16b5209a9c_264061_ed40ec0f5186294f9d3e314bb22ff997.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2022/10/%E5%92%8C%E6%97%B6%E9%97%B4%E8%B5%9B%E8%B7%91/feature_hu36f6260a2b69fab2e51caf16b5209a9c_264061_0x360_resize_q75_box.cc1282e70685f96b2797607186e998cd.jpg"
+    alt="和时间赛跑"
+    loading="lazy"
+    height="360"
+    width="640"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="和时间赛跑"
+        href="/en/blog/2022/10/%E5%92%8C%E6%97%B6%E9%97%B4%E8%B5%9B%E8%B7%91/">和时间赛跑</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/feature_hu0f84a211aa2a86d55b92a6fa4ce7ad09_1628951_9986d79511392a24e42038c36d24297d.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/feature_hu0f84a211aa2a86d55b92a6fa4ce7ad09_1628951_0x360_resize_box_3.0373dd896dcdc3df106141e47d6e9dd5.png"
+    alt="关于博客"
+    loading="lazy"
+    height="360"
+    width="576"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="关于博客"
+        href="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/">关于博客</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+            </div>
+            
+<button class="slide-control-left">
+  <svg aria-hidden="true" class="bi bi-arrow-left-circlebi bi-arrow-left-circle hi-svg-inline slide-control-left-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>
+  <span class="visually-hidden">Left</span>
+</button>
+<button class="slide-control-right">
+  <svg aria-hidden="true" class="bi bi-arrow-right-circlebi bi-arrow-right-circle hi-svg-inline slide-control-right-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg>
+  <span class="visually-hidden">Right</span>
+</button>
+
+          </div>
+        </div>
+        <div
+          class="tab-pane slide"
+          id="recent-posts"
+          role="tabpanel"
+          aria-labelledby="recent-posts-tab"
+          tabindex="0">
+          <div class="slide">
+            <div class="slide-inner row row-cols-1">
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/12/%E5%85%B3%E4%BA%8Egit%E6%8E%A8%E9%80%81%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="关于Git推送的一些问题"
+        href="/en/blog/2023/12/%E5%85%B3%E4%BA%8Egit%E6%8E%A8%E9%80%81%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">关于Git推送的一些问题</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/10/et%E6%A8%A1%E5%9E%8B%E7%BD%91%E6%A0%BC%E5%88%92%E5%88%86/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="ET模型网格划分"
+        href="/en/blog/2023/10/et%E6%A8%A1%E5%9E%8B%E7%BD%91%E6%A0%BC%E5%88%92%E5%88%86/">ET模型网格划分</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/10/python%E4%B9%8B%E7%A6%85/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="Python之禅"
+        href="/en/blog/2023/10/python%E4%B9%8B%E7%A6%85/">Python之禅</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/08/nx1847%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="NX1847安装使用"
+        href="/en/blog/2023/08/nx1847%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">NX1847安装使用</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/08/clash%E8%8A%82%E7%82%B9%E5%AF%BC%E5%85%A5%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="Clash节点导入错误解决办法"
+        href="/en/blog/2023/08/clash%E8%8A%82%E7%82%B9%E5%AF%BC%E5%85%A5%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Clash节点导入错误解决办法</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+            </div>
+            
+<button class="slide-control-left">
+  <svg aria-hidden="true" class="bi bi-arrow-left-circlebi bi-arrow-left-circle hi-svg-inline slide-control-left-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>
+  <span class="visually-hidden">Left</span>
+</button>
+<button class="slide-control-right">
+  <svg aria-hidden="true" class="bi bi-arrow-right-circlebi bi-arrow-right-circle hi-svg-inline slide-control-right-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg>
+  <span class="visually-hidden">Right</span>
+</button>
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+<div class="hb-blog-sidebar-taxonomies hb-module">
+  
+<ul class="nav nav-pills nav-justified mb-2" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="taxonomy-categories-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#taxonomy-categories-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="taxonomy-categories-tab-pane"
+        aria-selected="true">Categories</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="taxonomy-tags-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#taxonomy-tags-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="taxonomy-tags-tab-pane"
+        aria-selected="false">Tags</button>
+    </li>
+</ul>
+<div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="taxonomy-categories-tab-pane"
+      role="tabpanel"
+      aria-labelledby="taxonomy-categories-tab"
+      tabindex="0">
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E6%8A%98%E8%85%BE/">折腾 (22)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E9%80%9A%E4%BF%97/">通俗 (13)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E8%BD%AF%E4%BB%B6/">软件 (3)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/code/">Code (2)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E6%96%87%E5%AD%A6/">文学 (2)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/tutorial/">Tutorial (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E7%94%9F%E6%B4%BB/">生活 (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E7%BB%8F%E6%B5%8E%E5%AD%A6/">经济学 (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E7%BD%91%E6%A0%BC%E5%88%92%E5%88%86/">网格划分 (1)
+        </a>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="taxonomy-tags-tab-pane"
+      role="tabpanel"
+      aria-labelledby="taxonomy-tags-tab"
+      tabindex="0">
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果 (21)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/%E7%89%A9%E7%90%86/">物理 (13)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/%E5%8D%9A%E5%AE%A2/">博客 (9)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/clash/">clash (2)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/python/">python (2)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/code-block/">Code Block (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/git/">git (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/icem/">ICEM (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/manjaro/">manjaro (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/math/">Math (1)
+        </a>
+    </div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+    </div>
+    
+
+    <footer class="hb-footer pt-4 pt-md-5 pb-2 pb-md-3 bg-body-tertiary">
+  <div class="container-fluid container-lg px-4 px-md-3 text-body-secondary">
+
+    <div class="row"><div class="hb-footer-site-info col mb-2 text-center">
+
+  <div class="h5">亲自巡山的大王</div>
+  <ul class="list-unstyled small mb-2">
+      <li class="mt-2">落款你的名字 工整又好看.</li>
+      <li class="mt-2">Copyright © 2022-2023 <a
+  href="https://github.com/runofftheearth"
+  
+  target="_blank" rel="noopener noreferrer">ziyue.tech</a> 版权所有.</li>
+  <li class="mt-2">
+    Built with ❤️ from <a href="https://gohugo.io/" target="_blank" rel="external" title="Hugo">Hugo</a>, <a href="https://hugomods.com/" target="_blank" rel="external" title="Hugo Modules">Hugo Modules</a> and <a href="https://hbstack.dev/" target="_blank" rel="external" title="HB Framework">HB Framework</a>.
+  </li>
+  </ul>
+
+</div>
+
+
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script
+  src="/js/hb.dc6e5c341be0d336877c41a5ce0bdbaf546a1aca0927f2fa3533c36e751145fd.js"
+  integrity="sha256-3G5cNBvg0zaHfEGlzgvbr1RqGsoJJ/L6NTPDbnURRf0="
+  defer></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('DOMContentLoaded', function() {
+    navigator.serviceWorker.register('\/sw.js');
+  });
+}
+</script>
+
+<script src="/js/search.e34e710e8b6abe368af1f4f9545bd6b074916390ca4aa79fbda8a9c2ef24b4b4.js" defer></script>
+
+
+
+
+  </body>
+</html>

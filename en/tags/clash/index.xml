@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clash on 亲自巡山的大王</title>
+    <link>https://runofftheearth.github.io/en/tags/clash/</link>
+    <description>Recent content in clash on 亲自巡山的大王</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022-{year} [ziyue.tech](https://github.com/runofftheearth) 版权所有. </copyright>
+    <lastBuildDate>Wed, 16 Aug 2023 08:06:26 +0800</lastBuildDate>
+    <atom:link href="https://runofftheearth.github.io/en/tags/clash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clash节点导入错误解决办法</title>
+      <link>https://runofftheearth.github.io/en/blog/2023/08/clash%E8%8A%82%E7%82%B9%E5%AF%BC%E5%85%A5%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Wed, 16 Aug 2023 08:06:26 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2023/08/clash%E8%8A%82%E7%82%B9%E5%AF%BC%E5%85%A5%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description>&lt;p&gt;首先，要实现全局路由所有设备代理，软件版本要使用&lt;a&#xA;  href=&#34;https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public&#34;&#xA;  &#xA;  target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;ClashX Pro&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在Linux/Mac下通过CFW实现透明代理</title>
+      <link>https://runofftheearth.github.io/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Tue, 27 Jun 2023 09:42:46 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/</guid>
+      <description>&lt;p&gt;可以通过clash for windows(俗称CFW)软件，将一台闲置设备设置成网关，实现全家设备的科学上网。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

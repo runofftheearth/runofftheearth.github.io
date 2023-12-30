@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+  <head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+
+
+
+
+    <link rel="manifest" href="https://runofftheearth.github.io/en/manifest.webmanifest" />
+
+<meta name="description" content="准备工作" />
+
+
+
+      <link
+        rel="icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_16x16_resize_box_3.png"
+        sizes="16x16"
+        type="image/png"
+      />
+      <link
+        rel="icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_32x32_resize_box_3.png"
+        sizes="32x32"
+        type="image/png"
+      />
+      <link
+        rel="icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_150x150_resize_box_3.png"
+        sizes="150x150"
+        type="image/png"
+      />
+      <link
+        rel="apple-touch-icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_180x180_resize_box_3.png"
+        sizes="180x180"
+        type="image/png"
+      />
+      <link
+        rel="icon"
+        href="/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_192x192_resize_box_3.png"
+        sizes="192x192"
+        type="image/png"
+      />
+
+  <link
+    rel="mask-icon"
+    href="/mask-icon.svg"
+    color="#000000"
+  />
+
+
+<meta property="og:title" content="2.3 准备ACPI" />
+<meta property="og:description" content="准备工作" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://runofftheearth.github.io/en/blog/2023/06/2.3-%E5%87%86%E5%A4%87acpi/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2023-06-18T01:10:54+08:00" />
+<meta property="article:modified_time" content="2023-06-18T01:10:54+08:00" />
+
+<meta itemprop="name" content="2.3 准备ACPI">
+<meta itemprop="description" content="准备工作"><meta itemprop="datePublished" content="2023-06-18T01:10:54+08:00" />
+<meta itemprop="dateModified" content="2023-06-18T01:10:54+08:00" />
+<meta itemprop="wordCount" content="939">
+<meta itemprop="keywords" content="黑苹果," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="2.3 准备ACPI"/>
+<meta name="twitter:description" content="准备工作"/>
+
+
+
+    <title>
+
+
+2.3 准备ACPI - Blog - 亲自巡山的大王</title>
+
+  
+  
+  
+
+
+    <link href="/css/hb.c5df937dfe72d08e56c5bcfbeacf6a97fee67f9ed69c97cf201e29b304035cb8.css" rel="stylesheet" />
+
+
+
+
+
+
+<script
+  src="/js/init.b980cf5ff873691f491c400ab7f55079eb2d1eef456f2eec75db7cf3d8c9dcc7.js"
+  
+    integrity="sha256-uYDPX/hzaR9JHEAKt/VQeestHu9Fby7sddt889jJ3Mc="
+  ></script>
+
+
+
+
+
+
+
+  </head>
+  <body 
+><noscript>
+  <div class="alert alert-danger text-center rounded-0" role="alert"><svg aria-hidden="true" class="bi bi-exclamation-square-fillbi bi-exclamation-square-fill hi-svg-inline me-2" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+</svg>Your browser does not support JavaScript.</div>
+</noscript>
+
+
+
+    
+<header class="hb-header"
+  >
+  
+
+  <nav class="hb-header-nav navbar navbar-expand-lg">
+    
+
+    <div
+      class="container-fluid">
+      
+
+
+  <a
+    class="navbar-brand d-flex align-items-center"
+    href="/en/">
+  <img
+    src="https://runofftheearth.github.io/images/logo_hub93853839e3e32803e0743ae5bb54d00_333268_0x64_resize_box_3.png"
+    alt="Logo"
+    width="64"
+    height="64"
+    class="hb-header-logo d-inline-block align-text-top me-2" />拯救世界去了</a>
+
+      <div class="d-flex order-5">
+        
+<div class="search-modal-toggle hb-header-search-form position-relative d-flex ms-lg-1">
+  <button
+    type="button"
+    class="hb-header-search-icon border-0 bg-transparent px-2"
+    aria-label="Toggle search">
+    <svg aria-hidden="true" class="bi bi-searchbi bi-search hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg>
+  </button>
+  <input
+    class="form-control rounded-5 d-none d-lg-block ms-lg-1"
+    placeholder="Search" />
+    <span class="hb-header-search-keys position-absolute d-none d-lg-block">
+        <kbd>CTRL</kbd>
+        <kbd>K</kbd>
+    </span>
+</div>
+
+
+
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#hb-header-content"
+          aria-controls="hb-header-content"
+          aria-label="Toggle navigation"><svg aria-hidden="true" class="bi bi-three-dotsbi bi-three-dots hi-svg-inline" fill="currentColor" height="1.25em" viewBox="0 0 16 16" width="1.25em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+</svg>
+        </button>
+        
+
+      </div>
+      <div
+        class="offcanvas offcanvas-lg offcanvas-end"
+        tabindex="-1"
+        id="hb-header-content"
+        aria-labelledby="hb-header-content-label">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="hb-header-content-label">拯救世界去了</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          
+          <ul class="hb-header-menus navbar-nav flex-row flex-wrap"><li
+    class="hb-header-menu nav-item col-6 col-lg-auto">
+    <a
+      class="nav-link"
+      
+      href="https://runofftheearth.github.io/en/gallery/"
+      
+      ><svg aria-hidden="true" class="hi-svg-inline hb-header-menu-icon me-1" fill="currentColor" height="1em" viewBox="0 0 576 512" width="1em" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M160 32c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H328 280 200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z"/></svg>Gallery</a>
+  </li>
+  <li class="hb-header-menu dropdown nav-item col-12 col-lg-auto active">
+    
+      <a
+        class="nav-link pe-0 d-inline-flex align-items-center active"
+        href="/en/blog/"
+        aria-current="page"
+        
+        ><svg aria-hidden="true" class="hi-svg-inline hb-header-menu-icon me-1" fill="currentColor" height="1em" viewBox="0 0 512 512" width="1em" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32zM96 144c0-26.5-21.5-48-48-48S0 117.5 0 144V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z"/></svg>Blog</a>
+      <a
+        class="nav-link ps-0 d-inline-flex"
+        href="#"
+        id="header-menu-blog"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="visually-hidden">Toggle Dropdown</span><svg aria-hidden="true" class="bi bi-chevron-compact-downbi bi-chevron-compact-down hi-svg-inline" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
+</svg>
+      </a>
+    <ul
+      class="hb-header-submenus dropdown-menu"
+      aria-labelledby="header-menu-blog"
+      
+      data-bs-popper="none">
+<li
+  >
+    <a
+      class="hb-header-submenu dropdown-item d-flex align-items-center"
+      href="https://runofftheearth.github.io/en/archives/"
+      
+      >
+        <div
+          class="dropdown-item-icon d-flex align-items-center bg-body-secondary bg-gradient rounded me-2 p-2">
+<svg aria-hidden="true" class="bi bi-archivebi bi-archive hi-svg-inline text-primary-emphasis" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+</svg>
+
+        </div>
+      <div class="dropdown-item-content">
+        <div
+          class="dropdown-item-title mb-1">Archives</div>
+          <p class="dropdown-item-desc mb-0 text-wrap">Posts archive.</p>
+      </div></a></li>
+
+<li
+  >
+    <a
+      class="hb-header-submenu dropdown-item d-flex align-items-center"
+      href="https://runofftheearth.github.io/en/categories/"
+      
+      >
+        <div
+          class="dropdown-item-icon d-flex align-items-center bg-body-secondary bg-gradient rounded me-2 p-2">
+<svg aria-hidden="true" class="bi bi-folderbi bi-folder hi-svg-inline" fill="currentColor" height="2em" style="color: orange;" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+</svg>
+
+        </div>
+      <div class="dropdown-item-content">
+        <div
+          class="dropdown-item-title mb-1">Categories</div>
+          <p class="dropdown-item-desc mb-0 text-wrap">All of categories.</p>
+      </div></a></li>
+
+<li
+  >
+    <a
+      class="hb-header-submenu dropdown-item d-flex align-items-center"
+      href="https://runofftheearth.github.io/en/tags/"
+      
+      >
+        <div
+          class="dropdown-item-icon d-flex align-items-center bg-body-secondary bg-gradient rounded me-2 p-2">
+<svg aria-hidden="true" class="bi bi-tagsbi bi-tags hi-svg-inline" fill="currentColor" height="2em" style="color: green;" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z"/>
+  <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z"/>
+</svg>
+
+        </div>
+      <div class="dropdown-item-content">
+        <div
+          class="dropdown-item-title mb-1">Tags</div>
+          <p class="dropdown-item-desc mb-0 text-wrap">All of tags.</p>
+      </div></a></li>
+
+    </ul>
+  </li></ul>
+          
+          
+          <ul class="hb-header-panel navbar-nav flex-row flex-wrap">
+              <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                <hr class="d-lg-none my-2 text-body-50" />
+              </li>
+            
+  <li class="nav-item col-6 col-lg-auto d-flex align-items-center">
+<a
+  class="hb-social btn btn-link nav-link py-2 px-0 px-lg-2 d-flex justify-content-center align-items-center"
+  href="https://github.com/runofftheearth"
+  target="_blank"
+  rel="nofollow me"
+  title="GitHub"><svg aria-hidden="true" class="hi-svg-inline hb-social-icon" fill="currentColor" height="1em" role="img" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    <span class="hb-social-text d-lg-none ms-1">GitHub</span>
+</a>
+
+  </li>
+
+  <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+    <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-body"></div>
+    <hr class="d-lg-none my-2 text-body-50" />
+  </li>
+
+
+<li class="theme-toggle nav-item dropdown col-6 col-lg-auto d-flex flex-column justify-content-center">
+  <a
+    class="btn btn-link nav-link py-2 px-0 px-lg-2 d-flex justify-content-start justify-content-lg-center align-items-center"
+    href="#"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+    title="Theme"
+  >
+    <svg aria-hidden="true" class="bi bi-circle-halfbi bi-circle-half hi-svg-inline my-1 theme-toggle-icon" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+</svg>
+    <span class="d-lg-none ms-1">Theme</span>
+  </a>
+
+  <ul class="theme-toggle-menu dropdown-menu dropdown-menu-end">
+      <li>
+        <button
+          class="theme-toggle-item dropdown-item d-flex align-items-center justify-content-center"
+          data-bs-theme-value="auto"
+        >
+          <span class="theme-toggle-item-icon me-1 d-flex align-items-center">
+            <svg aria-hidden="true" class="bi bi-circle-halfbi bi-circle-half hi-svg-inline my-1" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"/>
+</svg>
+          </span>
+          Auto
+        </button>
+      </li>
+      <li>
+        <button
+          class="theme-toggle-item dropdown-item d-flex align-items-center justify-content-center"
+          data-bs-theme-value="dark"
+        >
+          <span class="theme-toggle-item-icon me-1 d-flex align-items-center">
+            <svg aria-hidden="true" class="bi bi-moon-starsbi bi-moon-stars hi-svg-inline my-1" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278M4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+  <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+</svg>
+          </span>
+          Dark
+        </button>
+      </li>
+      <li>
+        <button
+          class="theme-toggle-item dropdown-item d-flex align-items-center justify-content-center"
+          data-bs-theme-value="light"
+        >
+          <span class="theme-toggle-item-icon me-1 d-flex align-items-center">
+            <svg aria-hidden="true" class="bi bi-brightness-highbi bi-brightness-high hi-svg-inline my-1" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+          </span>
+          Light
+        </button>
+      </li>
+  </ul>
+</li>
+
+
+
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    
+
+  </nav>
+  
+
+</header>
+
+
+
+    
+
+    <div class="hb-main container">
+  <div class="hb-blog-main-container">
+  <div class="hb-blog-main">
+    <div class="container-fluid px-0 mb-4">
+    <nav aria-label="breadcrumb">
+      <ol class="hb-breadcrumb breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="/en/" title="夕晴照雪霁无暇">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/en/blog/" title="Blog">Blog</a>
+          </li><li class="breadcrumb-item active" aria-current="page">
+          <a href="/en/blog/2023/06/2.3-%E5%87%86%E5%A4%87acpi/" title="2.3 准备ACPI">2.3 准备ACPI</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+
+    <div class="hb-blog-post hb-module position-relative">
+      <div class="hb-blog-post-intro">
+        <h1 class="hb-blog-post-title mb-2">2.3 准备ACPI</h1>
+        <div class="hb-blog-post-meta mb-2">
+          
+
+          <span class="hb-blog-post-date">June 18, 2023</span>
+
+          <span class="hb-blog-post-reading-time">5 min read</span>
+
+          
+      <span class="hb-blog-post-taxonomy-meta">
+        <a
+          class="hb-blog-post-taxonomy hb-blog-post-taxonomy-category badge bg-secondary text-decoration-none fw-normal me-1"
+          href="/en/categories/%E6%8A%98%E8%85%BE/">折腾</a>
+      </span>
+      <span class="hb-blog-post-taxonomy-meta">
+        <a
+          class="hb-blog-post-taxonomy hb-blog-post-taxonomy-tag badge bg-secondary text-decoration-none fw-normal me-1"
+          href="/en/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a>
+      </span>
+        </div>
+          <div class="hb-blog-post-desc lead mb-2">准备工作</div>
+      </div>
+      <div
+        class="hb-blog-post-toc mt-2 text-body-secondary position-sticky overflow-y-auto">
+
+  <div class="h6 d-none d-md-block">On this page</div>
+  <hr class="d-none d-md-block" />
+  <div class="d-grid d-block d-md-none mb-2">
+    <button
+      class="btn btn-light d-flex align-items-center justify-content-between collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target=".hb-blog-post-toc-collapse"
+      aria-expanded="false"
+      aria-controls="collapse-toc">
+      <span>On this page</span>
+      <svg aria-hidden="true" class="bi bi-chevron-expandbi bi-chevron-expand hi-svg-inline ms-2" fill="currentColor" height="1.25rem" viewBox="0 0 16 16" width="1.25rem" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"/>
+</svg>
+    </button>
+  </div>
+  <div class="px-2 px-md-0">
+    <div id="collapse-toc" class="collapse hb-blog-post-toc-collapse"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#基本概念">基本概念</a>
+      <ul>
+        <li><a href="#apci">APCI</a></li>
+        <li><a href="#dsdt-ssdt">DSDT 、SSDT</a></li>
+        <li><a href="#why为什么要知道这些">Why？为什么要知道这些</a></li>
+      </ul>
+    </li>
+    <li><a href="#常见-acpi-组合">常见 ACPI 组合</a>
+      <ul>
+        <li><a href="#intel-桌面">Intel 桌面</a></li>
+        <li><a href="#intel-笔记本">Intel 笔记本</a></li>
+        <li><a href="#intel-高端桌面">Intel 高端桌面</a></li>
+        <li><a href="#amd-桌面">AMD 桌面</a></li>
+      </ul>
+    </li>
+    <li><a href="#黑苹果-acpi-大全">黑苹果 ACPI 大全?</a></li>
+  </ul>
+</nav></div>
+  </div>
+
+
+      </div>
+      <div class="hb-blog-post-main">
+
+
+        <div
+          class="hb-blog-post-content mb-5"
+          data-bs-spy="scroll" data-bs-target="#TableOfContents">
+          <h2 id="基本概念">基本概念</h2>
+<h3 id="apci">APCI</h3>
+<p>高级配置与电源接口（Advanced Configuration and Power Interface），是 1997 年由英特尔、微软、东芝共同提出、制定的操作系统电源管理、硬件配置接口，ACPI 定义了系统固件 BIOS 或 UEFI 和操作系统之间的硬件抽象接口。</p>
+<p>它帮助操作系统合理控制和分配计算机硬件设备的电量，有 了 ACPI ，操作系统可以根据设备实际情况，根据需要把不同的硬件设备关闭。</p>
+<p>它主要涵盖的功能包括：</p>
+<ol>
+<li>System power management（系统电源管理）</li>
+<li>Device power management（设备电源管理）</li>
+<li>Processor power management（处理器电源管理）</li>
+<li>Device and processor performance management（设备及处理器性能管理）</li>
+<li>Configuration / Plug and Play（配置/即插即用）</li>
+<li>System Events（系统事件）</li>
+<li>Battery management（电池管理）</li>
+<li>Thermal management（温度管理）</li>
+<li>Embedded Controller（嵌入式控制器）</li>
+<li>SMBus Controller（SMBus控制器）</li>
+</ol>
+<p>在计算机应用平台，ACPI 越来越重要。ACPI 由很多表组成，包括：RSDP，SDTH，RSDT，FADT，FACS，<strong>DSDT</strong>，<strong>SSDT</strong>，MADT，SBST，XSDT，ECDT，SLIT，SRAT。其中 <strong>DSDT</strong> 就是它的一个重要的描述表。</p>
+<h3 id="dsdt-ssdt">DSDT 、SSDT</h3>
+<p>正如上面所说，DSDT 和 SSDT 是 ACPI 规范的一部分，概述了硬件设备，如 USB 控制器、CPU 线程、嵌入式控制器、系统时钟等。</p>
+<p>DSDT（差分系统描述表）可以被视为包含大部分信息的主体</p>
+<p>SSDT（辅助系统描述表）传递的信息较少</p>
+<p>可以将 DSDT 视为建筑蓝图，其中 SSDT 是概述项目额外细节的便签。</p>
+<p>黑苹果下一般是先提取 DSDT，然后根据 DSDT 内容来编写对应的 SSDT 来修正 DSDT，当然不使用 SSDT 直接在提起的 DSDT 基础上修改也可以的，就是得进行 DSDT 排错以及代码调整，工程量还是比较大的，不如使用 SSDT 修正起来简约方便。</p>
+<h3 id="why为什么要知道这些">Why？为什么要知道这些</h3>
+<p>macOS 可能对 DSDT 中存在的设备非常挑剔，因此我们需要纠正它。macOS 正常工作需要修正的主要设备：</p>
+<ul>
+<li><strong>EC</strong></li>
+<li>嵌入式控制器</li>
+<li>非苹果的机型都在其 DSDT 中公开了一个 EC，但是通常与 macOS 不兼容，可能会导致恐慌，因此需要对 macOS 隐藏。</li>
+<li>对于笔记本电脑，实际的嵌入式控制器仍然需要启用电池和热键才能工作，并且重命名 EC 还会导致 Windows 出现问题，因此最好在不禁用真正的嵌入式控制器的情况下创建假 EC。</li>
+<li><strong>Plugin type</strong></li>
+<li>插件类型</li>
+<li>允许使用 XCPM 在 Intel Haswell 以及更新架构的 CPU上提供本地 CPU 电源管理，这个不适合 AMD</li>
+<li><strong>AWAC system clock</strong></li>
+<li>AWAC 系统时钟</li>
+<li>因为 macOS 无法与 AWAC 时钟通信，因此这要求我们要么强制使用传统 RTC 时钟，要么在不可用的情况下为 macOS 创建一个假的时钟来玩</li>
+<li><strong>NVRAM SSDT</strong></li>
+<li>真正的 300 系列主板（非 Z370）不会在 ACPI 中将 FW 芯片声明为 MMIO，因此内核会忽略 UEFI 内存映射声明的 MMIO 区域。这个 SSDT 带回了 NVRAM 支持</li>
+<li><strong>Backlight SSDT</strong></li>
+<li>用于修复笔记本电脑上的背光控制支持</li>
+<li><strong>GPIO SSDT</strong></li>
+<li>用于允许 VoodooI2C 连接，仅适用于笔记本电脑</li>
+<li><strong>XOSI SSDT</strong></li>
+<li>用于将 OSI 调用重新路由到此 SSDT，主要用于诱使我们的硬件认为其启动 Windows，以便我们获得更好的触控板支持</li>
+<li><strong>IRQ SSDT and ACPI patches</strong></li>
+<li>用于修复 DSDT 中的 IRQ 冲突，主要用于笔记本电脑。SSDT Time 独占</li>
+<li>注意 Skylake 和较新的 CPU 很少有 IRQ 冲突，这主要在 Broadwell 和较旧的系统上使用</li>
+</ul>
+<h2 id="常见-acpi-组合">常见 ACPI 组合</h2>
+<p>ACPI 可以自己手动编译，也可以下载别人编译好的，虽然自己编译是最完美的，但是需要一定的学习门槛，所以小白用户还是建议下载编译好的 SSDT 文件即可。</p>
+<p>下面可以根据自己的机型，参考下文，下载属于自己的 ACPI 文件即可。</p>
+<h3 id="intel-桌面">Intel 桌面</h3>
+<blockquote>
+<p>Penryn、Younah、Conroe</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-DESKTOP.aml</a></li>
+</ul>
+<p><strong>Lynnfield、Clarkdale</strong></p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-DESKTOP.aml</a></li>
+</ul>
+<p><strong>SandyBridge</strong>、<strong>Ivy Bridge</strong></p>
+<ul>
+<li>CPU-PM.aml
+<ul>
+<li>电源管理使用</li>
+<li>需要自己脚本生成，比较老了，可以参考 <a
+  href="https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#sandy-and-ivy-bridge-power-management"
+  
+  target="_blank" rel="noopener noreferrer">Sandy and Ivy Bridge Power Management</a></li>
+<li>生成后需要配合 ACPI 补丁：<strong>Delete CpuPm</strong>、<strong>Delete Cpu0Ist</strong></li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-DESKTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-IMEI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-IMEI.aml</a>
+<ul>
+<li>修复 Ivy Bridge CPU 与 6 系列主板混合的问题</li>
+<li>修复 Sandy Bridge CPU 与 7 系列主板混合的问题</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Hasewell、Broadwell</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-DESKTOP.aml</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Skylake</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Kaby Lake</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Coffee Lake</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-AWAC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-AWAC.aml</a>
+<ul>
+<li>修复较新硬件上的系统时钟</li>
+<li>支持以下主板：
+<ul>
+<li>B360、B365、H310、H370</li>
+<li>Z370（具有较新 BIOS 版本的 Gigabyte 和 AsRock 主板）</li>
+<li>Z390</li>
+<li>B460、Z490</li>
+<li>400系列 （Comet Lake）</li>
+<li>495系列 （Ice lake）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Comet Lake</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-AWAC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-AWAC.aml</a>
+<ul>
+<li>修复较新硬件上的系统时钟</li>
+<li>支持以下主板：
+<ul>
+<li>B360、B365、H310、H370</li>
+<li>Z370（具有较新 BIOS 版本的 Gigabyte 和 AsRock 主板）</li>
+<li>Z390</li>
+<li>B460、Z490</li>
+<li>400系列 （Comet Lake）</li>
+<li>495系列 （Ice lake）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RHUB.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-RHUB.aml</a>
+<ul>
+<li>修复某些 OEM主板的问题，需要关闭 RHUB 设备并强制 macOS 手动重建端口</li>
+<li>华硕 Z490 需要这个 SSDT</li>
+<li>微星主板有待测试</li>
+<li>技嘉和华擎主板工作很好，不需要这个 SSDT</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Rocket Lake</p>
+<p>可以模仿 <strong>Comet Lake</strong> 10代 CPU 的来</p>
+</blockquote>
+<blockquote>
+<p>Alder Lake</p>
+<ul>
+<li><a
+  href="https://cloud.189.cn/web/share?code=bmQzimFfQFJf%ef%bc%88%e8%ae%bf%e9%97%ae%e7%a0%81%ef%bc%9a3ysw%ef%bc%89"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-ALT.aml</a>
+<ul>
+<li>12 代 CPU 大小核调度，独有的 SSDT</li>
+</ul>
+</li>
+<li>其他可以模仿 <strong>Comet Lake</strong> 10代 CPU 的来</li>
+</ul>
+</blockquote>
+<h3 id="intel-笔记本">Intel 笔记本</h3>
+<blockquote>
+<p>Clarksfield、Arrandale</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-LAPTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-XOSI.aml</a>
+<ul>
+<li>触控板连接修复，默认工作在轮询模式</li>
+<li>需要配合 ACPI 补丁：<strong>Change _OSI to XOSI</strong> 来使用</li>
+<li>NUC 等没有触控板的设备不需要这个</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF.aml</a>
+<ul>
+<li>修复笔记本亮度控制，NUC 不需要这个</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Sany Bridge、Ivy Bridge</p>
+<ul>
+<li>CPU-PM.aml
+<ul>
+<li>电源管理使用</li>
+<li>需要自己脚本生成，比较老了，可以参考 <a
+  href="https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#sandy-and-ivy-bridge-power-management"
+  
+  target="_blank" rel="noopener noreferrer">Sandy and Ivy Bridge Power Management</a></li>
+<li>生成后需要配合 ACPI 补丁：<strong>Delete CpuPm</strong>、<strong>Delete Cpu0Ist</strong></li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-LAPTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-XOSI.aml</a>
+<ul>
+<li>触控板连接修复，默认工作在轮询模式</li>
+<li>需要配合 ACPI 补丁：<strong>Change _OSI to XOSI</strong> 来使用</li>
+<li>NUC 等没有触控板的设备不需要这个</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF.aml</a>
+<ul>
+<li>修复笔记本亮度控制，NUC 不需要这个 -[X] <a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-IMEI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-IMEI.aml</a></li>
+<li>修复 Ivy Bridge CPU 与 6 系列主板混合的问题</li>
+<li>修复 Sandy Bridge CPU 与 7 系列主板混合的问题</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Haswell、Broadwell</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-LAPTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-XOSI.aml</a>
+<ul>
+<li>触控板连接修复，默认工作在轮询模式</li>
+<li>需要配合 ACPI 补丁：<strong>Change _OSI to XOSI</strong> 来使用</li>
+<li>NUC 等没有触控板的设备不需要这个</li>
+<li>如果这个不成功的话，可手动使用<a
+  href="https://github.com/acidanthera/MaciASL/releases"
+  
+  target="_blank" rel="noopener noreferrer">MaciASL</a>编译<a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-GPI0.dsl.zip"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPI0.dsl.zip</a>来替代 XOSI
+<ul>
+<li>但是中断难度有点高，可以参考这个部分的内容：<a
+  href="https://apple.sqlsec.com/6-%e5%ae%9e%e7%94%a8%e5%a7%bf%e5%8a%bf/6-3/"
+  
+  target="_blank" rel="noopener noreferrer">触控板中断示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF.aml</a>
+<ul>
+<li>修复笔记本亮度控制，NUC 不需要这个</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Skylake、Kaby Lake</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-LAPTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-XOSI.aml</a>
+<ul>
+<li>触控板连接修复，默认工作在轮询模式</li>
+<li>需要配合 ACPI 补丁：<strong>Change _OSI to XOSI</strong> 来使用</li>
+<li>NUC 等没有触控板的设备不需要这个</li>
+<li>如果这个不成功的话，可手动使用<a
+  href="https://github.com/acidanthera/MaciASL/releases"
+  
+  target="_blank" rel="noopener noreferrer">MaciASL</a>编译<a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-GPI0.dsl.zip"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPI0.dsl.zip</a>来替代 XOSI
+<ul>
+<li>但是中断难度有点高，可以参考这个部分的内容：<a
+  href="https://apple.sqlsec.com/6-%e5%ae%9e%e7%94%a8%e5%a7%bf%e5%8a%bf/6-3/"
+  
+  target="_blank" rel="noopener noreferrer">触控板中断示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF.aml</a> *修复笔记本亮度控制，NUC 不需要这个</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Coffee Lake、Whiskey Lake</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-LAPTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-XOSI.aml</a>
+<ul>
+<li>触控板连接修复，默认工作在轮询模式</li>
+<li>需要配合 ACPI 补丁：<strong>Change _OSI to XOSI</strong> 来使用</li>
+<li>NUC 等没有触控板的设备不需要这个</li>
+<li>如果这个不成功的话，可手动使用<a
+  href="https://github.com/acidanthera/MaciASL/releases"
+  
+  target="_blank" rel="noopener noreferrer">MaciASL</a>编译<a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-GPI0.dsl.zip"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPI0.dsl.zip</a>来替代 XOSI
+<ul>
+<li>但是中断难度有点高，可以参考这个部分的内容：<a
+  href="https://apple.sqlsec.com/6-%e5%ae%9e%e7%94%a8%e5%a7%bf%e5%8a%bf/6-3/"
+  
+  target="_blank" rel="noopener noreferrer">触控板中断示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF.aml</a>
+<ul>
+<li>修复笔记本亮度控制，NUC 不需要这个</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-AWAC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-AWAC.aml</a>
+<ul>
+<li>修复较新硬件上的系统时钟</li>
+<li>支持以下主板：
+<ul>
+<li>B360、B365、H310、H370</li>
+<li>Z370（具有较新 BIOS 版本的 Gigabyte 和 AsRock 主板）</li>
+<li>Z390</li>
+<li>B460、Z490</li>
+<li>400系列 （Comet Lake）</li>
+<li>495系列 （Ice lake）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Coffee Lake Plus、Comet Lake</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-LAPTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-XOSI.aml</a>
+<ul>
+<li>触控板连接修复，默认工作在轮询模式</li>
+<li>需要配合 ACPI 补丁：<strong>Change _OSI to XOSI</strong> 来使用</li>
+<li>NUC 等没有触控板的设备不需要这个</li>
+<li>如果这个不成功的话，可手动使用<a
+  href="https://github.com/acidanthera/MaciASL/releases"
+  
+  target="_blank" rel="noopener noreferrer">MaciASL</a>编译<a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-GPI0.dsl.zip"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPI0.dsl.zip</a>来替代 XOSI
+<ul>
+<li>但是中断难度有点高，可以参考这个部分的内容：<a
+  href="https://apple.sqlsec.com/6-%e5%ae%9e%e7%94%a8%e5%a7%bf%e5%8a%bf/6-3/"
+  
+  target="_blank" rel="noopener noreferrer">触控板中断示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF.aml</a>
+<ul>
+<li>修复笔记本亮度控制，NUC 不需要这个</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-AWAC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-AWAC.aml</a>
+<ul>
+<li>修复较新硬件上的系统时钟</li>
+<li>支持以下主板：
+<ul>
+<li>B360、B365、H310、H370</li>
+<li>Z370（具有较新 BIOS 版本的 Gigabyte 和 AsRock 主板）</li>
+<li>Z390</li>
+<li>B460、Z490</li>
+<li>400系列 （Comet Lake）</li>
+<li>495系列 （Ice lake）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PMC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PMC.aml</a>
+<ul>
+<li>用来支持适配 NVRAM</li>
+<li>300 系列主板都需要此 SSDT（Z370除外）</li>
+<li>支持以下主板：
+<ul>
+<li>B360、B365</li>
+<li>H310、H370（HM370 应该不需要这个）</li>
+<li>Z390</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Ice Lake</p>
+<ul>
+<li>
+<p><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></p>
+</li>
+<li>
+<p><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-LAPTOP.aml</a></p>
+</li>
+<li>
+<p>SSDT-XOSI.aml</p>
+<ul>
+<li>触控板连接修复，默认工作在轮询模式</li>
+<li>需要配合 ACPI 补丁：<strong>Change _OSI to XOSI</strong> 来使用</li>
+<li>NUC 等没有触控板的设备不需要这个</li>
+<li>如果这个不成功的话，可手动使用<a
+  href="https://github.com/acidanthera/MaciASL/releases"
+  
+  target="_blank" rel="noopener noreferrer">MaciASL</a>编译<a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-GPI0.dsl.zip"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPI0.dsl.zip</a>来替代 XOSI
+<ul>
+<li>但是中断难度有点高，可以参考这个部分的内容：<a
+  href="https://apple.sqlsec.com/6-%e5%ae%9e%e7%94%a8%e5%a7%bf%e5%8a%bf/6-3/"
+  
+  target="_blank" rel="noopener noreferrer">触控板中断示例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF.aml</a></p>
+<p>修复笔记本亮度控制，NUC 不需要这个</p>
+</li>
+<li>
+<p><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-AWAC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-AWAC.aml</a></p>
+<ul>
+<li>修复较新硬件上的系统时钟</li>
+<li>支持以下主板：
+<ul>
+<li>B360、B365、H310、H370</li>
+<li>Z370（具有较新 BIOS 版本的 Gigabyte 和 AsRock 主板）</li>
+<li>Z390</li>
+<li>B460、Z490</li>
+<li>400系列 （Comet Lake）</li>
+<li>495系列 （Ice lake）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RHUB.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-RHUB.aml</a></p>
+<ul>
+<li>修复许多 Icelake 笔记本电脑上的根设备错误</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="intel-高端桌面">Intel 高端桌面</h3>
+<blockquote>
+<p>Nehalem、Westmere</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-DESKTOP.aml</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Sandy Bridge-E、Ivy Bridge-E</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-DESKTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-UNC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-UNC.aml</a>
+<ul>
+<li>禁用 ACPI 中未使用的设备，确保 IOPCIFamily 不会出现内核恐慌</li>
+<li>所有的 X99 主板和大多数 X79 主板需要这个 SSDT</li>
+<li>此外还有一些 C602、C612 主板也需要这个 SSDT</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Haswell-E、Broadwell-E</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RTC0-RANGE-HEDT.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-RTC0-RANGE-HEDT.aml</a>
+<ul>
+<li>Big Sur 及其后面的系统需要确保 RTC 设备的兼容</li>
+</ul>
+</li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-UNC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-UNC.aml</a>
+<ul>
+<li>禁用 ACPI 中未使用的设备，确保 IOPCIFamily 不会出现内核恐慌</li>
+<li>所有的 X99 主板和大多数 X79 主板需要这个 SSDT</li>
+<li>此外还有一些 C602、C612 主板也需要这个 SSDT</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Skylake-X/W、Cascade Lake-X/W</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RTC0-RANGE-HEDT.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-RTC0-RANGE-HEDT.aml</a>
+<ul>
+<li>Big Sur 及其后面的系统需要确保 RTC 设备的兼容</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="amd-桌面">AMD 桌面</h3>
+<blockquote>
+<p>Bulldozer(15h)、Jaguar(16h)</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Ryzen、Threadripper(17h and 19h)</p>
+<ul>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></li>
+<li><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-CPUR.aml</a>
+<ul>
+<li>用于 B550 和 A520 主板修复 CPU 定义，其他主板可以不使用</li>
+<li>X570 和较旧的主板不需要此 SSDT</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="黑苹果-acpi-大全">黑苹果 ACPI 大全?</h2>
+<p>由于 ACPI 太多了，国光我不可能都列的很全，而且有些 SSDT 作用网上没有权威解释，所以下面的解释说明也会有误差，仅做参考使用，如果内容方面有所遗漏或者发现严重错误的话，欢迎 Github 提交 PR 补充：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">序号</th>
+<th style="text-align:left">SSDT 文件名</th>
+<th style="text-align:left">解释说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/FixShutdown-USB-SSDT.dsl"
+  
+  target="_blank" rel="noopener noreferrer">FixShutdown-USB-SSDT.aml</a></td>
+<td style="text-align:left">修复 USB 控制器，解决睡眠或者关机自动重启</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/Spoof-SSDT.dsl"
+  
+  target="_blank" rel="noopener noreferrer">Spoof-SSDT.aml</a></td>
+<td style="text-align:left">禁用 GPU</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-ALS0.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-ALS0.aml</a></td>
+<td style="text-align:left">添加虚拟的环境光传感器以在重启后保存之前亮度设置</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-ARTC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-ARTC.aml</a></td>
+<td style="text-align:left">修复在较新的硬件上找到的系统时钟。OCC 自带的</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-AWAC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-AWAC.aml</a></td>
+<td style="text-align:left">300 系列主板使用，</td>
+</tr>
+<tr>
+<td style="text-align:left">6</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-BAT.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-BAT.aml</a></td>
+<td style="text-align:left">ThinkPad 等型号的电池补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">7</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-BKey.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-BKey.aml</a></td>
+<td style="text-align:left">早期的亮度调节使用</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-BRG0.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-BRG0.aml</a></td>
+<td style="text-align:left">BIOS 没有 Serial(COM) Port 串口或者找不到禁用 Super IO 的话可能需要</td>
+</tr>
+<tr>
+<td style="text-align:left">9</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-CPUR.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-CPUR.aml</a></td>
+<td style="text-align:left">能源管理，针对 AMD B550 和 A520 主板，X570 等较旧的主板不要使用</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-DESKTOP.aml</a></td>
+<td style="text-align:left">老的桌面平台使用，用于修复嵌入式控制器</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-LAPTOP.aml</a></td>
+<td style="text-align:left">老的笔记本平台使用，用于修复嵌入式控制器</td>
+</tr>
+<tr>
+<td style="text-align:left">12</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-DESKTOP.aml</a></td>
+<td style="text-align:left">新的桌面平台使用，用于修复嵌入式控制器</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-LAPTOP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EC-USBX-LAPTOP.aml</a></td>
+<td style="text-align:left">新的笔记本平台使用，用于修复嵌入式控制器</td>
+</tr>
+<tr>
+<td style="text-align:left">14</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-EHCx-DISABLE.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-EHCx_OFF.aml</a></td>
+<td style="text-align:left">USB 兼容性表，禁用EHC1和EHC2。OCC 自带的</td>
+</tr>
+<tr>
+<td style="text-align:left">15</td>
+<td style="text-align:left"><a
+  href="https://sqlsec.lanzoub.com/iN45U04b351a"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-NoHybGfx.aml</a></td>
+<td style="text-align:left">屏蔽独显</td>
+</tr>
+<tr>
+<td style="text-align:left">16</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/vanilla-laptop-guide-legacy/blob/master/Misc-files/SSDT-GPIO.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPI0.aml</a></td>
+<td style="text-align:left">触控板连接修复。OCC 也自带的</td>
+</tr>
+<tr>
+<td style="text-align:left">17</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-GPRW.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPRW.aml</a></td>
+<td style="text-align:left">修复睡眠自动唤醒补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">18</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-HPET.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-HPET.aml</a></td>
+<td style="text-align:left">主要用于 X79、X99 和笔记本电脑用户的 IRQ 补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">19</td>
+<td style="text-align:left"><a
+  href="https://github.com/acidanthera/MacHyperVSupport/releases"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-HV-CPU.aml</a></td>
+<td style="text-align:left">对 macOS 的 Hyper-V 集成支持</td>
+</tr>
+<tr>
+<td style="text-align:left">20</td>
+<td style="text-align:left"><a
+  href="https://github.com/acidanthera/MacHyperVSupport/releases"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-HV-PLUG.aml</a></td>
+<td style="text-align:left">对 macOS 的 Hyper-V 集成支持</td>
+</tr>
+<tr>
+<td style="text-align:left">21</td>
+<td style="text-align:left"><a
+  href="https://github.com/acidanthera/MacHyperVSupport/releases"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-HV-VMBUS.aml</a></td>
+<td style="text-align:left">对 macOS 的 Hyper-V 集成支持</td>
+</tr>
+<tr>
+<td style="text-align:left">22</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-IMEI-S.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-IMEI-S.aml</a></td>
+<td style="text-align:left">当 DSDT 中没有 IMEI 设备需要通过设备属性设置定义设备 ID 的时候才需要</td>
+</tr>
+<tr>
+<td style="text-align:left">23</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-IMEI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-IMEI.aml</a></td>
+<td style="text-align:left">当 DSDT 中没有 IMEI 设备需要通过设备属性设置定义设备 ID 的时候才需要</td>
+</tr>
+<tr>
+<td style="text-align:left">24</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-IRQ.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-IRQ.aml</a></td>
+<td style="text-align:left">修复 IRQ 冲突</td>
+</tr>
+<tr>
+<td style="text-align:left">25</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-LANC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-LANC.aml</a></td>
+<td style="text-align:left">修复睡眠自动唤醒补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">26</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-LIDpatch.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-LIDpatch.aml</a></td>
+<td style="text-align:left">合盖睡眠</td>
+</tr>
+<tr>
+<td style="text-align:left">27</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-NDGP.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-NDGP.aml</a></td>
+<td style="text-align:left">屏蔽独显</td>
+</tr>
+<tr>
+<td style="text-align:left">28</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-OLARILA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-OLARILA.aml</a></td>
+<td style="text-align:left">作用不详 来自于 Olaria.com 的特殊 SSDT</td>
+</tr>
+<tr>
+<td style="text-align:left">29</td>
+<td style="text-align:left"><a
+  href="https://sqlsec.lanzoub.com/iFUcV04b2yob"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPU-SPOOF.aml</a></td>
+<td style="text-align:left">AMD R9 系列仿冒使用，详细可参考 <a
+  href="https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html"
+  
+  target="_blank" rel="noopener noreferrer">OC 教程</a></td>
+</tr>
+<tr>
+<td style="text-align:left">30</td>
+<td style="text-align:left"><a
+  href="https://github.com/naveenkrdy/Misc/blob/master/SSDTs/Compiled/SSDT-PLUG_FX.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG_FX.aml</a></td>
+<td style="text-align:left">可能是 AMD FX 系列专用的 CPU 能源管理</td>
+</tr>
+<tr>
+<td style="text-align:left">31</td>
+<td style="text-align:left"><a
+  href="https://github.com/naveenkrdy/Misc/blob/master/SSDTs/Compiled/SSDT-PLUG_RYZEN.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG_RYZEN.aml</a></td>
+<td style="text-align:left">可能是 AMD Ryzen 系列专用的 CPU 能源管理</td>
+</tr>
+<tr>
+<td style="text-align:left">32</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-DRTNIA.aml</a></td>
+<td style="text-align:left">用于 Hasewell 和更新 CPU 的能源管理</td>
+</tr>
+<tr>
+<td style="text-align:left">33</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/OpenCore-Install-Guide/blob/master/extra-files/SSDT-PMC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PMC.aml</a></td>
+<td style="text-align:left">300 系列主板原生的 NVRAM 补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">34</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF-CFL.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF-CFL.aml</a></td>
+<td style="text-align:left">Coffee Lake 和更新平台的笔记本背光修复补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">35</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PNLF.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PNLF.aml</a></td>
+<td style="text-align:left">大多数主板的背光修复补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">36</td>
+<td style="text-align:left"><a
+  href="https://cn.bing.com/search?q=SSDT-PTSWAK.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PTSWAK.aml</a></td>
+<td style="text-align:left">修复关机、睡眠问题</td>
+</tr>
+<tr>
+<td style="text-align:left">37</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RHUB.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-RHUB.aml</a></td>
+<td style="text-align:left">修复某些 400 系列主板的问题，需要关闭 RHUB 设备并强制 macOS 手动重建端口</td>
+</tr>
+<tr>
+<td style="text-align:left">38</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RTC0-RANGE-HEDT.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-RTC0-RANGE-HEDT.aml</a></td>
+<td style="text-align:left">高端桌面平台专用，因为Big Sur 需要确保 RTC 设备的兼容</td>
+</tr>
+<tr>
+<td style="text-align:left">39</td>
+<td style="text-align:left"><a
+  href="https://github.com/acidanthera/OpenCorePkg/blob/master/Docs/AcpiSamples/Source/SSDT-SBUS-MCHC.dsl"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-SBUS-MCHC.aml</a></td>
+<td style="text-align:left">修复 SMBus 支持，解决 温度、风扇、电压等读数问题</td>
+</tr>
+<tr>
+<td style="text-align:left">40</td>
+<td style="text-align:left"><a
+  href="https://sqlsec.lanzoub.com/ij85R04b2w5a"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-GPU-R9-370.aml</a></td>
+<td style="text-align:left">AMD R9 370 的仿冒，实际替换成自己的实际路径使用</td>
+</tr>
+<tr>
+<td style="text-align:left">41</td>
+<td style="text-align:left"><a
+  href="https://github.com/acidanthera/VoodooPS2/blob/master/Docs/ACPI/SSDT-Thinkpad_Clickpad.dsl"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-ThinkPad_ClickPad</a></td>
+<td style="text-align:left">ThinkPad 的 ClickPad 专用</td>
+</tr>
+<tr>
+<td style="text-align:left">42</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-UNC.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-UNC.aml</a></td>
+<td style="text-align:left">禁用 ACPI 中未使用的设备，确保 IOPCIFamily 不会出现内核恐慌</td>
+</tr>
+<tr>
+<td style="text-align:left">43</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-UPRW.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-UPRW.aml</a></td>
+<td style="text-align:left">修复睡眠自动唤醒补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">44</td>
+<td style="text-align:left"><a
+  href="https://sqlsec.lanzoub.com/i5bNV04b2ocj"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-USB3-1-XHC2.aml</a></td>
+<td style="text-align:left">ASMedia ASM1142 USB 3.1 Type-A 和 Type-C 一体的 USB 专用</td>
+</tr>
+<tr>
+<td style="text-align:left">45</td>
+<td style="text-align:left"><a
+  href="https://sqlsec.lanzoub.com/iI61h04b2txa"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-SSCN.aml</a></td>
+<td style="text-align:left">某些 I2C 触控板轮询失败的情况下可以考虑使用看看</td>
+</tr>
+<tr>
+<td style="text-align:left">46</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-XHC2.dsl"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-XHC2.aml</a></td>
+<td style="text-align:left">自动注入 XHC 属性？</td>
+</tr>
+<tr>
+<td style="text-align:left">47</td>
+<td style="text-align:left"><a
+  href="https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-XOSI.aml"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-XOSI.aml</a></td>
+<td style="text-align:left">触控板连接修复，模拟 Windows 版本的 Darwin，需要配合补丁</td>
+</tr>
+<tr>
+<td style="text-align:left">48</td>
+<td style="text-align:left"><a
+  href="https://sqlsec.lanzoub.com/iTg3G04b2kdg"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-RP.PXSX-disbale.aml</a></td>
+<td style="text-align:left">屏蔽 NVME 硬盘补丁示例，记得替换自己电脑的实际硬盘路径</td>
+</tr>
+<tr>
+<td style="text-align:left">49</td>
+<td style="text-align:left"><a
+  href="https://sqlsec.lanzoub.com/i7oos04b2m8d"
+  
+  target="_blank" rel="noopener noreferrer">SSDT-PLUG-ALT.aml</a></td>
+<td style="text-align:left">12 代 CPU 大小核调度</td>
+</tr>
+</tbody>
+</table>
+<hr>
+        </div><div
+  class="hb-content-panel-wrapper position-sticky mb-3 d-flex justify-content-center">
+  <div class="hb-content-panel d-flex shadow w-auto rounded-5 bg-body">
+    
+
+    
+  <div class="hb-content-panel-item">
+    <a
+      href="#content-comments"
+      class="btn btn-link text-body"
+      title="Comments"
+      role="button"><svg aria-hidden="true" class="bi bi-chat-dotsbi bi-chat-dots hi-svg-inline" fill="currentColor" height="1em" viewBox="0 0 16 16" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+  <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2"/>
+</svg>
+    </a>
+  </div>
+
+    
+
+  </div>
+</div>
+
+
+<ul class="hb-blog-post-nav nav justify-content-between mb-3">
+  
+    <li class="nav-item my-1">
+      <a class="nav-link p-0 d-flex align-items-center" href="/en/blog/2023/06/2.2-oc%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/"><svg aria-hidden="true" class="bi bi-arrow-left-circlebi bi-arrow-left-circle hi-svg-inline me-2" fill="currentColor" height="1.5em" viewBox="0 0 16 16" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>2.2 OC文件结构</a>
+    </li>
+  
+  
+    <li class="nav-item my-1">
+      <a class="nav-link p-0 d-flex align-items-center" href="/en/blog/2023/06/%E7%90%86%E6%83%B3%E5%9B%BD/">理想国<svg aria-hidden="true" class="bi bi-arrow-right-circlebi bi-arrow-right-circle hi-svg-inline ms-2" fill="currentColor" height="1.5em" viewBox="0 0 16 16" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg></a>
+    </li>
+  
+</ul>
+
+
+  <div class="hb-blog-related-posts slide mb-3">
+    <div class="slide-inner row row-cols-1 row-cols-xl-2 gx-2">
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/4-%E8%81%94%E6%83%B3lenovo%E5%B0%8F%E6%96%B0i2000%E9%BB%91%E8%8B%B9%E6%9E%9C%E9%A6%96%E5%8F%91%E4%BD%93%E9%AA%8C%E4%B9%8B%E6%97%85/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="4 联想Lenovo小新I2000黑苹果首发体验之旅"
+        href="/en/blog/2023/06/4-%E8%81%94%E6%83%B3lenovo%E5%B0%8F%E6%96%B0i2000%E9%BB%91%E8%8B%B9%E6%9E%9C%E9%A6%96%E5%8F%91%E4%BD%93%E9%AA%8C%E4%B9%8B%E6%97%85/">4 联想Lenovo小新I2000黑苹果首发体验之旅</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/3.8-%E9%85%8D%E7%BD%AEuefi/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="3.8 配置UEFI"
+        href="/en/blog/2023/06/3.8-%E9%85%8D%E7%BD%AEuefi/">3.8 配置UEFI</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/3.7-%E9%85%8D%E7%BD%AEplatformlnfo/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="3.7 配置Platformlnfo"
+        href="/en/blog/2023/06/3.7-%E9%85%8D%E7%BD%AEplatformlnfo/">3.7 配置Platformlnfo</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/3.6-%E9%85%8D%E7%BD%AEnvram/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="3.6 配置NVRAM"
+        href="/en/blog/2023/06/3.6-%E9%85%8D%E7%BD%AEnvram/">3.6 配置NVRAM</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/3.5-%E9%85%8D%E7%BD%AEmisc/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="3.5 配置Misc"
+        href="/en/blog/2023/06/3.5-%E9%85%8D%E7%BD%AEmisc/">3.5 配置Misc</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/3.4-%E9%85%8D%E7%BD%AEkernel/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="3.4 配置Kernel"
+        href="/en/blog/2023/06/3.4-%E9%85%8D%E7%BD%AEkernel/">3.4 配置Kernel</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/3.3-%E9%85%8D%E7%BD%AEdeviceproperties/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="3.3 配置DeviceProperties"
+        href="/en/blog/2023/06/3.3-%E9%85%8D%E7%BD%AEdeviceproperties/">3.3 配置DeviceProperties</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/3.2-%E9%85%8D%E7%BD%AEbooter/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="3.2 配置Booter"
+        href="/en/blog/2023/06/3.2-%E9%85%8D%E7%BD%AEbooter/">3.2 配置Booter</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/3.1-%E9%85%8D%E7%BD%AEacpi/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="3.1 配置ACPI"
+        href="/en/blog/2023/06/3.1-%E9%85%8D%E7%BD%AEacpi/">3.1 配置ACPI</a>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div class="slide-item">
+          
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/2.8-kexts%E5%BE%AE%E8%B0%83/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="2.8 Kexts微调"
+        href="/en/blog/2023/06/2.8-kexts%E5%BE%AE%E8%B0%83/">2.8 Kexts微调</a>
+    </div>
+  </div>
+</div>
+
+        </div></div>
+    
+<button class="slide-control-left">
+  <svg aria-hidden="true" class="bi bi-arrow-left-circlebi bi-arrow-left-circle hi-svg-inline slide-control-left-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>
+  <span class="visually-hidden">Left</span>
+</button>
+<button class="slide-control-right">
+  <svg aria-hidden="true" class="bi bi-arrow-right-circlebi bi-arrow-right-circle hi-svg-inline slide-control-right-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg>
+  <span class="visually-hidden">Right</span>
+</button>
+
+  </div>
+
+
+
+
+  <div id="content-comments" class="hb-blog-post-comments mb-3">
+<div class="giscus"></div>
+
+
+  </div>
+
+
+
+      </div>
+    </div>
+    
+
+  </div>
+  <div class="hb-blog-sidebar pe-lg-1">
+  <div class="hb-module text-center bg-primary text-white p-3">
+  CUSTOM SIDEBAR WIDGET
+</div>
+
+  <div class="hb-blog-sidebar-posts hb-module">
+    <ul class="nav nav-pills nav-fill" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="featured-posts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#featured-posts"
+            type="button"
+            role="tab"
+            aria-controls="featured-posts"
+            aria-selected="true">
+            Featured
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="recent-posts-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#recent-posts"
+            type="button"
+            role="tab"
+            aria-controls="recent-posts"
+            aria-selected="true">
+            Recent
+          </button>
+        </li>
+    </ul>
+
+    <div class="tab-content mt-2">
+        <div
+          class="tab-pane active"
+          id="featured-posts"
+          role="tabpanel"
+          aria-labelledby="featured-posts-tab"
+          tabindex="0">
+          <div class="slide">
+            <div class="slide-inner row row-cols-1">
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/feature_hu9771932d5ae426c8c7e526f4c3456f01_286770_796be8d49d12af98cde711a1286c236f.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/feature_hu9771932d5ae426c8c7e526f4c3456f01_286770_0x360_resize_q75_box.3e68f19bc858fedb8677397adc6e1ac4.jpg"
+    alt="在Linux/Mac下通过CFW实现透明代理"
+    loading="lazy"
+    height="360"
+    width="882"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="在Linux/Mac下通过CFW实现透明代理"
+        href="/en/blog/2023/06/%E5%9C%A8linux/mac%E4%B8%8B%E9%80%9A%E8%BF%87cfw%E5%AE%9E%E7%8E%B0%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/">在Linux/Mac下通过CFW实现透明代理</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/06/%E9%9F%B3%E4%B9%90%E7%A2%B0%E6%92%9E/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2023/06/%E9%9F%B3%E4%B9%90%E7%A2%B0%E6%92%9E/feature_hufb32e575b01feb3fb62c24ecb146afd3_121526_edc0c117c99286cf4866661c6a4f48db.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2023/06/%E9%9F%B3%E4%B9%90%E7%A2%B0%E6%92%9E/feature_hufb32e575b01feb3fb62c24ecb146afd3_121526_0x360_resize_q75_box.d829b8d627ac10fcb6cb701f0be77788.jpg"
+    alt="音乐碰撞"
+    loading="lazy"
+    height="360"
+    width="576"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="音乐碰撞"
+        href="/en/blog/2023/06/%E9%9F%B3%E4%B9%90%E7%A2%B0%E6%92%9E/">音乐碰撞</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/10/%E5%92%8C%E6%97%B6%E9%97%B4%E8%B5%9B%E8%B7%91/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2022/10/%E5%92%8C%E6%97%B6%E9%97%B4%E8%B5%9B%E8%B7%91/feature_hu36f6260a2b69fab2e51caf16b5209a9c_264061_ed40ec0f5186294f9d3e314bb22ff997.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2022/10/%E5%92%8C%E6%97%B6%E9%97%B4%E8%B5%9B%E8%B7%91/feature_hu36f6260a2b69fab2e51caf16b5209a9c_264061_0x360_resize_q75_box.cc1282e70685f96b2797607186e998cd.jpg"
+    alt="和时间赛跑"
+    loading="lazy"
+    height="360"
+    width="640"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="和时间赛跑"
+        href="/en/blog/2022/10/%E5%92%8C%E6%97%B6%E9%97%B4%E8%B5%9B%E8%B7%91/">和时间赛跑</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <picture>
+    <source srcset="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/feature_hu0f84a211aa2a86d55b92a6fa4ce7ad09_1628951_9986d79511392a24e42038c36d24297d.webp" type="image/webp" />
+  <img
+    class="hb-blog-post-card-img"
+    src="https://runofftheearth.github.io/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/feature_hu0f84a211aa2a86d55b92a6fa4ce7ad09_1628951_0x360_resize_box_3.0373dd896dcdc3df106141e47d6e9dd5.png"
+    alt="关于博客"
+    loading="lazy"
+    height="360"
+    width="576"
+    
+    
+    
+     />
+</picture>
+
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="关于博客"
+        href="/en/blog/2022/07/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/">关于博客</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+            </div>
+            
+<button class="slide-control-left">
+  <svg aria-hidden="true" class="bi bi-arrow-left-circlebi bi-arrow-left-circle hi-svg-inline slide-control-left-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>
+  <span class="visually-hidden">Left</span>
+</button>
+<button class="slide-control-right">
+  <svg aria-hidden="true" class="bi bi-arrow-right-circlebi bi-arrow-right-circle hi-svg-inline slide-control-right-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg>
+  <span class="visually-hidden">Right</span>
+</button>
+
+          </div>
+        </div>
+        <div
+          class="tab-pane slide"
+          id="recent-posts"
+          role="tabpanel"
+          aria-labelledby="recent-posts-tab"
+          tabindex="0">
+          <div class="slide">
+            <div class="slide-inner row row-cols-1">
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/12/%E5%85%B3%E4%BA%8Egit%E6%8E%A8%E9%80%81%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="关于Git推送的一些问题"
+        href="/en/blog/2023/12/%E5%85%B3%E4%BA%8Egit%E6%8E%A8%E9%80%81%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">关于Git推送的一些问题</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/10/et%E6%A8%A1%E5%9E%8B%E7%BD%91%E6%A0%BC%E5%88%92%E5%88%86/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="ET模型网格划分"
+        href="/en/blog/2023/10/et%E6%A8%A1%E5%9E%8B%E7%BD%91%E6%A0%BC%E5%88%92%E5%88%86/">ET模型网格划分</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/10/python%E4%B9%8B%E7%A6%85/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="Python之禅"
+        href="/en/blog/2023/10/python%E4%B9%8B%E7%A6%85/">Python之禅</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/08/nx1847%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="NX1847安装使用"
+        href="/en/blog/2023/08/nx1847%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">NX1847安装使用</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+                <div class="slide-item px-0">
+                  
+<div
+  class="hb-blog-post-card card border-0 overflow-hidden h-100 bg-transparent mb-0">
+    
+<a
+  class="card-img-top overflow-hidden border border-secondary-subtle text-body text-decoration-none mt-2"
+  href="/en/blog/2023/08/clash%E8%8A%82%E7%82%B9%E5%AF%BC%E5%85%A5%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+      
+    <div
+      class="hb-blog-post-card-img-none d-flex align-items-center justify-content-center">¯\_(ツ)_/¯
+    </div>
+</a>
+
+  <div class="card-body px-0 py-2 d-flex flex-column">
+    <div class="hb-blog-post-title card-title h5 py-1">
+      <a
+        class="hb-blog-post-title-link d-block"
+        title="Clash节点导入错误解决办法"
+        href="/en/blog/2023/08/clash%E8%8A%82%E7%82%B9%E5%AF%BC%E5%85%A5%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Clash节点导入错误解决办法</a>
+    </div>
+  </div>
+</div>
+
+                </div>
+            </div>
+            
+<button class="slide-control-left">
+  <svg aria-hidden="true" class="bi bi-arrow-left-circlebi bi-arrow-left-circle hi-svg-inline slide-control-left-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+</svg>
+  <span class="visually-hidden">Left</span>
+</button>
+<button class="slide-control-right">
+  <svg aria-hidden="true" class="bi bi-arrow-right-circlebi bi-arrow-right-circle hi-svg-inline slide-control-right-icon" fill="currentColor" height="2em" viewBox="0 0 16 16" width="2em" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+</svg>
+  <span class="visually-hidden">Right</span>
+</button>
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+<div class="hb-blog-sidebar-taxonomies hb-module">
+  
+<ul class="nav nav-pills nav-justified mb-2" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="taxonomy-categories-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#taxonomy-categories-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="taxonomy-categories-tab-pane"
+        aria-selected="true">Categories</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="taxonomy-tags-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#taxonomy-tags-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="taxonomy-tags-tab-pane"
+        aria-selected="false">Tags</button>
+    </li>
+</ul>
+<div class="tab-content">
+    <div
+      class="tab-pane fade show active"
+      id="taxonomy-categories-tab-pane"
+      role="tabpanel"
+      aria-labelledby="taxonomy-categories-tab"
+      tabindex="0">
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E6%8A%98%E8%85%BE/">折腾 (22)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E9%80%9A%E4%BF%97/">通俗 (13)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E8%BD%AF%E4%BB%B6/">软件 (3)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/code/">Code (2)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E6%96%87%E5%AD%A6/">文学 (2)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/tutorial/">Tutorial (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E7%94%9F%E6%B4%BB/">生活 (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E7%BB%8F%E6%B5%8E%E5%AD%A6/">经济学 (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/categories/%E7%BD%91%E6%A0%BC%E5%88%92%E5%88%86/">网格划分 (1)
+        </a>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="taxonomy-tags-tab-pane"
+      role="tabpanel"
+      aria-labelledby="taxonomy-tags-tab"
+      tabindex="0">
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果 (21)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/%E7%89%A9%E7%90%86/">物理 (13)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/%E5%8D%9A%E5%AE%A2/">博客 (9)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/clash/">clash (2)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/python/">python (2)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/code-block/">Code Block (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/git/">git (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/icem/">ICEM (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/manjaro/">manjaro (1)
+        </a>
+        <a
+          class="btn btn-sm btn-outline-secondary p-1 me-1 mb-1"
+          href="/en/tags/math/">Math (1)
+        </a>
+    </div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+    </div>
+    
+
+    <footer class="hb-footer pt-4 pt-md-5 pb-2 pb-md-3 bg-body-tertiary">
+  <div class="container-fluid container-lg px-4 px-md-3 text-body-secondary">
+
+    <div class="row"><div class="hb-footer-site-info col mb-2 text-center">
+
+  <div class="h5">亲自巡山的大王</div>
+  <ul class="list-unstyled small mb-2">
+      <li class="mt-2">落款你的名字 工整又好看.</li>
+      <li class="mt-2">Copyright © 2022-2023 <a
+  href="https://github.com/runofftheearth"
+  
+  target="_blank" rel="noopener noreferrer">ziyue.tech</a> 版权所有.</li>
+  <li class="mt-2">
+    Built with ❤️ from <a href="https://gohugo.io/" target="_blank" rel="external" title="Hugo">Hugo</a>, <a href="https://hugomods.com/" target="_blank" rel="external" title="Hugo Modules">Hugo Modules</a> and <a href="https://hbstack.dev/" target="_blank" rel="external" title="HB Framework">HB Framework</a>.
+  </li>
+  </ul>
+
+</div>
+
+
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script
+  src="/js/hb.dc6e5c341be0d336877c41a5ce0bdbaf546a1aca0927f2fa3533c36e751145fd.js"
+  integrity="sha256-3G5cNBvg0zaHfEGlzgvbr1RqGsoJJ/L6NTPDbnURRf0="
+  defer></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('DOMContentLoaded', function() {
+    navigator.serviceWorker.register('\/sw.js');
+  });
+}
+</script>
+
+<script src="/js/search.e34e710e8b6abe368af1f4f9545bd6b074916390ca4aa79fbda8a9c2ef24b4b4.js" defer></script>
+
+
+
+
+  </body>
+</html>

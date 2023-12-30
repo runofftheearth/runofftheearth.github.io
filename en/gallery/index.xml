@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gallery on 亲自巡山的大王</title>
+    <link>https://runofftheearth.github.io/en/gallery/</link>
+    <description>Recent content in Gallery on 亲自巡山的大王</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022-{year} [ziyue.tech](https://github.com/runofftheearth) 版权所有. </copyright>
+    <lastBuildDate>Mon, 01 Aug 2022 16:16:05 +0800</lastBuildDate>
+    <atom:link href="https://runofftheearth.github.io/en/gallery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>胡桃日寄</title>
+      <link>https://runofftheearth.github.io/en/gallery/%E8%83%A1%E6%A1%83%E6%97%A5%E5%AF%84/</link>
+      <pubDate>Mon, 01 Aug 2022 16:16:05 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/gallery/%E8%83%A1%E6%A1%83%E6%97%A5%E5%AF%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>壁纸</title>
+      <link>https://runofftheearth.github.io/en/gallery/%E5%A3%81%E7%BA%B8/</link>
+      <pubDate>Fri, 22 Jul 2022 16:16:05 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/gallery/%E5%A3%81%E7%BA%B8/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

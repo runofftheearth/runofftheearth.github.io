@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jun on 亲自巡山的大王</title>
+    <link>https://runofftheearth.github.io/en/archives/2021/06/</link>
+    <description>Recent content in Jun on 亲自巡山的大王</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022-{year} [ziyue.tech](https://github.com/runofftheearth) 版权所有. </copyright>
+    <atom:link href="https://runofftheearth.github.io/en/archives/2021/06/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

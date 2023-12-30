@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on 亲自巡山的大王</title>
+    <link>https://runofftheearth.github.io/en/tags/git/</link>
+    <description>Recent content in git on 亲自巡山的大王</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Copyright © 2022-{year} [ziyue.tech](https://github.com/runofftheearth) 版权所有. </copyright>
+    <lastBuildDate>Fri, 15 Dec 2023 19:54:25 +0800</lastBuildDate>
+    <atom:link href="https://runofftheearth.github.io/en/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于Git推送的一些问题</title>
+      <link>https://runofftheearth.github.io/en/blog/2023/12/%E5%85%B3%E4%BA%8Egit%E6%8E%A8%E9%80%81%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Fri, 15 Dec 2023 19:54:25 +0800</pubDate>
+      <guid>https://runofftheearth.github.io/en/blog/2023/12/%E5%85%B3%E4%BA%8Egit%E6%8E%A8%E9%80%81%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;Git更新推送博客。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
