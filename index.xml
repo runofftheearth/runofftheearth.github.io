@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome to Blowfish! :tada: on Blowfish</title>
+    <link>https://runofftheearth.github.io/</link>
+    <description>Recent content in Welcome to Blowfish! :tada: on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Blowfish</copyright>
+    <lastBuildDate>Sun, 08 Aug 9999 00:00:00 +0000</lastBuildDate><atom:link href="https://runofftheearth.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build your homepage using Blowfish and Hugo</title>
+      <link>https://runofftheearth.github.io/guides/202310-blowfish-tutorial/</link>
+      <pubDate>Wed, 04 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/guides/202310-blowfish-tutorial/</guid>
+      <description>Just one year ago, I created Blowfish, a Hugo theme crafted to build my unique vision for my personal homepage. I also decided to make it an open-source project. Fast-forward to today, and Blowfish has transformed into a thriving open-source project with over 600 stars on GitHub and a user base of hundreds. In this tutorial, I’ll show you how to get started and have your website running in a couple of minutes.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/guides/202310-blowfish-tutorial/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Multiple Authors</title>
+      <link>https://runofftheearth.github.io/samples/multiple-authors/</link>
+      <pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/multiple-authors/</guid>
+      <description>A quick example of how multiple authors could be used.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/multiple-authors/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Thumbnails</title>
+      <link>https://runofftheearth.github.io/samples/thumbnail_sample/</link>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/thumbnail_sample/</guid>
+      <description>A quick example of how to start using Thumbnails in your artciles.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/thumbnail_sample/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Welcome to Blowfish</title>
+      <link>https://runofftheearth.github.io/docs/welcome/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/welcome/</guid>
+      <description>Blowfish is packed with tons of features. The original aim of Blowfish was to develop a theme that was simple and lightweight. The theme is a fork of Congo and expands its initial vision.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/welcome/featured.png" />
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>https://runofftheearth.github.io/docs/installation/</link>
+      <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/installation/</guid>
+      <description>Simply follow the standard Hugo Quick Start procedure to get up and running quickly.
+Detailed installation instructions can be found below. Instructions for updating the theme are also available.
+Installation # These instructions will get you up and running using Hugo and Blowfish from a completely blank state.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/installation/featured.png" />
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://runofftheearth.github.io/docs/getting-started/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/getting-started/</guid>
+      <description>This section assumes you have already installed the Blowfish theme. We just launched a CLI tool to help you get started with Blowfish. It will help you with installation and configuration.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/getting-started/featured.png" />
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>https://runofftheearth.github.io/docs/configuration/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/configuration/</guid>
+      <description>Blowfish is a highly customisable theme and uses some of the latest Hugo features to simplify how it is configured.
+The theme ships with a default configuration that gets you up and running with a basic blog or static website.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/configuration/featured.png" />
+    </item>
+    
+    <item>
+      <title>Icons</title>
+      <link>https://runofftheearth.github.io/samples/icons/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/icons/</guid>
+      <description>Blowfish has built-in support for a number of FontAwesome 6 icons. These can be included in your website through either the icon partial or icon shortcode.
+Additionally, custom icons are also fully supported.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/icons/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Homepage Layout</title>
+      <link>https://runofftheearth.github.io/docs/homepage-layout/</link>
+      <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/homepage-layout/</guid>
+      <description>Blowfish provides a fully flexible homepage layout. There are two main templates to choose from with additional settings to adjust the design. Alternatively, you can also provide your own template and have complete control over the homepage content.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/homepage-layout/featured.png" />
+    </item>
+    
+    <item>
+      <title>Front Matter</title>
+      <link>https://runofftheearth.github.io/docs/front-matter/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/front-matter/</guid>
+      <description>In addition to the default Hugo front matter parameters, Blowfish adds a number of additional options to customise the presentation of individual articles. All the available theme front matter parameters are listed below.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/front-matter/featured.png" />
+    </item>
+    
+    <item>
+      <title>Thumbnails</title>
+      <link>https://runofftheearth.github.io/docs/thumbnails/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/thumbnails/</guid>
+      <description>Thumbnails # Blowfish was enhanced in order to make it easy to add visual support to your posts. To do so, you just need to place an image file (almost all formats are supported but we recommend .</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/thumbnails/featured.png" />
+    </item>
+    
+    <item>
+      <title>Shortcodes</title>
+      <link>https://runofftheearth.github.io/docs/shortcodes/</link>
+      <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/shortcodes/</guid>
+      <description>In addition to all the default Hugo shortcodes, Blowfish adds a few extras for additional functionality.
+Alert # alert outputs its contents as a stylised message box within your article. It&amp;rsquo;s useful for drawing attention to important information that you don&amp;rsquo;t want the reader to miss.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/shortcodes/featured.png" />
+    </item>
+    
+    <item>
+      <title>Multiple Authors</title>
+      <link>https://runofftheearth.github.io/docs/multi-author/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/multi-author/</guid>
+      <description>Some websites have more than one author contributing with content and therefore require more than a single default author across the entire website. For those use-cases, Blowfish allows users to extend the list of authors using the multiple authors feature.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/multi-author/featured.png" />
+    </item>
+    
+    <item>
+      <title>Partials</title>
+      <link>https://runofftheearth.github.io/docs/partials/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/partials/</guid>
+      <description>Analytics # Blowfish provides built-in support for Fathom Analytics and Google Analytics. Fathom is a paid alternative to Google Analytics that respects user privacy.
+Fathom Analytics # To enable Fathom Analytics support, simply provide your Fathom site code in the config/_default/params.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/partials/featured.png" />
+    </item>
+    
+    <item>
+      <title>Content Examples</title>
+      <link>https://runofftheearth.github.io/docs/content-examples/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/content-examples/</guid>
+      <description>If you&amp;rsquo;ve been reading the documentation in order, you should now know about all the features and configurations available in Blowfish. This page is designed to pull everything together and offer some worked examples that you might like to use in your Hugo project.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/content-examples/featured.png" />
+    </item>
+    
+    <item>
+      <title>Series</title>
+      <link>https://runofftheearth.github.io/docs/series/</link>
+      <pubDate>Sun, 09 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/series/</guid>
+      <description>Blowfish provides a feature to group a set of articles together under a &amp;ldquo;series&amp;rdquo;. Placing an article under a series will display the rest of the series articles in each single page and provide a quick way to navigate amongst them.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/series/featured.png" />
+    </item>
+    
+    <item>
+      <title>Advanced Customisation</title>
+      <link>https://runofftheearth.github.io/docs/advanced-customisation/</link>
+      <pubDate>Sat, 08 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/advanced-customisation/</guid>
+      <description>There are many ways you can make advanced changes to Blowfish. Read below to learn more about what can be customised and the best way of achieving your desired result.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/advanced-customisation/featured.png" />
+    </item>
+    
+    <item>
+      <title>Hosting &amp; Deployment</title>
+      <link>https://runofftheearth.github.io/docs/hosting-deployment/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/hosting-deployment/</guid>
+      <description>There are many ways to deploy your Hugo website built with Blowfish. The theme is designed to be flexible in almost any deployment scenario.
+Blowfish is built using relative URLs throughout the theme.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/hosting-deployment/featured.png" />
+    </item>
+    
+    <item>
+      <title>Firebase: Views &amp; Likes</title>
+      <link>https://runofftheearth.github.io/docs/firebase-views/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/firebase-views/</guid>
+      <description>In order to be able to support dynamic data across your website we&amp;rsquo;ve added the support to integrate Firebase. This will allow you to use the views feature across lists and posts.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/firebase-views/featured.png" />
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://runofftheearth.github.io/samples/markdown/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/markdown/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown formatting that can be used in Blowfish, also it shows how some basic HTML elements are decorated.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/markdown/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Rich Content</title>
+      <link>https://runofftheearth.github.io/samples/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/rich-content/</guid>
+      <description>This is an &lt;em&gt;example&lt;/em&gt; of a &lt;strong&gt;rich&lt;/strong&gt; content summary.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/rich-content/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>https://runofftheearth.github.io/samples/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mathematical notation</title>
+      <link>https://runofftheearth.github.io/samples/mathematical-notation/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/mathematical-notation/</guid>
+      <description>&lt;p&gt;KaTeX can be used to render mathematical notation within articles.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/mathematical-notation/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Charts</title>
+      <link>https://runofftheearth.github.io/samples/charts/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/charts/</guid>
+      <description>Blowfish includes Chart.js for powerful charts and data visualisations.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/charts/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Diagrams and Flowcharts</title>
+      <link>https://runofftheearth.github.io/samples/diagrams-flowcharts/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/diagrams-flowcharts/</guid>
+      <description>It&amp;rsquo;s easy to add diagrams and flowcharts to articles using Mermaid.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/diagrams-flowcharts/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Emoji :parachute:</title>
+      <link>https://runofftheearth.github.io/samples/emoji/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/emoji/</guid>
+      <description>📖🏞️🧗🏽🐉🧙🏽‍♂️🧚🏽👸</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/emoji/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Recipe Template</title>
+      <link>https://runofftheearth.github.io/guides/template/</link>
+      <pubDate>Tue, 22 Dec 1987 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/guides/template/</guid>
+      <description>Thank you for wanting to contribute to Blowfish&amp;rsquo;s community.
+How to start? # This is a template article that will explain how to create a new article for Blowfish&amp;rsquo;s guide section.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/guides/template/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

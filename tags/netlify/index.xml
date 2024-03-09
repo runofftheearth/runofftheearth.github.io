@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netlify on Blowfish</title>
+    <link>https://runofftheearth.github.io/tags/netlify/</link>
+    <description>Recent content in Netlify on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Blowfish</copyright>
+    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://runofftheearth.github.io/tags/netlify/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hosting &amp; Deployment</title>
+      <link>https://runofftheearth.github.io/docs/hosting-deployment/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/hosting-deployment/</guid>
+      <description>There are many ways to deploy your Hugo website built with Blowfish. The theme is designed to be flexible in almost any deployment scenario.
+Blowfish is built using relative URLs throughout the theme.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/hosting-deployment/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

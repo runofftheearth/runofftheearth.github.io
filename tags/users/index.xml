@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Users on Blowfish</title>
+    <link>https://runofftheearth.github.io/tags/users/</link>
+    <description>Recent content in Users on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Blowfish</copyright>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://runofftheearth.github.io/tags/users/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Users</title>
+      <link>https://runofftheearth.github.io/users/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/users/</guid>
+      <description>Real websites that are built with Blowfish. Check the full list in JSON format.
+Blowfish user? To add your site to this list, submit a pull request. </description>
+      
+    </item>
+    
+  </channel>
+</rss>

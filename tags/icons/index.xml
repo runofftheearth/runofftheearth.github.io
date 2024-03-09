@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Icons on Blowfish</title>
+    <link>https://runofftheearth.github.io/tags/icons/</link>
+    <description>Recent content in Icons on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Blowfish</copyright>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://runofftheearth.github.io/tags/icons/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Icons</title>
+      <link>https://runofftheearth.github.io/samples/icons/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/samples/icons/</guid>
+      <description>Blowfish has built-in support for a number of FontAwesome 6 icons. These can be included in your website through either the icon partial or icon shortcode.
+Additionally, custom icons are also fully supported.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/samples/icons/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

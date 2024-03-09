@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Template on Blowfish</title>
+    <link>https://runofftheearth.github.io/tags/template/</link>
+    <description>Recent content in Template on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Blowfish</copyright>
+    <lastBuildDate>Tue, 22 Dec 1987 00:00:00 +0000</lastBuildDate><atom:link href="https://runofftheearth.github.io/tags/template/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recipe Template</title>
+      <link>https://runofftheearth.github.io/guides/template/</link>
+      <pubDate>Tue, 22 Dec 1987 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/guides/template/</guid>
+      <description>Thank you for wanting to contribute to Blowfish&amp;rsquo;s community.
+How to start? # This is a template article that will explain how to create a new article for Blowfish&amp;rsquo;s guide section.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/guides/template/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

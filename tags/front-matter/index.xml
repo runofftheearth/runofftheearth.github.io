@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Front Matter on Blowfish</title>
+    <link>https://runofftheearth.github.io/tags/front-matter/</link>
+    <description>Recent content in Front Matter on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 Blowfish</copyright>
+    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://runofftheearth.github.io/tags/front-matter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Front Matter</title>
+      <link>https://runofftheearth.github.io/docs/front-matter/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://runofftheearth.github.io/docs/front-matter/</guid>
+      <description>In addition to the default Hugo front matter parameters, Blowfish adds a number of additional options to customise the presentation of individual articles. All the available theme front matter parameters are listed below.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://runofftheearth.github.io/docs/front-matter/featured.png" />
+    </item>
+    
+  </channel>
+</rss>

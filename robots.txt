@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://runofftheearth.github.io/sitemap.xml
