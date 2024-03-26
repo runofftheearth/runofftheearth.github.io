@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on 拯救世界去了</title>
+    <link>https://ziyue.tech/tags/windows/</link>
+    <description>Recent content in Windows on 拯救世界去了</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 轻歌</copyright>
+    <lastBuildDate>Sun, 17 Mar 2024 20:13:01 +0800</lastBuildDate><atom:link href="https://ziyue.tech/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows之间文件网络共享设置</title>
+      <link>https://ziyue.tech/posts/windows%E4%B9%8B%E9%97%B4%E6%96%87%E4%BB%B6%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Sun, 17 Mar 2024 20:13:01 +0800</pubDate>
+      
+      <guid>https://ziyue.tech/posts/windows%E4%B9%8B%E9%97%B4%E6%96%87%E4%BB%B6%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB%E8%AE%BE%E7%BD%AE/</guid>
+      <description>在同一局域网下的电脑，可以在某一台电脑上设置一个共享文件夹，使每一台电脑都可以进行访问、增删、修改和拷贝文件。设置共享文件夹的电脑称为目标电脑，用微软账号登陆，这样可以在后续访问这台电脑带来极大的便利，设置起来也很简单，共享选项里设置为everyone即可。
+设置好共享文件夹后，打开Windows的资源管理器&amp;gt;网络，初始化完成后就能在计算机一栏看见局域网内的电脑。找到目标电脑打开后，输入目标电脑登陆的微软账号和密码，就能访问到共享文件夹。</description>
+      
+    </item>
+    
+  </channel>
+</rss>

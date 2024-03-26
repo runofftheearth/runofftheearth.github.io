@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manjaro on 拯救世界去了</title>
+    <link>https://ziyue.tech/tags/manjaro/</link>
+    <description>Recent content in Manjaro on 拯救世界去了</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 轻歌</copyright>
+    <lastBuildDate>Sat, 13 Jan 2024 14:28:05 +0800</lastBuildDate><atom:link href="https://ziyue.tech/tags/manjaro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hyper-V中安装manjaro</title>
+      <link>https://ziyue.tech/posts/hyper-v%E4%B8%AD%E5%AE%89%E8%A3%85manjaro/</link>
+      <pubDate>Sat, 13 Jan 2024 14:28:05 +0800</pubDate>
+      
+      <guid>https://ziyue.tech/posts/hyper-v%E4%B8%AD%E5%AE%89%E8%A3%85manjaro/</guid>
+      <description>&lt;p&gt;在虚拟机中安装使用manjaro。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

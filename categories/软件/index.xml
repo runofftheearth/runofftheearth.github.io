@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件 on 拯救世界去了</title>
+    <link>https://ziyue.tech/categories/%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 软件 on 拯救世界去了</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 轻歌</copyright>
+    <lastBuildDate>Wed, 23 Aug 2023 23:54:05 +0800</lastBuildDate><atom:link href="https://ziyue.tech/categories/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NX1847安装使用</title>
+      <link>https://ziyue.tech/posts/%E5%B7%A5%E4%B8%9A%E8%BD%AF%E4%BB%B6/nx1847%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 23 Aug 2023 23:54:05 +0800</pubDate>
+      
+      <guid>https://ziyue.tech/posts/%E5%B7%A5%E4%B8%9A%E8%BD%AF%E4%BB%B6/nx1847%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;NX1847安装使用教程记录。&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>在Linux/Mac下通过CFW实现透明代理</title>
+      <link>https://ziyue.tech/posts/clash%E6%97%81%E8%B7%AF/</link>
+      <pubDate>Tue, 27 Jun 2023 09:42:46 +0800</pubDate>
+      
+      <guid>https://ziyue.tech/posts/clash%E6%97%81%E8%B7%AF/</guid>
+      <description>&lt;p&gt;可以通过clash for windows(俗称CFW)软件，将一台闲置设备设置成网关，实现全家设备的科学上网。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
