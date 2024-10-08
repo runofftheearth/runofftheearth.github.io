@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三章 日出 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%97%A5%E5%87%BA/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="小镇不大不小，六百多户人家，镇上穷苦人家的门户，陈平安大多认得，至于家底殷实的有钱人家，门槛高，泥腿子少年可跨不进去，一些个大户扎堆的宽敞巷弄，陈平安甚至都没有踏足过，那边的街道，多铺以大块大块的青石板，下雨天，绝不会一脚踩下去泥浆四溅。那些质地极佳的青石板，经过千百年来人马车辆的踩踏碾压，早已摩挲得光滑如镜。
+" />
+
+
+<meta name="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%B8%89%E7%AB%A0%E6%97%A5%E5%87%BA/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="第三章 日出">
+  <meta property="og:description" content="小镇不大不小，六百多户人家，镇上穷苦人家的门户，陈平安大多认得，至于家底殷实的有钱人家，门槛高，泥腿子少年可跨不进去，一些个大户扎堆的宽敞巷弄，陈平安甚至都没有踏足过，那边的街道，多铺以大块大块的青石板，下雨天，绝不会一脚踩下去泥浆四溅。那些质地极佳的青石板，经过千百年来人马车辆的踩踏碾压，早已摩挲得光滑如镜。">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-14T17:03:34+08:00">
+    <meta property="article:modified_time" content="2024-02-14T17:03:34+08:00">
+    <meta property="article:tag" content="烽火戏诸侯">
+    <meta property="article:tag" content="剑来">
+    <meta property="article:tag" content="第一卷笼中雀">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="第三章 日出">
+  <meta name="twitter:description" content="小镇不大不小，六百多户人家，镇上穷苦人家的门户，陈平安大多认得，至于家底殷实的有钱人家，门槛高，泥腿子少年可跨不进去，一些个大户扎堆的宽敞巷弄，陈平安甚至都没有踏足过，那边的街道，多铺以大块大块的青石板，下雨天，绝不会一脚踩下去泥浆四溅。那些质地极佳的青石板，经过千百年来人马车辆的踩踏碾压，早已摩挲得光滑如镜。">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="第三章 日出">
+  <meta itemprop="description" content="小镇不大不小，六百多户人家，镇上穷苦人家的门户，陈平安大多认得，至于家底殷实的有钱人家，门槛高，泥腿子少年可跨不进去，一些个大户扎堆的宽敞巷弄，陈平安甚至都没有踏足过，那边的街道，多铺以大块大块的青石板，下雨天，绝不会一脚踩下去泥浆四溅。那些质地极佳的青石板，经过千百年来人马车辆的踩踏碾压，早已摩挲得光滑如镜。">
+  <meta itemprop="datePublished" content="2024-02-14T17:03:34+08:00">
+  <meta itemprop="dateModified" content="2024-02-14T17:03:34+08:00">
+  <meta itemprop="wordCount" content="61">
+  <meta itemprop="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+      <header>
+        <h1 itemprop="headline">第三章 日出</h1>
+        <p class="text-sm">
+          
+            星期三, 2月 14, 2024
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期三, 2月 14, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%e7%ac%ac%e4%b8%89%e7%ab%a0%20%e6%97%a5%e5%87%ba&url=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E4%25B8%2589%25E7%25AB%25A0%25E6%2597%25A5%25E5%2587%25BA%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E4%25B8%2589%25E7%25AB%25A0%25E6%2597%25A5%25E5%2587%25BA%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>小镇不大不小，六百多户人家，镇上穷苦人家的门户，陈平安大多认得，至于家底殷实的有钱人家，门槛高，泥腿子少年可跨不进去，一些个大户扎堆的宽敞巷弄，陈平安甚至都没有踏足过，那边的街道，多铺以大块大块的青石板，下雨天，绝不会一脚踩下去泥浆四溅。那些质地极佳的青石板，经过千百年来人马车辆的踩踏碾压，早已摩挲得光滑如镜。</p>
+<p>卢、李、赵、宋四个姓氏，在小镇这边是大姓，乡塾就是这几家出的钱，在城外大多拥有两三座大龙窑。历任窑务督造官的官邸，就和这几户人家在一条街上。</p>
+<p>不凑巧，陈平安今天要送的十封信，几乎全是小镇出了名的阔绰户，这也很合情合理，龙生龙凤生凤，老鼠生儿打地洞，能够寄信回家的远方游子，家世肯定不差，否则也没那底气出门远行。其中九封信，陈平安其实就去了两个地方，福鹿街和桃叶巷，当他第一次踩在大如床板的青石板上，少年有些忐忑，放缓了脚步，竟然有些自惭形秽，忍不住觉得自己的草鞋脏了街面。</p>
+<p>陈平安送出去的第一封信，是祖上得到过一柄皇帝御赐玉如意的卢家，当少年站在门口，愈发局促不安。</p>
+<p>有钱人家就是讲究多，卢家宅子大不说，门口还摆放两尊石狮子，等人高，气势凌人。宋集薪说这玩意儿能够避凶镇邪，陈平安根本不清楚何谓凶邪，只是很好奇等人高的狮子嘴里，好像还含着一粒圆滚滚的石球，这又是如何雕琢出来的？陈平安强忍住去触摸石球的冲动，走上台阶，扣响那个青铜狮子门首，很快就有个年轻人开门走出，一听说是来送信的，那人面无表情，用双指捻住信封一角，接过那封家书后，便转身快步走入宅子，重重关上贴有彩绘财神像的大门。</p>
+<p>之后少年的送信过程，也是这般平淡无奇，桃叶巷街角有户名声不显的人家，开门的是个慈眉善目的矮小老人，收起信后，笑着说了句：“小伙子，辛苦了。要不要进来歇歇，喝口热水？”</p>
+<p>少年腼腆笑了笑，摇摇头，跑着离去。</p>
+<p>老人将那封家书轻轻放入袖子，没有着急回去宅院，抬头望向远方，视线浑浊。</p>
+<p>最后视线，由高到低，由远及近，凝视着街道两旁的桃树，貌似老朽昏聩的老人，这才挤出一丝笑意。</p>
+<p>老人转身离去。</p>
+<p>没过多久，一只颜色可爱的小黄雀停到桃树枝头，喙啄犹嫩，轻轻嘶鸣。</p>
+<p>留到最后的那封信，陈平安需要送去给乡塾授业的教书先生，期间路过一座算命摊子，是个身穿老旧道袍的年轻道士，挺直腰杆坐镇桌后，他头戴一顶高冠，像一朵绽放的莲花。</p>
+<p>年轻道人看到快步跑过的少年后，赶紧打招呼道：“年轻人，走过路过不要错过，来抽一支签，贫道帮你算上一卦，可以帮你预知吉凶福祸。”</p>
+<p>陈平安没有停下脚步，不过转过头，摆摆手。</p>
+<p>道人犹不死心，身体前倾，提高嗓门，“年轻人，往日贫道替人解签，要收十文钱，今儿破个例，只收你三文钱！当然了，若是抽出了一支上签，你不妨再多加一文喜钱，如果鸿运当头，是上上签，那贫道也只收你五文钱，如何？”</p>
+<p>远处陈平安的脚步，明显停顿了一下，年轻道人已经火速起身，趁热打铁，高声道：“大早上的，年轻人你是头位客人，贫道干脆就好人做到底，只要你坐下抽签，实不相瞒，贫道会写一些黄纸符文，可以帮你为先人祈福，积攒yīn德，以贫道的能耐，不敢说一定让人投个大富大贵的好胎，可要说多出一两分福报，终归是尝试一下的。”</p>
+<p>陈平安愣了愣，将信将疑地转身返回，坐在摊子前的长凳上。</p>
+<p>一朴素道士，一寒酸少年，两个大小穷光蛋，相对而坐。</p>
+<p>道人笑着伸出手，示意少年拿起签筒。</p>
+<p>陈平安犹豫不决，突然说道：“我不抽签，你只帮我写一份黄纸符文，行不行？”</p>
+<p>在陈平安的记忆中，好像这位云游至此的年轻道爷，在小镇已经待了最少五六年，模样倒是没什么变化，对谁也都和和气气的，平时就是帮人摸骨看相、算卦抽签，偶尔也能代写家书，有意思的是，桌案上那只拥簇着一百零八支竹签的签筒，这么多年来，小镇男男女女抽签，既没有谁抽出过上上签，也没有谁从签筒摇晃出一支下签，仿佛整整一百零八签，签签中上无坏签。</p>
+<p>所以若是逢年过节，纯粹为了讨个好彩头，小镇百姓花上十文钱，也能接受，可真遇上烦心事，肯定不会有人愿意来这里当冤大头。若说这个道士是彻头彻尾的骗子，倒也冤枉了人家，小镇就这么大，如果真只会装神弄鬼、坑蒙拐骗，早就给人撵了出去。所以说这位年轻道人的功力，肯定不在相术、解签两事上。倒是有些小病小灾，很多人喝了道人的一碗符水，很快就能痊愈，颇为灵验。</p>
+<p>年轻道人摇头道：“贫道行事，童叟无欺，说好了解签加写符一起，收你五文钱的。”</p>
+<p>陈平安低声反驳道：“是三文钱。”</p>
+<p>道人哈哈笑道：“万一抽出上上签，可不就是五文钱了嘛。”</p>
+<p>陈平安下定决心，伸手去拿签筒，突然抬头问道：“道长是如何知道我身上恰好有五文钱？”</p>
+<p>道人正襟危坐，“贫道看人福气厚薄，财运多寡，一向很准。”</p>
+<p>陈平安想了想，拿起那只签筒。</p>
+<p>道人微笑道：“年轻人，不要紧张，命里有时终须有，命里无时莫强求，以平常心看待无常事，便是第一等万全法。”</p>
+<p>陈平安重新将签筒放回桌上，神情郑重，问道：“道长，我把五文钱都给你，也不抽签了，只请道长将那张黄纸符文，写得比平时更好一些，行不行？”</p>
+<p>道人笑意如常，略作思量，点头道：“可。”</p>
+<p>桌案上，笔墨砚纸早就备好，道人仔细问过了陈平安爹娘的姓名籍贯生辰，抽出一张黄sè符纸，很快就写完，一气呵成。</p>
+<p>至于写了什么，陈平安茫然不知。</p>
+<p>搁下笔，提起那张符纸，年轻道人吹了吹墨迹，“拿回家后，人站在门槛内，将黄纸烧在门槛外，就行了。”</p>
+<p>少年郑重其事地接过那张符纸，小心翼翼珍藏起来后，没有忘记把五枚铜钱放在桌案上，鞠躬致谢。</p>
+<p>年轻道人挥挥手，示意少年忙自己的事情去。</p>
+<p>陈平安撒开腿跑去送最后一封信。</p>
+<p>道人懒洋洋靠在椅子上，瞥了眼铜钱，弯腰伸手将它们搂到身前。</p>
+<p>就在此时，一只小巧玲珑的黄雀，从高空飞扑到桌面上，轻啄了一下某颗铜钱，很快便没了兴致，振翅远去。</p>
+<p>“黄雀始欲衔花来，君家种桃花未开。”</p>
+<p>道人悠悠然念完这句诗词后，故作潇洒地轻轻挥袖，叹气道：“命里八尺，莫求一丈啊。”</p>
+<p>这一挥袖，就有两支竹签从袖子里滑落，掉在地上，道人哎呦一声，赶紧捡起来，然后鬼鬼祟祟四处张望，发现暂时无人留心这边，这才如释重负，重新将那两支竹签藏入宽松的袖口。</p>
+<p>年轻道人咳嗽一声，板起脸，继续守株待兔，等待下一位客人。</p>
+<p>他有些感慨，果然还是赚女子的钱，更容易一些。</p>
+<p>其实，年轻道人袖中所藏两支竹签，一支是最上签，一支是最下签，都是用来挣大钱的。</p>
+<p>不足为外人道也。</p>
+<p>少年自然不清楚这些奥妙玄机，一路脚步轻盈，来到那座乡塾馆舍外，附近竹林郁郁，绿意欲滴。</p>
+<p>陈平安放缓脚步，屋内响起中年人的醇厚嗓音，“日出有曜，羔裘如濡。”</p>
+<p>随后便有一阵齐整清脆的稚嫩嗓音响起，“日出有曜，羔裘如濡。”</p>
+<p>陈平安抬头望去，旭日东升，煌煌泱泱。</p>
+<p>少年怔怔出神。</p>
+<p>等他回过神，蒙学孩童正在摇头晃脑，按照先生的要求，娴熟背诵一段文章：“惊蛰时分，天地生发，万物始荣。夜卧早行，广步于庭，君子缓行，以便生志……”</p>
+<p>陈平安站在学塾门口，欲言又止。</p>
+<p>两鬓微霜的中年儒士转头望来，轻轻走出屋子。</p>
+<p>陈平安将书信双手递出去，恭敬道：“这是先生的书信。”</p>
+<p>一袭青衫的高大男人接过信封后，温声说道：“以后无事的时候，你可以多来这里旁听。”</p>
+<p>陈平安有些为难，毕竟他未必真有时间来此听这位先生教书，少年不愿欺骗他。</p>
+<p>男人笑了笑，善解人意道：“无妨，道理全在书上，做人却在书外。你去忙吧。”</p>
+<p>陈平安松了口气，告辞离去。</p>
+<p>少年跑出去很远后，鬼使神差地转头回望。</p>
+<p>只见那位先生始终站在门口，身影沐浴在阳光中，远远望去，恍若神人。</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%BB%84%E9%B8%9F/" title="第四章 黄鸟">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">第四章 黄鸟</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E5%BC%80%E9%97%A8/" title="第二章 开门">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">第二章 开门</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

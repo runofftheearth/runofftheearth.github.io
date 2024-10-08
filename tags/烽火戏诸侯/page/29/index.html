@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>烽火戏诸侯 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/tags/%E7%83%BD%E7%81%AB%E6%88%8F%E8%AF%B8%E4%BE%AF/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="" />
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/tags/%E7%83%BD%E7%81%AB%E6%88%8F%E8%AF%B8%E4%BE%AF/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="烽火戏诸侯">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="website">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="烽火戏诸侯">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+     
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+
+
+<div class="flex flex-col md:flex-row mt-4">
+
+  <div class="md:basis-[200px] lg:basis-[300px] p-4 prose dark:prose-invert">
+    <h1 class="text-2xl">烽火戏诸侯</h1>
+    <p class="text-sm">753篇文章</p>
+    <div class="flex flex-wrap gap-4 mt-6">
+      
+
+      
+      
+      <a href="/tags/%E7%AC%AC%E5%85%AB%E5%8D%B7%E6%80%9D%E6%97%A0%E9%82%AA/" class="badge h-6 no-underline hover:badge-primary">
+        第八卷思无邪
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E4%BA%8C%E5%8D%B7%E5%B1%B1%E6%B0%B4%E9%83%8E/" class="badge h-6 no-underline hover:badge-primary">
+        第二卷山水郎
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/" class="badge h-6 no-underline hover:badge-primary">
+        第九卷天上月
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E5%85%AD%E5%8D%B7%E5%B0%8F%E5%A4%AB%E5%AD%90/" class="badge h-6 no-underline hover:badge-primary">
+        第六卷小夫子
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/" class="badge h-6 no-underline hover:badge-primary">
+        第七卷龙抬头
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E4%B8%89%E5%8D%B7%E9%87%91%E9%94%99%E5%88%80/" class="badge h-6 no-underline hover:badge-primary">
+        第三卷金错刀
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E5%8D%81%E5%8D%B7%E8%BF%9C%E6%B8%B8%E5%AE%A2/" class="badge h-6 no-underline hover:badge-primary">
+        第十卷远游客
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E5%8D%81%E4%B8%80%E5%8D%B7%E5%A4%9C%E5%BD%92%E4%BA%BA/" class="badge h-6 no-underline hover:badge-primary">
+        第十一卷夜归人
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E5%9B%9B%E5%8D%B7%E5%89%91%E6%B0%94%E8%BF%91/" class="badge h-6 no-underline hover:badge-primary">
+        第四卷剑气近
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E4%BA%94%E5%8D%B7%E9%81%93%E8%A7%82%E9%81%93/" class="badge h-6 no-underline hover:badge-primary">
+        第五卷道观道
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/" class="badge h-6 no-underline hover:badge-primary">
+        第一卷笼中雀
+      </a>
+      
+      
+      
+      <span class="badge h-6 badge-primary">
+        烽火戏诸侯
+      </span>
+      
+      
+      
+      <a href="/tags/%E5%89%91%E6%9D%A5/" class="badge h-6 no-underline hover:badge-primary">
+        剑来
+      </a>
+      
+      
+    </div>
+  </div>
+  
+  <div class="divider divider-vertical md:divider-horizontal px-4 md:px-0"></div>
+  
+  <div class="flex-1">
+    
+
+    
+    <div class="dream-grid">
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E4%B8%83%E5%8D%81%E4%B8%89%E7%AB%A0%E5%85%B3%E4%BA%8E%E4%B8%80%E6%8A%8A%E7%AB%B9%E5%89%91%E9%9E%98%E7%9A%84%E5%B0%8F%E4%BA%8B/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default3_hu6a0df562d613fbdedf7180f7f013eef1_206638_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default3.jpg" alt="/images/default3.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百七十三章 关于一把竹剑鞘的小事</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>陈平安来到大门口，摘了斗笠。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E4%B8%83%E5%8D%81%E4%BA%8C%E7%AB%A0%E5%90%AC%E8%AF%B4%E4%BD%A0%E8%A6%81%E9%97%AE%E5%89%91/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default3_hu6a0df562d613fbdedf7180f7f013eef1_206638_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default3.jpg" alt="/images/default3.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百七十二章 听说你要问剑</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>铁符江畔，几位高冠大袖的老夫子带头走在前方，身后是儒衫的年轻男女，显然皆是儒家门生。</p>
+<p>队伍如同一条青色长蛇，人人高声朗诵《劝学篇》。</p>
+<p>江水潺潺，书声琅琅。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E4%B8%83%E5%8D%81%E4%B8%80%E7%AB%A0%E6%B2%A1%E8%A7%81%E8%BF%87%E5%8D%8A%E4%BB%99%E5%85%B5/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default3_hu6a0df562d613fbdedf7180f7f013eef1_206638_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default3.jpg" alt="/images/default3.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百七十一章 没见过半仙兵</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>天微微亮，彩衣国胭脂郡城门那边，一伙远游而来的江湖豪侠，骑马等待门禁开放，其中一位梳水国大名鼎鼎的武林名宿高坐马背，手心缓缓摩挲着一块羊脂玉手把件，闲来无事，环顾四周，瞧见远处走来一位风尘仆仆的年轻游侠，神色疲惫，但是眼神并不浑浊，老者心想年轻人应该是位练家子，不过看脚步深浅，身手不会太高。老人便继续视线游曳，看了些妇人少女，只可惜大多是村野女子，肌肤枯燥，姿色平平，便有些失望，希望入城之后，胭脂郡的女子，可别都是如此啊。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E4%B8%83%E5%8D%81%E7%AB%A0%E5%89%91%E6%B0%94%E5%A6%82%E8%99%B9%E4%BA%BA%E5%A6%82%E4%BB%99/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default3_hu6a0df562d613fbdedf7180f7f013eef1_206638_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default3.jpg" alt="/images/default3.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百七十章 剑气如虹人如仙</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>动静太大，来势汹汹，关键是对方这副架势，可不像是来朦胧山叙旧的道上朋友。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E5%85%AD%E5%8D%81%E4%B9%9D%E7%AB%A0%E5%BE%A1%E5%89%91%E5%8E%BB%E5%BE%80%E7%A5%96%E5%B8%88%E5%A0%82/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default3_hu6a0df562d613fbdedf7180f7f013eef1_206638_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default3.jpg" alt="/images/default3.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百六十九章 御剑去往祖师堂</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>青衫背剑的年轻剑客，这次游历彩衣国，依旧是走过那片熟悉的低矮山脉，比起当年跟张山峰一起游历，好似生机断绝的鬼蜮之地，如今再无半点阴煞气息，不说是什么灵气充沛的山水形胜之地，终究青山绿水，远胜往昔。凭着记忆一路前行，终于在夜幕中，来到一处熟悉的古宅，还是有两座石狮子坐镇大门，并且略有变化，如今悬挂了春联，也张贴上了彩绘门神。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E5%85%AD%E5%8D%81%E5%85%AB%E7%AB%A0%E9%A3%9E%E9%B8%9F%E4%B8%80%E5%A3%B0%E5%A6%82%E5%8A%9D%E5%AE%A2/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default2_hu56d6269342fd058767a3ed6bb73cdd00_189957_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default2.jpg" alt="/images/default2.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百六十八章 飞鸟一声如劝客</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>今天朱敛的院子，难得热闹，魏檗没有离开落魄山，而是过来这边跟朱敛下棋来了。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E5%85%AD%E5%8D%81%E4%B8%83%E7%AB%A0%E6%94%B6%E6%AD%A6%E8%BF%90%E5%90%83%E7%8F%A0%E5%AD%90/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default1_hu0a025718d8a4107614c89b6074607ba1_542459_2560x1440_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default1.jpg" alt="/images/default1.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百六十七章 收武运吃珠子</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>窄窄的骑龙巷是一条斜坡，还有条长长的阶梯，草头铺子就在台阶底下，与压岁铺子，两家铺子都是当年那个扎羊角辫小女孩，石嘉春家的祖业，后来小丫头没有跟李宝瓶李槐他们一起去往大隋书院求学，也没有像董水井这样留在小镇，而是跟随家族，搬去了大骊京城，就将两间铺子卖了，后来在阮邛的帮忙下，辗转到了陈平安手上。陈平安每次返乡，董水井还能见着，石嘉春却在当年那次分开后，再没有见过了。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E5%85%AD%E5%8D%81%E5%85%AD%E7%AB%A0%E6%9C%89%E6%B2%A1%E6%9C%89%E9%99%88%E5%B9%B3%E5%AE%89%E7%9A%84%E8%90%BD%E9%AD%84%E5%B1%B1/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default2_hu56d6269342fd058767a3ed6bb73cdd00_189957_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default2.jpg" alt="/images/default2.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百六十六章 有没有陈平安的落魄山</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>竹楼二楼。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E5%85%AD%E5%8D%81%E4%BA%94%E7%AB%A0%E5%87%BA%E6%8B%B3%E5%B9%B6%E6%97%A0%E5%8C%BA%E5%88%AB/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default1_hu0a025718d8a4107614c89b6074607ba1_542459_2560x1440_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default1.jpg" alt="/images/default1.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百六十五章 出拳并无区别</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 3月 18, 2024
+    
+    </p>
+
+    <p>竹楼一楼，已经摆放了一排博古架，木色素雅，错落有致，格子多，宝贝少。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%83%E5%8D%B7%E9%BE%99%E6%8A%AC%E5%A4%B4/%E7%AC%AC%E5%9B%9B%E7%99%BE%E5%85%AD%E5%8D%81%E5%9B%9B%E7%AB%A0%E5%8D%81%E5%B9%B4%E4%B9%8B%E7%BA%A6%E5%B7%B2%E8%BF%87%E5%8D%8A/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default1_hu0a025718d8a4107614c89b6074607ba1_542459_2560x1440_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default1.jpg" alt="/images/default1.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第四百六十四章 十年之约已过半</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期日, 3月 17, 2024
+    
+    </p>
+
+    <p>离开了杨家药铺，去了趟那座既未毁弃也无启用的老旧学塾，陈平安撑伞站在窗外，望向里边。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+    </div>
+    
+
+    
+    <div class="flex justify-center pt-8">
+      <div class="join grid grid-cols-2">
+  
+  <a href="/tags/%E7%83%BD%E7%81%AB%E6%88%8F%E8%AF%B8%E4%BE%AF/page/28/" title=上一页 class="join-item btn btn-outline btn-sm">
+    上一页
+  </a>
+  
+  
+  <a href="/tags/%E7%83%BD%E7%81%AB%E6%88%8F%E8%AF%B8%E4%BE%AF/page/30/" title="下一页" class="join-item btn btn-outline btn-sm">
+    下一页
+  </a>
+  
+</div>
+
+    </div>
+    
+  </div>
+</div>
+
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

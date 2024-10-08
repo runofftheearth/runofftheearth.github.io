@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第五章 道破 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%94%E7%AB%A0%E9%81%93%E7%A0%B4/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="宋集薪带着婢女稚圭来到老槐树下，发现树荫里人满为患，将近半百号人，坐在自家搬来的板凳椅子上，陆陆续续还有孩童扯着长辈过来凑热闹。
+" />
+
+
+<meta name="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%94%E7%AB%A0%E9%81%93%E7%A0%B4/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="第五章 道破">
+  <meta property="og:description" content="宋集薪带着婢女稚圭来到老槐树下，发现树荫里人满为患，将近半百号人，坐在自家搬来的板凳椅子上，陆陆续续还有孩童扯着长辈过来凑热闹。">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-14T17:13:39+08:00">
+    <meta property="article:modified_time" content="2024-02-14T17:13:39+08:00">
+    <meta property="article:tag" content="烽火戏诸侯">
+    <meta property="article:tag" content="剑来">
+    <meta property="article:tag" content="第一卷笼中雀">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="第五章 道破">
+  <meta name="twitter:description" content="宋集薪带着婢女稚圭来到老槐树下，发现树荫里人满为患，将近半百号人，坐在自家搬来的板凳椅子上，陆陆续续还有孩童扯着长辈过来凑热闹。">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="第五章 道破">
+  <meta itemprop="description" content="宋集薪带着婢女稚圭来到老槐树下，发现树荫里人满为患，将近半百号人，坐在自家搬来的板凳椅子上，陆陆续续还有孩童扯着长辈过来凑热闹。">
+  <meta itemprop="datePublished" content="2024-02-14T17:13:39+08:00">
+  <meta itemprop="dateModified" content="2024-02-14T17:13:39+08:00">
+  <meta itemprop="wordCount" content="50">
+  <meta itemprop="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+      <header>
+        <h1 itemprop="headline">第五章 道破</h1>
+        <p class="text-sm">
+          
+            星期三, 2月 14, 2024
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期三, 2月 14, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%e7%ac%ac%e4%ba%94%e7%ab%a0%20%e9%81%93%e7%a0%b4&url=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E4%25BA%2594%25E7%25AB%25A0%25E9%2581%2593%25E7%25A0%25B4%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E4%25BA%2594%25E7%25AB%25A0%25E9%2581%2593%25E7%25A0%25B4%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>宋集薪带着婢女稚圭来到老槐树下，发现树荫里人满为患，将近半百号人，坐在自家搬来的板凳椅子上，陆陆续续还有孩童扯着长辈过来凑热闹。</p>
+<p>宋集薪和她并肩站在树荫边缘，看到一个老人站在树底下，一手托大白碗，一手负身后，神色激昂，正大声说道：“方才说过了大致的龙脉走向，我再来说说这真龙，啧啧，这可就真了不得了，约莫三千年前，天底下出了一位了不得的神仙人物，先是在某座洞天福地潜心修行，证了大道，便独自仗剑游历天下，手中三尺气概，锋芒毕露。不知为何，此人偏偏与蛟龙不对付，整整三百个春秋，有蛟龙处斩蛟龙，杀得世间再无真龙，这才罢休，最后不知所踪，有人说他是去了极高的道法张本之地，与道祖坐而论道，也有说是去了极远的西方净土佛国，与佛陀辩经说法，更有人说他亲自坐镇酆都地府的大门，防止魑魅魍魉为祸人间……”</p>
+<p>老先生说得唾沫四溅，底下所有小镇百姓都无动于衷，人人满脸茫然。</p>
+<p>婢女低声好奇问道：“三尺气概是什么？”</p>
+<p>宋集薪笑道：“就是剑。”</p>
+<p>婢女没好气道：“公子，这位老人家，也忒喜欢卖弄学问了，话也不好好说。”</p>
+<p>宋集薪瞥了眼老人，幸灾乐祸道：“咱们小镇识字的没几个，这位说书先生算是媚眼抛给瞎子看了。”</p>
+<p>婢女又问道：“洞天福地又是什么？世上真有人能够活三百岁吗？还有那酆都地府，不是死人才能去的地方吗？”</p>
+<p>宋集薪被问住了，却不愿露怯，便随口道：“尽是胡说八道，估计看过几本不入流的稗官野史，拿来糊弄乡野村夫的。”</p>
+<p>这一刻，宋集薪敏锐发现那老人，有意无意看了自己一眼，虽然只是蜻蜓点水的视线，很快就一掠而过，但宋集薪仍是细心捕捉到了，只是少年也就没有上心，只当是巧合而已。</p>
+<p>婢女抬头望向老槐树，细细碎碎的光线透过树叶缝隙，洒落下来，她下意识眯起眼眸。</p>
+<p>宋集薪转头望去，突然愣住了。</p>
+<p>如今自己这位婢女，有着一张刚开始褪去婴儿肥的侧脸，她好像跟记忆里那个瘦瘦小小、干干瘪瘪的小丫鬟，有了很大的出入。</p>
+<p>按照小镇的习俗，女子嫁人时，便会有聘请一位父母子女皆健在的福气齐全人，请她绞去新娘脸上的绒毛，剪齐额发和鬓角，谓之开面，或是升眉。</p>
+<p>宋集薪还从书上听说一个小镇没有的习俗，所以在稚圭十二岁那年，他便买了小镇最好的新酿之酒，搬出那只偷藏而来的瓷瓶，釉色极美，犹如青梅，把酒倒入其中后，将其小心泥封，最后埋入地下。</p>
+<p>宋集薪突然开口说道：“稚圭，虽说姓陈的家伙，按照我们读书人老祖宗的说法，属于‘朽木不可雕也，粪土之墙不可圬’，但是不管怎么说，他这辈子总算还是做了一件有意义的事情。”</p>
+<p>婢女并未答话，低敛眼眉，依稀可见睫毛微微颤动。</p>
+<p>宋集薪自顾自说道：“陈平安呢，人倒是不坏，就是性子太死板，做什么事情只认死理，所以当了窑匠，意味着他再勤劳苦练，也注定做不出一件有灵气的好东西来，所以刘羡阳的师父，那个姚老头儿，对陈平安死活看不上眼，是有其独到眼光的，这叫朽木不可雕。至于粪土之墙不可圬嘛，大致意思就是说陈平安这种穷酸鬼，哪怕你给他穿上件龙袍，他照样是个土里土气的泥腿子……”</p>
+<p>宋集薪说到这里的时候，自嘲道：“我其实比陈平安还惨。”</p>
+<p>她不知道如何安慰自家公子。</p>
+<p>宋集薪和他的婢女，在这座小镇上，一直是福禄街和桃叶巷的富人们，在茶余饭后的重要谈资，这要归功于宋集薪的那个“便宜老爹”，宋大人。</p>
+<p>小镇没有什么大人物，也没有什么风浪，故而被朝廷派驻此地的窑务督造官，无疑就是戏本上的那种青天大老爷，在历史上数十位督造官中，又以上任督造官宋大人，最得民心，宋大人不像之前那些高高在上的官老爷，宋大人不但没有躲在官署，修身养气，也没有闭门谢客，一心在书斋治学，而是对官窑瓷器的烧造事宜，事必躬亲，简直比匠户窑工更像是乡野百姓，十余年间，这位原本满身书卷气的宋大人，肌肤被晒得黝黑发亮，平日里装束与庄稼汉无异，待人接物，从无架子，只可惜小镇龙窑烧造而出的御用瓷器，无论是釉色品相，还是大器小件的形制，始终不尽如人意，准确说来，比起以往水准，甚至还要稍逊一筹，让老窑头们百思不得其解。</p>
+<p>最后大概朝廷那边觉得兢兢业业的宋大人，没有功劳也有苦劳，将其调回京城的吏部敕令文书上，好歹得了个良的考评。宋大人在返京之前，竟然千金散尽，出资建造了一座廊桥，后来发现宋大人离去车队当中，没有捎带某个孩子后，小镇几个大姓门庭便恍然大悟。可以说，宋大人与小镇积攒下过一份不俗的香火情，加上现任督造官的刻意照拂，少年宋集薪这些年在小镇的生活，衣食无忧，逍遥自在。如今改名为稚圭的丫鬟，关于她的身世来历，众说纷纭，住在泥瓶巷的当地人，说是一个鹅毛大雪的冬天，有个外地女孩沿路乞讨至此，昏死在宋集薪家的院门口，如果不是有人发现的早，就要去阎王爷那边转世投胎了。官署那边做杂事的老人，有另外的说法，信誓旦旦说是宋大人早年让人从别地买下的孤儿，为的就是给私生子宋集薪物色一个知冷暖的体己人，弥补一下父子不得相认的亏欠。</p>
+<p>不管如何，婢女被少年取名为稚圭后，算是彻底坐实了两人的父子关系，因为小镇大族豪绅都晓得，宋大人最钟情于一方砚台，便刻有“稚圭”二字。</p>
+<p>宋集薪回过神，笑脸灿烂起来，“不知为何，想起那只死皮赖脸的四脚蛇了，稚圭你想啊，我都把它摔到陈平安的院子了，它依然要往咱们家窜，你说陈平安的狗窝，得是多么不遭人待见，才会寒酸到连一条小蛇都不愿意进去？”</p>
+<p>婢女认真想了想，回答道：“有些事，也讲缘分的吧？”</p>
+<p>宋集薪伸出大拇指，开怀道：“正是这个道理！他陈平安就是个缘浅福薄之人，能活着就知足吧。”</p>
+<p>她没有说话。</p>
+<p>宋集薪自言自语道：“咱们离开小镇后，屋子里的东西交由陈平安照看，这家伙会不会监守自盗啊？”</p>
+<p>婢女轻声道：“公子，不至于吧？”</p>
+<p>宋集薪笑道：“呦，稚圭，监守自盗的意思也懂？”</p>
+<p>婢女眨了眨那双秋水长眸，“难道不是字面意思？”</p>
+<p>宋集薪笑了，望向南方，露出一抹心神向往，“我听说京城那个地方的藏书，比我们小镇的花草树木还要多！”</p>
+<p>就在此时，说书先生正说道：“世上虽已无真龙，龙之从属，如蛟、虬、螭等等，仍是真真正正、实实在在活在人世间，说不定就……”</p>
+<p>老人故意卖了一关子，眼见听众们无动于衷，根本不懂得捧场，只得继续说道：“说不定就隐匿在我们身边，道教神仙称之为潜龙在渊！”</p>
+<p>宋集薪打了个哈欠。</p>
+<p>头顶突然飘落一片槐叶，苍翠欲滴，刚好落在少年额头上。</p>
+<p>宋集薪伸手抓住树叶，双指拧转叶柄。</p>
+<p>————</p>
+<p>想着还是去城东门讨债一次的少年，在临近老槐树的时候，也看到了眼前有槐叶飘落，只是他加快步子，想要伸手去接住。</p>
+<p>只是一阵清风拂过，树叶从他手边滑过。</p>
+<p>草鞋少年身形矫健，快速横移一步，想要拦截下这片树叶。</p>
+<p>偏偏树叶在空中又打了一个旋儿。</p>
+<p>少年不信邪，几次辗转腾挪，最后仍是没能抓住槐叶。</p>
+<p>少年陈平安无可奈何。</p>
+<p>一个乡塾逃学的青衫少年，与陈平安擦肩而过。</p>
+<p>青衫少年自己都不知道，肩头上不知何时停留一片槐叶。</p>
+<p>陈平安继续去往城东门，哪怕要不到钱，催一催也是好的。</p>
+<p>————</p>
+<p>远处算命摊子那边，年轻道人闭目养神，自言自语道：“是谁说天运循环无厚薄？”</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%85%AD%E7%AB%A0%E4%B8%8B%E7%AD%BE/" title="第六章 下签">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">第六章 下签</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%9B%9B%E7%AB%A0%E9%BB%84%E9%B8%9F/" title="第四章 黄鸟">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">第四章 黄鸟</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

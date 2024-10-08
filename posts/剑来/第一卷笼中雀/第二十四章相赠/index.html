@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二十四章 相赠 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%AB%A0%E7%9B%B8%E8%B5%A0/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="桃叶巷的一栋宅子里，有位慈眉善目的老人，坐在廊下的藤椅上，身边坐着位模样俏皮可爱的丫鬟，穿着鹅黄纹彩长裤，外边罩穿着浅罗碧色的纱裙，一边听着老人说故事，一边缓缓扇风。
+" />
+
+
+<meta name="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E7%AB%A0%E7%9B%B8%E8%B5%A0/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="第二十四章 相赠">
+  <meta property="og:description" content="桃叶巷的一栋宅子里，有位慈眉善目的老人，坐在廊下的藤椅上，身边坐着位模样俏皮可爱的丫鬟，穿着鹅黄纹彩长裤，外边罩穿着浅罗碧色的纱裙，一边听着老人说故事，一边缓缓扇风。">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-17T13:12:59+08:00">
+    <meta property="article:modified_time" content="2024-02-17T13:12:59+08:00">
+    <meta property="article:tag" content="烽火戏诸侯">
+    <meta property="article:tag" content="剑来">
+    <meta property="article:tag" content="第一卷笼中雀">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="第二十四章 相赠">
+  <meta name="twitter:description" content="桃叶巷的一栋宅子里，有位慈眉善目的老人，坐在廊下的藤椅上，身边坐着位模样俏皮可爱的丫鬟，穿着鹅黄纹彩长裤，外边罩穿着浅罗碧色的纱裙，一边听着老人说故事，一边缓缓扇风。">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="第二十四章 相赠">
+  <meta itemprop="description" content="桃叶巷的一栋宅子里，有位慈眉善目的老人，坐在廊下的藤椅上，身边坐着位模样俏皮可爱的丫鬟，穿着鹅黄纹彩长裤，外边罩穿着浅罗碧色的纱裙，一边听着老人说故事，一边缓缓扇风。">
+  <meta itemprop="datePublished" content="2024-02-17T13:12:59+08:00">
+  <meta itemprop="dateModified" content="2024-02-17T13:12:59+08:00">
+  <meta itemprop="wordCount" content="88">
+  <meta itemprop="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+      <header>
+        <h1 itemprop="headline">第二十四章 相赠</h1>
+        <p class="text-sm">
+          
+            星期六, 2月 17, 2024
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期六, 2月 17, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%e7%ac%ac%e4%ba%8c%e5%8d%81%e5%9b%9b%e7%ab%a0%20%e7%9b%b8%e8%b5%a0&url=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E4%25BA%258C%25E5%258D%2581%25E5%259B%259B%25E7%25AB%25A0%25E7%259B%25B8%25E8%25B5%25A0%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E4%25BA%258C%25E5%258D%2581%25E5%259B%259B%25E7%25AB%25A0%25E7%259B%25B8%25E8%25B5%25A0%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>桃叶巷的一栋宅子里，有位慈眉善目的老人，坐在廊下的藤椅上，身边坐着位模样俏皮可爱的丫鬟，穿着鹅黄纹彩长裤，外边罩穿着浅罗碧色的纱裙，一边听着老人说故事，一边缓缓扇风。</p>
+<p>老人突然开口问道：“桃芽，风呢，又打盹啦？不是吓唬你，若是在小镇之外的大家宅子，你这样偷懒，可是要挨罚的。”</p>
+<p>没有任何回应，对下人一直优容宽厚的老人，正想继续调笑几句，脸色骤变，抬头望向远方，神情凝重起来。原来小院内，不仅是少女丫鬟所持之扇，没有丝毫动静，事实上就连无形的清风也静止了。老人赶紧屏气凝神，默念口诀，坐忘入定，以免在这场光yīn长河的短暂逆流当中，白白折损修为道行。老人轻轻叹息，最为恪守规矩礼数的齐静春，也终于破例出手，如此一来，真是山雨欲来风满楼了。</p>
+<p>铁锁井，身材魁梧的外乡年轻人蹲在不远处，使劲盯着轱辘车。但是眼角余光，却偷偷瞥向一位丰腴村妇的侧影，她正弯腰从井口中提起一只水桶，弧度惊人的臀部，沉甸甸坠下的胸脯，整个人略显夸张的曲线，玲珑毕露，身躯绽放出一股饱满麦穗的野性气息，让原本不过中人之姿的妇人，也多出一些别样韵味来。当年轻人意识到周围环境出现诡异静止后，他人没有动，只是壮着胆子，正视那幅妇人汲水的美妙画面，年轻人偷偷咽了咽口水，赶紧扭转身体，换了个蹲姿。</p>
+<p>难怪师父说过，山下女子，是出林虎，功力大减了，可要是一旦带上山，就要成为称王称霸的座山虎，是会吃人的，师父喝酒之后，总说天底下的英雄豪杰，全输给自家的入山虎了，没一个例外。但是年轻人觉得出林虎就已经很厉害了，比如眼前那妇人，明明长得普通，却妖娆得让他心痒痒，要是她二话不说给他一耳光，完全不讲道理，年轻人觉得自己还是根本不敢还手，说不得妇人一笑，他还会跟着笑呢。</p>
+<p>年轻人想到这些，就有些灰心丧气，低头瞥了眼裤裆，骂骂咧咧，“没骨头，难怪没骨气！”</p>
+<p>————</p>
+<p>泥瓶巷内，宋集薪正在翻阅一本厚重陈旧的地方县志，宋集薪摸索出很多规律，例如大体上是每六十年一增补，所以宋集薪私下将此书取名为《甲子志》，还有就是小镇百姓在年少时被远房亲戚带出去后，几乎就没有人回到过家乡，好像很不喜欢落叶归根，属于墙里开花墙外香，很多家族姓氏就在外面开枝散叶，甚至成长为一棵棵根深蒂固的参天大树，所以宋集薪又将其昵称为《墙外书》。</p>
+<p>少年此时正在翻阅一页人物传，描述了一个叫曹曦的生平事迹，笔墨吝啬，是这本县志的又一特色，宋集薪翻来覆去看了最少七八遍，对于这本书早已滚瓜烂熟，所以如今闲暇时翻阅，只会拣选一些光怪陆离的人物故事，当做一位说书先生描述的演义传奇，真实性如何无从考据，宋集薪当然也不在意，他只记得那个身穿官服的男人，在赴京述职离开小镇之前，深夜独自来此，男人以一种无比郑重的态度，告诉少年要牢记一件事情，就是背诵记住书中每一个出现过的人名，以及成百上千个人数，和他们身后祖辈们在小镇的各自根脚，尤其是跟四姓十族的关系脉络。</p>
+<p>此时宋集薪纹丝不动，就像小镇东南那些个破碎不堪的泥塑神像，一座座随意倒在草丛中、泥地里，无论风吹雨打，只是岿然不动。从窗户透过洒在书桌上的光线，保持一种反常的静止状态。</p>
+<p>这栋宅子里，唯一能动的人和物，是婢女稚圭和那条不起眼的四脚蛇，她很早就察觉到异样，脑海中第一个冒出的想法，是去隔壁院子，找那个面瘫少女，骂她个狗血淋头，但是当婢女意识到那柄剑的存在后，便打消了这个诱人的念头。她先是来到自己少爷的房间，斜瞥一眼书页内容，看到“曹曦”两个字就嫌烦，便帮少爷向后翻了几页，看到有关“谢实”的篇幅后，才开心笑了笑。只不过很快她就悻悻然，又将书页翻回去，以免泄露天机，害得自己露了马脚，这些年来，精明城府的少爷不过是出于好奇，怀疑她的身份来历罢了，从未抓到过真正的确凿证据，她可不想在大功告成之际，功亏一篑，她跟随少爷经常要去乡塾，觉得读书人有些话，说得很虚伪混账，比如“舍生而取义者也”，有些话则说得还不错，比如“行百里者半于九十”，真是把道理给说通透了。</p>
+<p>那条土黄色的四脚蛇，正趴在门槛上晒太阳，此时当它寂然静止，便恢复“真身”了，光线映照下，只见它流光溢彩，晶莹剔透，身躯通体像一块琉璃。</p>
+<p>隔壁院子的屋内，黑衣少女宁姚陷入一种玄之又玄的胎息状态，不以口鼻嘘吸，如婴儿仍在胞胎之中，神气归根而止念。</p>
+<p>雪白剑鞘内，飞剑如获大赦，缓缓出鞘后，它在主人四周轻快飞掠，小鸟依人之温驯亲昵，又有少女衣裙飘曳之美感。它并非胡乱飞行，而是灵犀画符一般，为正在疗伤的主人营造出一块最佳的风水之地，果不其然，没有丝毫呼吸迹象的少女，四周气息迅猛涌入她体内，她如鲸吞水，疯狂汲取这方天地间的本源灵气。于是这一刻，小镇的死寂沉沉，与这栋宅子的风生水起，构成鲜明的对比。</p>
+<p>小镇外的南方溪畔。</p>
+<p>有个五短身材的汉子，浓眉大眼，锐气逼人，袒胸露腹，手持铁锤正在打铁，一锤下去，火星四溅，满室光辉。</p>
+<p>无数星星点点的火光，在空旷的屋子里随处乱窜，绚烂壮观。</p>
+<p>一次抡捶，就能砸出一幅画面。</p>
+<p>汉子对面，站着一个扎着条清清爽爽马尾辫的少女，身材娇小，她披了件黄牛皮质的罩袍，防止火星溅射到身上，寻常棉布衣衫，很容易被烧穿出一个个窟窿来。</p>
+<p>当一次捶打之后，千万点火星，骤然间在屋内全部停滞。</p>
+<p>马尾辫少女皱眉问道：“爹？”</p>
+<p>汉子沉声道：“换你来锤打剑条，正好借此机会锤炼你的神意。”</p>
+<p>少女放下那根老剑条，拨开身前两侧火星，火星被她随手挥退，牵一发而动全身，本该静止在光yīn长河里的星火，不断撞击着火星，一次次相互撞击，使得屋内的光线，显得絮乱无比。</p>
+<p>相比小镇内那些好似潜龙在渊的高龄前辈，一个个凝神屏气静心入定，少女的所作所为，实在是过于横行霸道了点。</p>
+<p>尤其是当换成她来抡捶之后，势大力沉，动作迅猛，甚至比起经验老道的汉子，还要更加狂野不羁。</p>
+<p>每一次捶打溅射出来的火星，在止境当中并不会消失，所以一次次叠加之后，密密麻麻的火星，如璀璨繁星，拥簇在空中。</p>
+<p>铸剑之室，火星亿万。</p>
+<p>男子死死盯住那根通红的剑胚子，沉声吩咐道：“心中默念《铸剑经》的撼龙篇！”</p>
+<p>少女气势骤然下降，低声道：“爹？”</p>
+<p>男人恼火道：“干啥子？”</p>
+<p>少女气势再降，怯生生道：“中午吃得少了，肚子饿，捶不动了。”</p>
+<p>男人更加火大，如果不是在铸剑，差点就要调教骂人，“明明是让你背书就跟要你命一样，找什么借口……他娘的，闺女你这胃口，饿也很正常，还真不是借口……”</p>
+<p>少女偷着笑，嘴上说饿，其实手上动作没有丝毫减弱，刹那之间灵犀一动，少女大喝一声后，竭尽全力一锤砸下，鬼使神差道：“给我出来！”</p>
+<p>这一次溅射出来的火星，极其繁多，尤为刺眼。</p>
+<p>汉子脸上不露声色，心道：“成了。”</p>
+<p>————</p>
+<p>顾粲家的院子，妇人缓缓醒来，头疼如裂，在孩子的搀扶下坐回长凳，截江真君刘志茂正在闭目养神，袖中拇指食指缓缓掐动。</p>
+<p>妇人顾氏将儿子按在自己身边坐着，轻声问道：“仙长，怎么回事？”</p>
+<p>老人没有睁眼，道：“老夫收了个好徒弟，你有个好儿子。顾氏你就安心等着母凭子贵吧。”</p>
+<p>妇人大喜过望，热泪盈眶，抱住孩子，细细碎碎呢喃道：“孩子他爹，你听到了没有，我们顾粲一定会有大出息的……”</p>
+<p>刘志茂突然咦了一声，惊讶出声，睁眼低头观看掌心纹路，好似岔开出来一条新路，自言自语道：“这是为何？不应该啊。少年没死，反倒是那仙家子弟，莫名其妙死了？”</p>
+<p>老人不得不站起身，在院中缓缓踱步，掐指飞快，“废物！栽在一个市井少年的手里，云霞山辛苦积攒下来的千年声望，就此毁于一旦。”</p>
+<p>妇人忐忑不安道：“老仙长，既然我们家粲儿已经拜师了，不如就放过陈平安吧？”</p>
+<p>老人怒喝道：“妇人之仁！真要有一副慈悲心肠，你我初见时，就不该起杀心念头。这个时候来跟老夫装女菩萨，要脸不要脸？”</p>
+<p>妇人被骂得满脸惨白，嚅嚅喏喏不敢说半个字。</p>
+<p>老人犹不解气，伸手指着妇人大骂：“乡野村妇，见识短浅！以后顾粲随我返回书简湖后，你们母子相见的次数，绝不可太过频繁，以免妨碍了他的修行，可有异议？”</p>
+<p>妇人赶紧摆手道：“不敢。”</p>
+<p>老人眼神yīn森。</p>
+<p>妇人愣了愣，很快回过神，哭丧着脸，可怜兮兮道：“没有异议，绝对没有！”</p>
+<p>老人使劲一挥袖子，冷哼道：“气煞老夫！”</p>
+<p>先前眼见妇人还算有些别致风韵，刚刚有了将她收为贴身奴婢的念头，她便表现得如此俗不可耐，活该她错过一份有望步入修行门槛的福气。</p>
+<p>老人突然如临大敌，环顾四周，果然此方天地被人为静止为“止境”了，止境是世间诸多小洞天的一种，陆地神仙、金身罗汉也休想开辟而成。</p>
+<p>这种大神通，可谓登峰造极，虽说很大程度上归功于那座大阵，但依然让人倍感敬畏敬畏。</p>
+<p>试想一下，只要身处此方天地当中，任你是仙佛神魔鬼怪，来此皆需向我磕头，那是何种感受？</p>
+<p>截江真君刘志茂做梦都想要达到此等高度。术高莫用？去你的鬼吧！刘志茂恨不得有此小洞天之后，将佛陀、道祖、儒教教主这三位的第三代弟子，全部拉进来，不敢说要他们低头弯腰，好歹大家一起平起平坐，同辈相称。</p>
+<p>刘志茂毫无征兆地吐出一口鲜血，手心也鲜血溅射，像是被人用利器使劲割出一条血槽。</p>
+<p>另外一只手上，也不由自主地显现出那只白碗，水面波纹混乱，黑线乱窜，四处撞壁。</p>
+<p>老人没有丝毫犹豫，手心叠在手背，身为道家旁门中人，却以儒家作揖行礼，一弯到底，虔诚至极，颤声道：“书简湖青峡岛岛主刘志茂，恳请齐先生怜悯晚辈赤忱求道之心，若有冒犯之处，还望先生大人……圣人不记小人过！”</p>
+<p>良久之后。</p>
+<p>“速速离去！”</p>
+<p>四字如春雷炸响在这位真君的耳畔。</p>
+<p>刘志茂狂喜道：“先生放心，晚辈这就携带顾氏母子离开小镇。”</p>
+<p>一直以晚辈自居的老人记起一事，小心问道：“敢问先生，晚辈身上这两袋子金精铜钱，应该如何处置？”</p>
+<p>威严嗓音再度响起，“一人一物，刚好是两份机缘，留在院中即可。三十年内，你不许离开书简湖半步。”</p>
+<p>刘志茂如释重负，这次总算没有那般谄媚，故意行儒生揖礼，而只是打了个庄重的道家稽首，“长者赐不敢辞，齐先生的大恩大德，晚辈铭感五内，没齿难忘！”</p>
+<p>在这之后，齐静春的声音并未出现，止境也很快随之消失，刘志茂不废话，立即让顾氏带着顾粲随他离开小镇，顾氏正要说话，就被刘志茂一个凶狠至极的眼神瞪过去，吓得妇人噤若寒蝉，刘志茂掏出两只袋子，虽然心中有些恋恋不舍，但是这位志在一个名副其实真君头衔的旁门道人，仍是毫不犹豫地放在了长凳上，只是刚走到小院的时候，刘志茂突然问道：“你们家有没有留下什么老物件？”</p>
+<p>顾氏茫然，鬼头鬼脑的顾粲立即提醒道：“爹不是留下个多宝阁嘛，就是藏在床底下吃灰的那个？”</p>
+<p>刘志茂眼前一亮，二话不说就让妇人带路，去一探究竟。</p>
+<p>既然那位圣人认可了顾粲本身即是机缘，那就意味着这个孩子可以带走属于他自己的机缘。</p>
+<p>至于这些机缘的最终归属，在小镇上，恐怕天王老子来了，也得听齐静春的，但是到了书简湖，可就不好说了。</p>
+<p>终于无人看管的顾粲等到两人进屋后，一手一把抓起两只袋子，轻轻拔出门栓，撒腿飞奔向泥瓶巷另一端。</p>
+<p>屋内妇人顾氏跪在地上，探入床底去搬箱子，箱子不大却很沉，有些费劲，搬得她气喘吁吁。</p>
+<p>结果她的丰盈臀部被截江真君狠狠踢了一脚，老人调笑道：“顾氏，你亏在后天保养上，不过就凭这个，在青峡岛做个二等丫鬟，有些勉强，不过当三等丫鬟，绰绰有余。老夫瞧你是瞧不上眼，不过青峡岛上，倒是有几位客卿散人，说不得好你这一口，到时候你可要好好争取，莫要羞怯，白白错失了一桩福缘。”</p>
+<p>妇人身体微微僵硬，她此时大半身体仍在床底，看不清表情。</p>
+<p>————</p>
+<p>走到一条巷口，齐静春对陈平安说道：“蔡金简和苻南华，就交由我处置。如今你有了这片祖荫槐叶，就更不要看轻生死，好好活下去，才是对你爹娘最大的回报。至于之后云霞山、老龙城和截江真君三方势力，我不敢说他们永远不会找你的麻烦，但是十年内肯定不会来寻你的麻烦，运气好的话，你就一直是个市井平民，也能够三十年安然无恙。”</p>
+<p>齐静春笑道：“也无需对小镇心存忌讳，以后……过不了多久，应该就再没有那些算计了。如果你想要二三十年安稳日子，不妨就在这里找个姑娘娶了，成家立业便是。如果想要去小镇之外，见识一下真正的天地景象，也是好事情。读万卷书，行万里路，是我们读书人必须要做的事情，你以后就会发现，在小镇上是读书难，走路容易，到了外头，很多读书人是买书、看书、藏书都很容易，可就是不喜欢走远路，嫌吃苦，所谓的负笈游学，不过是乘车郊游罢了。”</p>
+<p>少年惊讶道：“齐先生，走路也算吃苦？”</p>
+<p>齐静春开怀大笑，“先不说小镇以外，只说身边好了，你见过福禄街、桃叶巷有几个同龄人，跟你这样漫山遍野乱跑的？”</p>
+<p>少年点头道：“还真是。”</p>
+<p>齐静春想了想，伸手拔出插在发髻上的一根碧玉发簪，弯腰递给贫寒少年，“就当是离别赠礼好了。并非贵重物件，更非仙家物品，放心收下。其实我与你一样，曾是陋巷少年，发奋苦读，经历重重磨难、坎坷，当然也有种种际遇，这才进入山崖书院，拜师求学的那段时光，是我齐静春这辈子最开心的岁月，后来先生出山之时，便交给我这根簪子，算是对我的一种期许和嘱托，只可惜如今回头来看，这么多年来，我做的一直不好，相信如果先生在世的话，一定会失望了。”</p>
+<p>少年哪里敢接下这份礼物。</p>
+<p>这根碧玉簪子，似乎还蕴含着齐先生和他先生的师徒情谊，情意重不用说，何况礼也不轻啊。</p>
+<p>少年再没见识，到底也是烧御用瓷出身的人物，对于一件东西的好坏，还是有些鉴赏力的。</p>
+<p>齐静春温声道：“留在我这里，恩师遗物就要随我一起埋没了，还不如转赠给你。何况你其实是无功不受禄，我在小镇逗留了将近六十年，一直有个小心结，不得解开，可惜恩师已逝，原本以为这辈子都会得不到答案，是你无意间帮我解惑了，所以我将这根簪子送你，于情于理于礼，都很合适。陈平安，只能帮你求来一片槐叶，无法给你再多机缘了。”</p>
+<p>少年双手接过那根材质普通的玉簪子，抬头真诚道：“先生已经做了很多了。”</p>
+<p>齐静春一笑置之，眼见着少年被自己说服收下簪子，便少了一块心病，簪子确实普通平凡，可到底是恩师遗物，能够赠送给一个不辱玉簪铭文的少年，很好。</p>
+<p>所以齐静春最后叮嘱道：“陈平安，记住，以后不管遇到什么，你都不要对这个世界失去希望。”</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E7%AB%A0%E7%A6%BB%E5%88%AB/" title="第二十五章 离别">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">第二十五章 离别</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89%E7%AB%A0%E6%A7%90%E8%8D%AB/" title="第二十三章 槐荫">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">第二十三章 槐荫</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

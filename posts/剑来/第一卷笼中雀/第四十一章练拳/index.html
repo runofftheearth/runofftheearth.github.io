@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第四十一章 练拳 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%80%E7%AB%A0%E7%BB%83%E6%8B%B3/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="夜幕深沉，督造官衙署，宋长镜一人独自返回，少年宋集薪已经去往狗窝一般的泥瓶巷，对此男人没有强求，身为统兵多年的沙场大将，在尸山血海里，尚且能够鼾声大作，所以那个被放养的侄子，这些年日子过得没那么符合天潢贵胄的身份，宋长镜没觉得这就亏欠了那孩子。能活着返回大骊京城，就不错了。
+" />
+
+
+<meta name="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%80%E7%AB%A0%E7%BB%83%E6%8B%B3/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="第四十一章 练拳">
+  <meta property="og:description" content="夜幕深沉，督造官衙署，宋长镜一人独自返回，少年宋集薪已经去往狗窝一般的泥瓶巷，对此男人没有强求，身为统兵多年的沙场大将，在尸山血海里，尚且能够鼾声大作，所以那个被放养的侄子，这些年日子过得没那么符合天潢贵胄的身份，宋长镜没觉得这就亏欠了那孩子。能活着返回大骊京城，就不错了。">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-23T09:42:44+08:00">
+    <meta property="article:modified_time" content="2024-02-23T09:42:44+08:00">
+    <meta property="article:tag" content="烽火戏诸侯">
+    <meta property="article:tag" content="剑来">
+    <meta property="article:tag" content="第一卷笼中雀">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="第四十一章 练拳">
+  <meta name="twitter:description" content="夜幕深沉，督造官衙署，宋长镜一人独自返回，少年宋集薪已经去往狗窝一般的泥瓶巷，对此男人没有强求，身为统兵多年的沙场大将，在尸山血海里，尚且能够鼾声大作，所以那个被放养的侄子，这些年日子过得没那么符合天潢贵胄的身份，宋长镜没觉得这就亏欠了那孩子。能活着返回大骊京城，就不错了。">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="第四十一章 练拳">
+  <meta itemprop="description" content="夜幕深沉，督造官衙署，宋长镜一人独自返回，少年宋集薪已经去往狗窝一般的泥瓶巷，对此男人没有强求，身为统兵多年的沙场大将，在尸山血海里，尚且能够鼾声大作，所以那个被放养的侄子，这些年日子过得没那么符合天潢贵胄的身份，宋长镜没觉得这就亏欠了那孩子。能活着返回大骊京城，就不错了。">
+  <meta itemprop="datePublished" content="2024-02-23T09:42:44+08:00">
+  <meta itemprop="dateModified" content="2024-02-23T09:42:44+08:00">
+  <meta itemprop="wordCount" content="105">
+  <meta itemprop="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+      <header>
+        <h1 itemprop="headline">第四十一章 练拳</h1>
+        <p class="text-sm">
+          
+            星期五, 2月 23, 2024
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期五, 2月 23, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%e7%ac%ac%e5%9b%9b%e5%8d%81%e4%b8%80%e7%ab%a0%20%e7%bb%83%e6%8b%b3&url=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E5%259B%259B%25E5%258D%2581%25E4%25B8%2580%25E7%25AB%25A0%25E7%25BB%2583%25E6%258B%25B3%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E5%259B%259B%25E5%258D%2581%25E4%25B8%2580%25E7%25AB%25A0%25E7%25BB%2583%25E6%258B%25B3%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>夜幕深沉，督造官衙署，宋长镜一人独自返回，少年宋集薪已经去往狗窝一般的泥瓶巷，对此男人没有强求，身为统兵多年的沙场大将，在尸山血海里，尚且能够鼾声大作，所以那个被放养的侄子，这些年日子过得没那么符合天潢贵胄的身份，宋长镜没觉得这就亏欠了那孩子。能活着返回大骊京城，就不错了。</p>
+<p>衙署的年迈管事，一直等候在门口，手里提着灯笼。</p>
+<p>宋长镜率先跨过只开了一扇侧门的门槛，大步向前，说道：“不用带路。”</p>
+<p>年迈管事默然点头，放缓脚步，然后悄然离去。</p>
+<p>福禄街上的这栋衙署，建造得并不豪奢，占地远远不如卢李两姓的宅子，前任那位货真价实的窑务督造官，生活得清苦紧巴，小镇大户们也没觉得如何不妥。</p>
+<p>但是宋长镜不一样，当今大骊皇帝的同母弟弟，还立下过开疆拓土不世之功，更是东宝瓶洲名列前茅的武道宗师。</p>
+<p>他的到来，就像过江龙闯入了一座小湖，地头蛇们哪怕谈不上如何畏惧，面对宋长镜这种人，谁都会拿出该有的恭谨姿态。</p>
+<p>宋长镜经过一座小院子的时候，看到有人还在房内挑灯夜读，坐姿端正，独处之时，仍是一丝不苟。</p>
+<p>不愧是一位正人君子。</p>
+<p>宋长镜大袖飘摇，快步走过，嘴角泛起讥讽笑意。</p>
+<p>昔年有少年求学于观湖书院，书法通神，名动朝野，被南魏国主召入皇宫，于侧殿撰写诏书，正值隆冬大雪，笔冻不能书，帝敕令宫嫔十余人侍于左右身侧，为其呵笔。</p>
+<p>此事迅速风靡东宝瓶洲，传为一桩美谈。</p>
+<p>只是无人深思，皇城宫禁何等森严，这种事情，皇帝不说，宦官不说，嫔妃不说，老百姓是如何知道的？</p>
+<p>走在幽深小径上，宋长镜蓦然爽朗大笑。</p>
+<p>身穿一身素洁衣衫的宋集薪回到泥瓶巷，院门未锁，推开屋门后，看到婢女稚圭坐在正堂一张椅子上，半眯着眼，歪着脑袋打瞌睡，当脑袋倾斜到了一个幅度后，就立即坐正，然后继续歪斜。</p>
+<p>看来少女是真的很累了。宋集薪弯下腰，轻轻晃了晃她的肩膀，柔声道：“稚圭稚圭，醒醒，赶紧回自己屋子睡觉去，小心冻着。”</p>
+<p>睡眼惺忪的少女揉着眼睛，迷糊道：“公子，怎么这么晚才回来啊。”</p>
+<p>宋集薪笑道：“去了趟廊桥那边，路程有点远，所以晚了些。”</p>
+<p>稚圭看到宋集薪的这身陌生礼服，惊讶道：“咦？公子怎么换了一身衣服？”</p>
+<p>宋集薪不愿在这个话题上多聊，“不提这个。那本地方县志借给你后，读书识字怎么样了，要不要我教你？”</p>
+<p>少女摇头道：“不用。”</p>
+<p>宋集薪回到自己屋子，漆黑一片，脱掉外袍，踢掉靴子，摸到床上，少年呢喃道：“王朱，王朱，原来如此。”</p>
+<p>稚圭回到自己屋子，熄灯睡觉，整个人缩在被窝里，发出一阵阵轻微的动静像是在偷吃东西，嘴里嚼着些什么。</p>
+<p>最后她竟然还打了一个饱嗝。</p>
+<p>————</p>
+<p>刘羡阳在铸剑铺子这边，虽然还没有正式成为阮师傅的徒弟，但是谁都看得出来，阮师傅对这个高大少年很器重，否则也不会手把手亲自教他如何锻打剑条，那一排铸剑室，如今并不是谁都可以进入的。</p>
+<p>正午歇息的时候，有一个烧瓷窑工出身的年轻人跑到刘羡阳跟前，说有人找他，挤眉弄眼，十分玩味，说是一个比福禄街那些夫人还好看的美妇人，来找刘羡阳。</p>
+<p>刘羡阳嬉皮笑脸跟着他走去，心情其实一下子沉重起来。</p>
+<p>果不其然，在一座水井旁边，站着一位身材修长的妇人，四周许多挖井搬土的青壮汉子，干活特别起劲。</p>
+<p>如小夫子宋集薪所鄙夷的那样，刘羡阳确实就是个土鳖，但是女子好看与否，跟读没读过书，识不识字，实在是没有任何关系。也许高大少年不知道，笼统含糊的好看一说，其中其实有一种叫妩媚，尤其是端庄且内媚，尤为动人心魄。</p>
+<p>媚这个字，若是解字，本就是画眉之女的意思。</p>
+<p>眼前这位不知姓名、根脚的夫人，眉毛细巧如娥虫之须，额头像蝉，广而方正，光洁丰满。</p>
+<p>今天她只身一人来此，没有兴师问罪的架势，也不像是要仗势凌人，刘羡阳稍稍松了口气。</p>
+<p>只不过这位雍容华贵的夫人，脸蛋再好看，刘羡阳不否认，如果是以往，说不定在街边遇上，还会吹几声口哨， 可是这不意味着刘羡阳就会动心，高大少年心仪的女子，以前是那个泥瓶巷的婢女，如今是，以后也是。</p>
+<p>刘羡阳带着美丽妇人走向小溪，语气坚定道：“夫人，你如果是想要说服我，卖给你们那件传家宝，我劝夫人不要开这个口了。”</p>
+<p>妇人嫣然笑道：“先别急着拒绝，容我跟你说清楚利害关系，你再来做决定。”</p>
+<p>高大少年脸色不变，故作轻松，其实一颗心瞬间沉入谷底。</p>
+<p>在远处，少女蹲坐在一间铸剑室门槛上，端着一碗饭，白米饭堆积出山尖尖的模样，高耸出大白碗的边沿，她正在狼吞虎咽，吃掉“山头“后，如愿以偿看到被她隐藏其中的红烧肉，整个人洋溢着幸福的光彩，偷偷背转身，背对着坐在门槛另一端细嚼慢咽的男人，问道：“爹，不管一管那外乡婆姨？”</p>
+<p>男人瓮声瓮气道：“不管。”</p>
+<p>青衣少女忧心道：“他可是你以后在这里的开山大弟子，就不怕走岔路？”</p>
+<p>男人淡然道：“那就是那小子没福气。”</p>
+<p>少女疑惑道：“爹，不会感到可惜啊？”</p>
+<p>比如她，看到铺子里那些好吃又精致的糕点，兜里没钱也就罢了，有钱，买了，结果不小心掉地上，真是活该被天打五雷轰。</p>
+<p>男人答非所问，“红烧肉好吃不？”</p>
+<p>少女下意识开心点头，“好吃好吃！”</p>
+<p>少女猛然绷紧身体，爹下过“旨意”，她每天只能吃一份荤菜，所以她假装像是只盛了一碗白米饭，将红烧肉藏在其中。为的就是晚上能够光明正大吃上一份荤菜。</p>
+<p>少女尴尬转头，高高抬起白碗，理直气壮道：“只有一块呦，我又没有坏规矩！”</p>
+<p>男人呵呵一笑，问道：“那么藏在碗底的那块红烧肉，吃不着，会不会感到可惜啊？”</p>
+<p>少女微微张大嘴巴，整个人跟被雷劈了似的，心如死灰。</p>
+<p>男人还往自家闺女伤口上撒盐，“你要是不多嘴问刘羡阳的事情，爹也就睁一只眼闭一只眼了。”</p>
+<p>少女闷不吭声，小口小口吃着红烧肉，一看就知道以后肯定勤俭持家。</p>
+<p>男人吃完饭，望向小溪那边的妇人和少年，说道：“这小子只要一天不登中五境，爹就不会管他的死活。哪怕进入中五境，爹会管一两次，但也绝不会多管，事不过三吧。福祸无门，惟人自召。”</p>
+<p>少女赌气道：“为啥不管？！”</p>
+<p>男人没好气道：“文人收学生，武人收徒弟，都不是江湖帮派招徕小喽啰，不是想着以后跟人起了争执，仗着人多势众来跟人吵架或是打架。归根结底，在我眼中，师生也好，师徒也罢，就是同道中人。何况如今刘羡阳还不是我的徒弟。”</p>
+<p>少女没说话。</p>
+<p>男人感叹道：“傻闺女，只说这偏居一隅的大骊王朝，知道有多少人吗？两千多万户！这么多天下人，这么多烦心事，你管得过来吗？爹会在接下来的六十年里，从齐静春手里接管小镇，你也别成天乱逛，安心在剑炉这边铸剑练剑，要不然惹了麻烦，爹是管还是不管？”</p>
+<p>不等男人把话说完，少女就冒出一句话，“不用你管。”</p>
+<p>她这句话，把男人憋得差点内伤，威力之大，不比某位剑仙的压箱底手笔更弱。</p>
+<p>男人真想使劲敲着这个傻闺女的榆木脑袋，你的事情，爹能不管？</p>
+<p>男人有些哀愁啊。</p>
+<p>少女一脸“震惊”道：“咦，碗底怎么多出一块红烧肉来，唉，我今天的份额用完啦，还是给你吃吧？爹？”</p>
+<p>男人不用转头看，都能感受到傻丫头的蹩脚演技，无奈道：“算了，你吃吧，爹就当你今天只吃了一块红烧肉。记得下午打铁，别再偷懒了。”</p>
+<p>这次少女的感激，丝毫不作伪，“爹，你真好！”</p>
+<p>男人气笑道：“是红烧肉好吧。”</p>
+<p>少女低下头，扒了一口米饭，轻声道：“爹也好。”</p>
+<p>男人绷着脸，好不容易才忍住笑意，想了想，觉得还是生个闺女好啊。</p>
+<p>耳边突然响起一个嗓音，“爹，晚上还能再吃一块不？两块和三块，差不太多，对不对？爹你不说话，我就当答应了哦？”</p>
+<p>少女以迅雷不及掩耳之势跑掉了。</p>
+<p>最后那句话，则是少女已经跑出去老远，她才说的。</p>
+<p>男人揉了揉脸颊，自言自语道：“我家秀秀以食为天。”</p>
+<p>————</p>
+<p>陈平安穿街走巷送完信后，买了一份早点，送去给泥瓶巷的宁姑娘，然后开始熟门熟路地煎药。</p>
+<p>宁姚今天穿了一件崭新的墨绿色长袍，干净利落，她本就长得英气勃发，这一身衣饰，加上腰佩长刀，比起福禄街桃叶巷那边的富家子弟，更有贵气。</p>
+<p>宁姚犹豫了一下，“就目前而言，你如果真想研习那本撼山谱，在学拳势之前，你要先做三件事，站桩，走桩和睡桩，最后一件事，比较讲究窍穴积淀和气息流转，很难用言语描述，先不说它便是。反正前两件事情，无需太考虑天赋根骨，你老老实实按照拳谱上绘画出来的姿势，长久以往坚持下去，终归是有用的，哪怕无法让你在武道上登堂入室，但是强健体魄和延年益寿，不是没有可能。”</p>
+<p>陈平安说出自己的一个想法，“在溪水里练习走桩，是不是也行？”</p>
+<p>宁姚点头道：“当然。及膝练起，再及腰，最后及脖。”</p>
+<p>陈平安顺着她的话问道：“最后不是整个人在水里吗？”</p>
+<p>宁姚冷笑道：“怎么，你是想在水底练习闭气，然后练出一只千年王八万年龟啊？”</p>
+<p>陈平安悻悻然不说话。</p>
+<p>宁姚想了想，“来，我给你演示一下走桩。看仔细了！”</p>
+<p>宁姚让陈平安把桌子挪开，然后向前走出六步，步伐为三小三大，最后一步当她一脚重重踏下，整栋屋子的泥地，仿佛都发出了一阵沉闷震动。</p>
+<p>少女一气呵成。</p>
+<p>看似轻描淡写，其实行云流水，给草鞋少年一种说不清道不明的感觉。</p>
+<p>如一条瀑布直泻而下，天经地义，而且蕴含着巨大的力道。又如树叶在溪水里打了一个旋转，圆转如意，轻柔至极。</p>
+<p>所有都是对的，但是陈平安只是知其然，不知所以然。</p>
+<p>看到少年一脸茫然的神色，宁姚又撤回原位，再次演示一遍。</p>
+<p>宁姚站定，转头问道：“看明白了吗？来试试看？”</p>
+<p>陈平安深呼吸一口气，尝试了一遍。</p>
+<p>摇摇晃晃，像个醉醺醺的酒鬼。</p>
+<p>陈平安站在原地，挠挠头，显然他自己也觉得有点不像话。</p>
+<p>宁姚黑着脸，沉声道：“再来！”</p>
+<p>三遍之后，陈平安已经略有好转，但是宁姚已经脸色阴沉得像要下一场暴雨。</p>
+<p>她无法想象，世上怎么会有陈平安这样的笨蛋，练武如此没有悟性，天资如此糟糕！</p>
+<p>没办法。</p>
+<p>宁姚是一个自幼就站在剑道极高处的人，出身，根骨，天赋，眼光，皆是如此。</p>
+<p>所以少女根本无法理解，在距离她有十万八千里之遥的山脚，那些人是如何一步一步登山的，更不会懂得那些人为何要走得踉踉跄跄。</p>
+<p>最后少女实在没辙，生怕自己一个忍不住，就要拔刀砍人，于是她灵机一动，拍了拍草鞋少年的肩膀，勉强安慰道：“陈平安，读书百遍其义自见，习武也是一样的道理，练拳几万下，出不来味道，那就几十万，一百万！你去捡你的石头吧，笨鸟先飞，别灰心丧气，慢慢来，在小溪里一遍遍练习这个走桩。”</p>
+<p>陈平安一想，真是这个道理。</p>
+<p>以前听宋集薪说过一句话，跟宁姑娘的“读书百遍”差不多意思，叫读书破万卷，下笔如有神。</p>
+<p>不过少年觉得更有道理的，还是宁姑娘所说的几万几十万不够，那就练一百万次嘛。</p>
+<p>陈平安笑着跑出泥瓶巷，一路上默念三小三大，按照记忆去模仿宁姚的走姿。</p>
+<p>草鞋少年在心中，告诉自己的“真相”，是练习一百万次之后，兴许就能练拳小成了。</p>
+<p>所以这部《撼山谱》的练拳起步，就是一百万次，在那之后，他陈平安才有资格再来谈其他。</p>
+<p>宁姚独自坐在门槛上，自言自语道：“为何感觉自己好像挖了一个天大的坑？那家伙会不会爬不出来啊？”</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E7%AB%A0%E5%A4%A9%E6%89%8D/" title="第四十二章 天才">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">第四十二章 天才</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%9B%9B%E5%8D%81%E7%AB%A0%E8%BF%98%E7%A4%BC/" title="第四十章 还礼">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">第四十章 还礼</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

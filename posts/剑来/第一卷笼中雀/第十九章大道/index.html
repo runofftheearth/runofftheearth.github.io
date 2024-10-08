@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第十九章 大道 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%8D%81%E4%B9%9D%E7%AB%A0%E5%A4%A7%E9%81%93/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="在陈平安即将跑出院子的时候，黑衣少女突然喊道：“等等，我有些事情要跟你说。”
+" />
+
+
+<meta name="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%8D%81%E4%B9%9D%E7%AB%A0%E5%A4%A7%E9%81%93/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="第十九章 大道">
+  <meta property="og:description" content="在陈平安即将跑出院子的时候，黑衣少女突然喊道：“等等，我有些事情要跟你说。”">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-17T08:28:58+08:00">
+    <meta property="article:modified_time" content="2024-02-17T08:28:58+08:00">
+    <meta property="article:tag" content="烽火戏诸侯">
+    <meta property="article:tag" content="剑来">
+    <meta property="article:tag" content="第一卷笼中雀">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="第十九章 大道">
+  <meta name="twitter:description" content="在陈平安即将跑出院子的时候，黑衣少女突然喊道：“等等，我有些事情要跟你说。”">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="第十九章 大道">
+  <meta itemprop="description" content="在陈平安即将跑出院子的时候，黑衣少女突然喊道：“等等，我有些事情要跟你说。”">
+  <meta itemprop="datePublished" content="2024-02-17T08:28:58+08:00">
+  <meta itemprop="dateModified" content="2024-02-17T08:28:58+08:00">
+  <meta itemprop="wordCount" content="51">
+  <meta itemprop="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+      <header>
+        <h1 itemprop="headline">第十九章 大道</h1>
+        <p class="text-sm">
+          
+            星期六, 2月 17, 2024
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期六, 2月 17, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%e7%ac%ac%e5%8d%81%e4%b9%9d%e7%ab%a0%20%e5%a4%a7%e9%81%93&url=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E5%258D%2581%25E4%25B9%259D%25E7%25AB%25A0%25E5%25A4%25A7%25E9%2581%2593%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E5%258D%2581%25E4%25B9%259D%25E7%25AB%25A0%25E5%25A4%25A7%25E9%2581%2593%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>在陈平安即将跑出院子的时候，黑衣少女突然喊道：“等等，我有些事情要跟你说。”</p>
+<p>陈平安假装没听到，正要打开院门的时候，少女提高嗓门，“陈平安！”</p>
+<p>陈平安只得转身跑回门槛那边，她脸色已经比之前红润几分，只是嗓音依旧有些沙哑，道：“第一，我们这些外人来到小镇之后，虽然如之前跟你所说，体魄强健胜过常人，但是除此之外，跟你们没什么两样。第二，外人不可以在这里杀人，一旦违反，无论什么原因理由，都会被驱逐出去，注定一无所获，这个代价很大，大到超出你的想象。第三，你也要想清楚，我们这些外人，到了危急时刻，哪怕拼着两手空空，也一定会出手，毕竟有命活下去，才是最根本的事情。”</p>
+<p>陈平安想了想，问道：“是不是说做事情，出手一定要快？”</p>
+<p>黑衣少女咧嘴一笑，神采飞扬的脸色，熠熠生辉的眼神，仿佛使得整间屋子都亮堂起来，她拍了拍横在膝盖上的绿色刀鞘，点头道：“对！出手要很快，更快，甚至是最快！比如我，佩刀也佩剑，我就要做到无论是拔刀，还是出剑，都是全天下最快的那个人！”</p>
+<p>她停顿了一下，突然从一个慷慨激昂的远方女侠，变成了一个想要显摆的邻家少女，眯眼笑问道：“喂，你知不知道这个天下到底有几座？”</p>
+<p>陈平安一脸茫然。</p>
+<p>少女好像也看出少年的不感兴趣，顿时索然无味，挥挥手赶人：“最好把罐子买回来，我等着喝药呢。”</p>
+<p>陈平安这次离开院子的脚步，慢了些，也平稳很多。</p>
+<p>在他离开泥瓶巷没多久，不曾上锁的院门便被人轻轻推开，屋内黑衣少女睁开眼睛，她刚才以一种奇怪的方式进行呼吸吐纳，望向门口那边，如临大敌。</p>
+<p>桌上雪白剑鞘内的飞剑，蓦然寂静无声，无形中却多出一股肃杀之气，仿佛当下的倒春寒，能够冻骨杀人。</p>
+<p>婢女稚圭悠悠然走到门口，就像寻常走门窜户的街坊邻居，她没有跨过门槛，向屋内探头探脑，四处张望，对于小床板上膝上横刀的黑衣少女，反而视而不见。</p>
+<p>稚圭打量许久，才终于看到那个大活人，满脸天真无邪道：“这位姐姐，你是谁呀？怎么坐在陈平安床上，我可没听说他有远房亲戚。”</p>
+<p>宁姚看了不请自来的少女一眼，便闭上眼睛，不闻不问。</p>
+<p>稚圭见她装聋作哑，也不生气，只是轻轻晃了晃脑袋，撇撇嘴，一脸嫌弃。</p>
+<p>她看了眼桌上那柄剑鞘雪白的长剑，她的眼眸深处，隐藏着极深的恨意和惧意，隐约有金色丝线在瞳孔中疯狂游走。这位婢女犹豫了一下，仍是抬起一只脚，准备跨过门槛，突然收回脚，咳嗽一声，装模作样道：“我进来了哦。不说话就是不反对，对吧？也是，这本来就是陈平安的宅子，我跟他认识好多年……你该不会听不懂我说的话吧？没关系，反正我们也没啥好聊的，我就是来看看这边，有没有缺什么东西，我们马上就要搬走了，很多物件都可以留给陈平安，你是不知道，这些年他过得很不容易啊。”</p>
+<p>絮絮叨叨，惺惺念念，让她和陈平安，像极了青梅竹马的少年少女。</p>
+<p>婢女稚圭走入屋子后，风平浪静，她径直走到小桌旁，坐在凳子上，眼角余光一直在那柄剑上打转。</p>
+<p>与此同时，黑衣少女也掏出年轻道人留给陈平安的三张纸，细细观摩，试图琢磨出一点门道来，只可惜翻来覆去仔细看了两遍，仍是不得其法，失望道：“这些字，写得真是没有……味道。”</p>
+<p>她清楚记得，家乡的那堵长墙之上，断断续续有十八个字，皆是有人以剑刻就，每一个字都蕴含着镇压万妖的磅礴气势。</p>
+<p>在她还是稚童的岁月里，她最大的爱好，就是站在那些大字的某一笔画当中，举目眺望。</p>
+<p>故而对于小镇四字匾额“气冲斗牛”，少女是真的看不上眼。</p>
+<p>婢女稚圭转过身，悄悄挺直纤细的腰肢，双手叠放在膝盖上，约莫是尽量让自己更像一位大家闺秀，面对着黑衣少女，笑眯眯柔声道：“唉，姑娘你也太不小心了。”</p>
+<p>宁姚忍不住问道：“你是谁？”</p>
+<p>稚圭哎呀一声，摸了摸自己胸口，故作惊讶，“姑娘你会说咱们这边的方言啊。”</p>
+<p>宁姚又问道：“你有事？”</p>
+<p>稚圭伸手指了指桌上长剑，“你的？”</p>
+<p>宁姚皱眉不言语。</p>
+<p>黑衣少女不说话，稚圭也无所谓，站起身走到墙角落，看着木架上的瓶瓶罐罐，那些不值钱的家当，这位婢女看得很仔细。</p>
+<p>在当窑工学徒的时候，陈平安光脚走遍了小镇周围所有的山山水水，一个人去山上挖土、砍柴，上山下山跑得很快。只要别人肯教他东西，不管是粗浅入门的，还是晦涩难学的，陈平安都会花十二分力气去做，至于最后能够做到什么程度，陈平安都不管，当然想管也管不着。就像姚老头教他烧瓷手艺，总是抠抠搜搜，从不愿意拿出真正的压箱底绝活，但只要是姚老头开口说过、出手做过，陈平安就会做得异常认真。后来刘羡阳教他制作木弓、鱼竿等，陈平安也同样学得一丝不苟。隔壁宋集薪说话向来刻薄，说陈平安的这种习性，按照书上说，叫作尽人事听天命，只可惜啊，陈平安根本没有什么好命，既然如此，还不如混吃等死，破罐子破摔得了。</p>
+<p>稚圭挥挥手，笑容灿烂道：“走啦走啦，姑娘你好好养伤。有需要就喊一声，我叫稚圭，住在隔壁院子。”</p>
+<p>宁姚面无表情。</p>
+<p>婢女离开屋子，走到院子后，以屋内黑衣少女刚好能听到的嗓音，嘀咕道：“也没有多少好看嘛。”</p>
+<p>宁姚也有意无意轻轻说了一句，“这名字真俗气。”</p>
+<p>稚圭关上院门的时候，有些用力，砰然作响。</p>
+<p>宁姚重新闭上养神。</p>
+<p>奇怪少女的造访，宁姚心无波澜。</p>
+<p>不过她是真的很不喜欢这座小镇，尤其不喜欢来此寻求机缘的修行中人，勾心斗角，蝇营狗苟，说是仙人高人，只是站在山上的缘故，并非自身有多高。</p>
+<p>在少女宁姚心中，大道不该如此小。</p>
+<p>————</p>
+<p>草鞋少年走出泥瓶巷后，阳光有些刺眼，伸出右手遮在额头，轻轻呼出一口气。</p>
+<p>然后他开始慢跑，脚步轻快，哪怕已经多次穿街过巷，仍是毫无疲惫，毕竟对于习惯了上山下水的少年来说，这点路程实在是太不值一提，真正称得上艰辛的事情，是上山烧炭，一座龙窑每年需要用掉木炭两三万斤，尤其是大雨天的时候，住在山上砍柴烧炭，那真是一种遭罪，少年曾经差点就死于一座建造时坍塌的炭窑里。少年这些年所做的事情，几乎都是体力活，也讲些技巧，但是入门之后，就纯粹是靠力气吃饭了，所以少年表面上的瘦小羸弱，只是假象，拥有一种内在经受过千锤百炼后的精悍。</p>
+<p>陈平安在一处十字巷口停下脚步，背靠墙壁，蹲下身，一手始终握拳，一手系紧草鞋。</p>
+<p>这一刻，少年心如止水。</p>
+<p>只是有些想念小镇上唯一的朋友。</p>
+<p>那个家伙曾经神神秘秘跟陈平安炫耀，说他爷爷讲过一个故事，在他爷爷小时候，亲眼看到过有人站在溪畔，只是小跑几步，就一步跃过了整条小溪。后来刘羡阳和陈平安去自己尝试，挑了一处溪面最窄的地段，两人同时后退助跑，同时起跳，结果比陈平安还大几岁的刘羡阳一跃之后，很快力竭落水，然后发现到头顶有个黑影，嗖一下，继续向前，最终落在很远处。</p>
+<p>在那之后，刘羡阳就再也没提过什么一步跨溪的神仙了。</p>
+<p>在那之后的之后，刘羡阳知道陈平安会经常自己去溪边，助跑，起跳，腾空，飞跃，摔落。</p>
+<p>少年一次比一次接近对岸，乐此不疲。</p>
+<p>有次忍不住偷偷远观，当刘羡阳看到那震撼人心的一幕后，觉得那时候的黝黑少年，好像跟印象中的笨蛋，不太一样。</p>
+<p>少年飞跃溪水的时候，就像一头经常盘旋在小镇天空的捕蛇鹰。</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E5%8D%81%E7%AB%A0%E6%A8%AA%E7%94%9F%E6%9E%9D%E8%8A%82/" title="第二十章 横生枝节">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">第二十章 横生枝节</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%8D%81%E5%85%AB%E7%AB%A0%E4%BA%94%E5%8E%BB%E4%B8%83%E4%B8%89/" title="第十八章 五去七三">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">第十八章 五去七三</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

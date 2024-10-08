@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二十章 横生枝节 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E5%8D%81%E7%AB%A0%E6%A8%AA%E7%94%9F%E6%9E%9D%E8%8A%82/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="苻南华见蔡金简有些兴致低落，便带着她随便四处走走，两人并肩而行，权且当做散心，期间夹杂一些关于东宝瓶洲南方的奇闻轶事，蔡金简仍然有些强颜欢笑，不过比起离开泥瓶巷后的烦躁，心情确实要好了许多。
+" />
+
+
+<meta name="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E5%8D%81%E7%AB%A0%E6%A8%AA%E7%94%9F%E6%9E%9D%E8%8A%82/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="第二十章 横生枝节">
+  <meta property="og:description" content="苻南华见蔡金简有些兴致低落，便带着她随便四处走走，两人并肩而行，权且当做散心，期间夹杂一些关于东宝瓶洲南方的奇闻轶事，蔡金简仍然有些强颜欢笑，不过比起离开泥瓶巷后的烦躁，心情确实要好了许多。">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-17T08:31:35+08:00">
+    <meta property="article:modified_time" content="2024-02-17T08:31:35+08:00">
+    <meta property="article:tag" content="烽火戏诸侯">
+    <meta property="article:tag" content="剑来">
+    <meta property="article:tag" content="第一卷笼中雀">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="第二十章 横生枝节">
+  <meta name="twitter:description" content="苻南华见蔡金简有些兴致低落，便带着她随便四处走走，两人并肩而行，权且当做散心，期间夹杂一些关于东宝瓶洲南方的奇闻轶事，蔡金简仍然有些强颜欢笑，不过比起离开泥瓶巷后的烦躁，心情确实要好了许多。">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="第二十章 横生枝节">
+  <meta itemprop="description" content="苻南华见蔡金简有些兴致低落，便带着她随便四处走走，两人并肩而行，权且当做散心，期间夹杂一些关于东宝瓶洲南方的奇闻轶事，蔡金简仍然有些强颜欢笑，不过比起离开泥瓶巷后的烦躁，心情确实要好了许多。">
+  <meta itemprop="datePublished" content="2024-02-17T08:31:35+08:00">
+  <meta itemprop="dateModified" content="2024-02-17T08:31:35+08:00">
+  <meta itemprop="wordCount" content="50">
+  <meta itemprop="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+      <header>
+        <h1 itemprop="headline">第二十章 横生枝节</h1>
+        <p class="text-sm">
+          
+            星期六, 2月 17, 2024
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期六, 2月 17, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%e7%ac%ac%e4%ba%8c%e5%8d%81%e7%ab%a0%20%e6%a8%aa%e7%94%9f%e6%9e%9d%e8%8a%82&url=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E4%25BA%258C%25E5%258D%2581%25E7%25AB%25A0%25E6%25A8%25AA%25E7%2594%259F%25E6%259E%259D%25E8%258A%2582%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E4%25BA%258C%25E5%258D%2581%25E7%25AB%25A0%25E6%25A8%25AA%25E7%2594%259F%25E6%259E%259D%25E8%258A%2582%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>苻南华见蔡金简有些兴致低落，便带着她随便四处走走，两人并肩而行，权且当做散心，期间夹杂一些关于东宝瓶洲南方的奇闻轶事，蔡金简仍然有些强颜欢笑，不过比起离开泥瓶巷后的烦躁，心情确实要好了许多。</p>
+<p>她对于这位老龙城的贵公子，印象渐好，要知道老龙城虽然底蕴深厚，英才辈出，距离顶尖宗门只有一线之隔，照理说比较二流垫底的云霞山，要高出许多，但是云霞山这类传承有序、根正苗红的正统仙家，对老龙城这类偏居一隅的南方蛮夷，拥有一种先天的优越感，若是以往遇见，不背后嘀咕一声南蛮子就算修养好的了。</p>
+<p>蔡金简苦涩道：“苻兄，云根石虽是我们云霞山的命-根子，但既然事先说定，我便不会赖账，哪怕倾家荡产，也会偿还给苻兄。”</p>
+<p>苻南华安慰道：“顾粲家的机缘，是否已是板上钉钉的局面，目前还不好说。”</p>
+<p>蔡金简脸色黯然，摇头道：“截江真君刘志茂，声明狼藉不假，手段不弱，否则也没办法在书简湖有一席之地，这桩机缘，强求不得了。一旦惹恼刘志茂，我如何扛得住一位旁门大真人的威势，怕就怕已经被刘志茂记恨上，一旦离开小镇，没了圣人坐镇和规矩约束，天晓得刘志茂会做出什么过激举动。想必苻兄在边境上，也看出一些蛛丝马迹，山门这趟随我来此寻宝的扈从，实力不济，完全不是他的对手。”</p>
+<p>苻南华笑道：“放心便是，哪怕是为了那十块云根石，我老龙城也会护送你安然回到云霞山。”</p>
+<p>蔡金简转头朝他嫣然一笑，翦水秋瞳，脉脉含情。</p>
+<p>苻南华颇为自得，习惯性想要抚摸那块玉佩，摸了一个空，才记起自己的老龙布雨佩，已经送给那个叫宋集薪的少年。</p>
+<p>蔡金简松了口气，走路的时候，脚步稍稍向左倾斜些许，于是她的肩头轻轻触碰了一下苻南华。</p>
+<p>泥瓶巷之行，蔡金简是做了一次计划外的押注，属于临时起意，却也小心权衡，只不过事实证明她赌输了，代价就是十块价值连城的云根石，这让她对接下来的小镇之行，充满了焦虑，无形中也对苻南华产生了依赖感，或者说产生了赌徒心性，十块云根石是赌，五十块不一样是赌？赌赢了，狠狠赚一个盆满钵盈，赌输了……蔡金简觉得自己不会输，绝对不会，她可是云霞山的修行天赋第一人蔡金简！修行路上，一帆风顺，境界提升，势如破竹，蔡金简不相信自己会在这条臭水沟翻船。</p>
+<p>在蔡金简心情好转的同时，感大局已定的苻南华，也有了真正欣赏蔡仙子容貌身段的闲情逸致，不可否认，她是天生内媚的女子，一旦与这种女子结为道侣，朝夕相处，无论修行还是床笫，皆可渐入佳境。</p>
+<p>蔡金简曾被一位德高望重的前辈大佬，亲口誉为“云根山风，飞天之姿”，言下之意，其实是极为难得的道侣人选，靠山吃山、做惯了生意的云霞老祖们，这些年不计代价栽培蔡金简，未尝没有待价而沽的私心，仙家联姻的天作之合，比起世俗王朝豪阀大姓的嫁娶，要更为慎重，看得也更加长远。</p>
+<p>只是苻南华对云霞山实在没什么好感，将山门命运就放在蔡金简一个女人的肩头，实在不像话，这也是苻南华对云霞山观感不佳的原因所在。</p>
+<p>苻南华提醒道：“万一宋集薪隔壁的少年，也是外边某方势力的选定之人，还留着那件本名瓷器，那么你这次出手，就会惹来麻烦，容易被人顺藤摸瓜，找到云霞山和你。再者，宋集薪主仆和截江真君刘志茂，都有可能察觉到此事。”</p>
+<p>蔡金简笑道：“苻兄可能专注于机缘线索，不曾在意此地一些不成文的规矩，小镇当地出生之人，男孩在九岁的时候，若是没能被等了将近十年的‘买瓷人’，找机会带离小镇，就意味着根骨天资先天不行，已经不太值钱，往后岁数越大，更加廉价，那些宗门帮派与其花一笔天价‘领养钱’，来当冤大头，显然远远不如用来重金培养几个亲传子弟，来得实惠。”</p>
+<p>蔡金简一提起那个草鞋少年，就满心厌恶，“凡夫俗子就该有凡夫俗子的觉悟！”</p>
+<p>苻南华尽量小心措辞，劝说道：“理是这个理，可是那少年见识短浅，哪里晓得你云霞山蔡仙子的尊贵，便是有所冒犯，教训一顿也够了，何须两次出手。”</p>
+<p>苻南华觉得蔡金简的悍然出手，事出反常必有妖，说不定就暗藏玄机，与机缘有关，所以他希望套出些话来，看能不能找到一些蛛丝马迹。以免螳螂捕蝉黄雀在后，自己将她当做秋蝉，其实是她才是黄雀。老龙城历经千辛万苦，加上给出远比正阳山、云霞山更加夸张的价格，才只得到一些只言片语的零碎秘闻，苻南华才得以知道小镇三千年以来，所谓机缘，在那场荡气回肠、千古绝唱的惨烈战事之后，除了那群天资卓绝的小镇孩子之外，确实一直只是前辈祖师们遗落此地的法宝器物而已，但是当这块福地面临彻底崩溃之际，就没有这么简单了。</p>
+<p>末代王朝，山河破碎，必有神兵重器出世，以迎新王朝新气象。</p>
+<p>蔡金简有些闷闷不乐，“别提他了，想起来就恶心。”</p>
+<p>她随即秋水长眸中流露出一抹罕见戾气，只不过不愿坏了自己在苻南华心目中的仙子形象，她才没有将心中所想诉诸于口。</p>
+<p>如果将来在小镇之外遇上那少年贱种，她一定要让他死个痛快，而不只是拖着一副病秧子身躯，继续苟活十几二十年。</p>
+<p>高挑女子尤其讨厌少年那双眼眸。内心深处，她有个自己从未深思的执念。</p>
+<p>那种干干净净的眼神，她在以“无垢澄澈”著称的云霞山，修行这么多年，从头到尾都不曾见到过几次，生长于陋巷的贫寒少年，有什么资格日复一日、年复一年拥有这份美好？</p>
+<p>蔡金简歪头揉着眼皮子，这个动作使得她的那双远山黛眉，愈发纤长。</p>
+<p>一直打量四周景象的苻南华随意打趣道：“在我们老龙城的井坊间，有个流传很广的说法，叫左眼跳财右眼跳灾，你是左眼跳还是右眼跳？”</p>
+<p>蔡金简手指被烫似的赶紧缩回手，瞪了他一眼，她当下显然是右眼皮在跳。</p>
+<p>自讨苦吃的苻南华连忙亡羊补牢，笑道：“凡夫俗子的瞎讲究，当不得真。”</p>
+<p>蔡金简嘴角翘起，侧过身，凝望着苻南华的侧脸，得意洋洋道：“被骗了吧？”</p>
+<p>苻南华愣了愣，看着小女儿娇憨作态的蔡金简，他没来由有些心动。</p>
+<p>他突然有些犹豫，对她的杀心开始摇摆不定，是不是与之成为一双神仙美眷，会更有利于老龙城势力北上的谋划？蔡金简一旦在此成功获得机缘，回到山门后，地位势必水涨船高，运作得当，甚至不是没有机会成为云霞山的女主人，在历史悠久的云霞山祖谱上，也不是没有女子当家的先例。如此一来，老龙城就等于有了一块跳板，名正言顺渗透东宝瓶洲的腹地版图，从此南北呼应，进可攻退可守，正是王霸基业，使得老龙城摆脱空有实力、却只能偏安割据的尴尬局面，数百年来饱受排斥之苦。</p>
+<p>前方不远处，几步外，就是横竖两条巷弄交错的十字路口了。</p>
+<p>苻南华看到那个岔口，猛然惊醒，似有所悟，眼神重新坚毅起来。</p>
+<p>头戴高冠的苻南华，额头瞬间渗出了细密汗珠。</p>
+<p>乱我心志者，必杀之，以坚道心！</p>
+<p>这一刻，苻南华再看向蔡金简，他的眼神、气态和心境，便恢复之前的洒脱了，纯粹像是在欣赏一幅画面，美人美景，皆可以养目，如今能多看几眼就几眼，毕竟她在离开小镇后，注定要在他手上香消云陨。</p>
+<p>杀人放火金腰带，修路铺桥无骸骨。</p>
+<p>听听，有些市井底层的名言警句，真是放之四海而皆准啊。</p>
+<p>苻南华心胸，豁然开朗。</p>
+<p>蔡金简侧着身，嗓音柔媚，笑问道：“南华，想到什么了，这么开心？”</p>
+<p>她悄悄换了个更亲昵的称呼。</p>
+<p>苻南华摇摇头笑了笑，正要说话，眼角余光瞥见一抹黑影。</p>
+<p>一个身材消瘦的少年，仿佛只用了一步，就从那条横向巷弄跨到了蔡金简身前，左手迅猛上挑，与此同时，右手一拳已经砸在云霞山仙子的腹部，势大力沉，尺寸间的骤然发力，竟然隐约有呼啸风声，迫使女子不得不弯腰低头。</p>
+<p>虽然少年右手劲道已经远超同龄人，但少年其实是个左撇子，所以少年左手握住的利器，完完全全没入蔡金简的喉咙，直接刺透下口腔。</p>
+<p>少年犹不罢休，右手一拳砸在女子胸膛，左手仍是向上一抬。</p>
+<p>保证这场偷袭不会有丝毫意外。</p>
+<p>那一刻，女子原本纤细白皙的脖子上，鲜血喷涌。</p>
+<p>再接下去，少年腰肢、脚踝发力，以肩头撞向高挑女子心口，将其整个人狠狠撞入横向小巷中。</p>
+<p>苻南华双脚扎根地面，死死站在原地。</p>
+<p>这位老龙城少主，头脑一片空白。</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%80%E7%AB%A0%E6%8D%95%E8%9B%87%E9%B9%B0/" title="第二十一章 捕蛇鹰">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">第二十一章 捕蛇鹰</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%8D%81%E4%B9%9D%E7%AB%A0%E5%A4%A7%E9%81%93/" title="第十九章 大道">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">第十九章 大道</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

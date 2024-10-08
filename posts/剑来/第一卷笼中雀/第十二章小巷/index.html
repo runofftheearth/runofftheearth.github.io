@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第十二章 小巷 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%E5%B0%8F%E5%B7%B7/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="黑衣少女走向小巷深处，偶尔会有人家挂出喜庆的大红灯笼，相比其他人，帷帽少女没有什么家族的精心铺垫，没有什么草蛇灰线伏延千里，她就这么孑然一身，闯入小镇。
+" />
+
+
+<meta name="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%E5%B0%8F%E5%B7%B7/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="第十二章 小巷">
+  <meta property="og:description" content="黑衣少女走向小巷深处，偶尔会有人家挂出喜庆的大红灯笼，相比其他人，帷帽少女没有什么家族的精心铺垫，没有什么草蛇灰线伏延千里，她就这么孑然一身，闯入小镇。">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-17T08:12:16+08:00">
+    <meta property="article:modified_time" content="2024-02-17T08:12:16+08:00">
+    <meta property="article:tag" content="烽火戏诸侯">
+    <meta property="article:tag" content="剑来">
+    <meta property="article:tag" content="第一卷笼中雀">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="第十二章 小巷">
+  <meta name="twitter:description" content="黑衣少女走向小巷深处，偶尔会有人家挂出喜庆的大红灯笼，相比其他人，帷帽少女没有什么家族的精心铺垫，没有什么草蛇灰线伏延千里，她就这么孑然一身，闯入小镇。">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="第十二章 小巷">
+  <meta itemprop="description" content="黑衣少女走向小巷深处，偶尔会有人家挂出喜庆的大红灯笼，相比其他人，帷帽少女没有什么家族的精心铺垫，没有什么草蛇灰线伏延千里，她就这么孑然一身，闯入小镇。">
+  <meta itemprop="datePublished" content="2024-02-17T08:12:16+08:00">
+  <meta itemprop="dateModified" content="2024-02-17T08:12:16+08:00">
+  <meta itemprop="wordCount" content="53">
+  <meta itemprop="keywords" content="烽火戏诸侯,剑来,第一卷笼中雀">
+
+      <header>
+        <h1 itemprop="headline">第十二章 小巷</h1>
+        <p class="text-sm">
+          
+            星期六, 2月 17, 2024
+          
+
+          | <span>1分钟阅读</span>
+
+          
+          | <span>更新于
+            
+              星期六, 2月 17, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%e7%ac%ac%e5%8d%81%e4%ba%8c%e7%ab%a0%20%e5%b0%8f%e5%b7%b7&url=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E5%258D%2581%25E4%25BA%258C%25E7%25AB%25A0%25E5%25B0%258F%25E5%25B7%25B7%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2ffengqianxia.github.io%2fposts%2f%25E5%2589%2591%25E6%259D%25A5%2f%25E7%25AC%25AC%25E4%25B8%2580%25E5%258D%25B7%25E7%25AC%25BC%25E4%25B8%25AD%25E9%259B%2580%2f%25E7%25AC%25AC%25E5%258D%2581%25E4%25BA%258C%25E7%25AB%25A0%25E5%25B0%258F%25E5%25B7%25B7%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>黑衣少女走向小巷深处，偶尔会有人家挂出喜庆的大红灯笼，相比其他人，帷帽少女没有什么家族的精心铺垫，没有什么草蛇灰线伏延千里，她就这么孑然一身，闯入小镇。</p>
+<p>小巷不远处，站着一个锦衣少年，双手正高高捧起一方青色玉玺，稚童的巴掌大小，雕刻有龙盘虎踞，在阳光的照射下，熠熠生辉，玉玺内隐约有丝丝缕缕的霞光亮起。锦衣少年抬头眯眼望着手中这方至宝，满脸陶醉。</p>
+<p>在他身边，有个高大老人单膝跪地，正在用袖口仔细擦拭少年靴子上的泥土。</p>
+<p>锦衣少年的眼角余光，其实也早早发现了奇怪少女，头戴浅露款式的帷帽，悬佩一柄绿鞘狭刀，步伐沉稳，显而易见，她绝不会是小镇本地人。</p>
+<p>只不过锦衣少年毫不在意，仍然仔细端详着那方沉寂千年的古老玉玺，内心深处，他甚至希望那少女心生夺宝念头，要不然实在是太无趣了。</p>
+<p>反正他已经两样东西得手，收获之丰，远超预想，如果再不找点事情做做，他就只能带着老奴就此离去，对于这位少年而言，会觉得缺少点什么。</p>
+<p>就好比他在小镇万里以外的那个家里，身上穿着一袭金黄色的九蟒大袍子，只可惜，始终少了一爪。</p>
+<p>来此小镇，每位选定之人，可携带三枚信物，分别装入锦囊绣袋，之前交给看门人一只袋子，属于必须掏出来的过路费，不管那个看门人身份高低，不论城门如何破烂不堪，即便是一国君主，或者一宗祖师来此，也得老老实实按照这个规矩来。其余两只锦囊绣袋，意思是在此最多捞取两件宝物带出小镇，否则任你在这里搜刮到十件、百件宝贝，也要一一还回去。袋子里的信物，是三种形制特殊的铜钱，分别是市井百姓用以庆贺上梁的压胜钱，皇宫每年悬挂于桃符上的迎春钱，以及被城隍爷塑像托在掌心的供养钱，说是铜钱，其实质地是珍稀异常的金精，对于“山下”大多数凡夫俗子而言，连官家纹银都不常见，更何况是一袋子沉甸甸的“黄金”，确实足以让人心甘情愿来兜售传家宝。</p>
+<p>锦衣少年对于三种不见于正史记载的铜钱，钻研了一路，也琢磨不出任何门道。</p>
+<p>前方，浑身散发出一种冷峻气息的少女，笔直前行，将小巷主仆二人视若无物。</p>
+<p>锦衣少年临时改变主意，收起了那方玉玺，装入一只早就准备好的布袋子，系挂在腰间，但是依然站在小巷中央，没有要让路的意思。</p>
+<p>身材高大、皮肤白皙的老人也站起身，嗓音yīn柔，细声细气道：：“殿下，此人是个登堂入室的练家子，不可掉以轻心。若是在小镇以外，自然不用在意。可是在此地，便是咱家这副走纯粹武道的体魄，也时时刻刻承受此方世界的压制，极为难受。一旦全力运转气息、窍穴大开，就会像是江海倒灌，经脉窍穴都会洪水泛滥，一发不可收拾，到时候咱家死了事小，殿下安危事大啊。如果由于咱家的照顾不周，使得殿下修道的千秋大业，出现丁点儿纰漏，回去之后，咱家如何跟陛下和娘娘交待？”</p>
+<p>锦衣少年促狭道：“吴爷爷，你出宫之后，话变得多了。以前在宫里头，你一年到头就是翻来倒去那几句话，比我姐饲养的那只笨鹦鹉还不如。”</p>
+<p>老人自称“咱家”，处处骨子里透着卑躬屈膝，尤其是在心底以此为豪，只能是忠心耿耿的宫中阉人。</p>
+<p>他见这位小主人好像没有听明白自己的言下之意，只得更加直白说道：“殿下，小巷此人在此地，已经有可能对殿下造成威胁。”</p>
+<p>锦衣少年懒洋洋笑道：“虽然我早就听闻修行路上，三教九流鱼龙混杂，许多邪门歪道，更多旁门左道，但是我和她不过一场萍水相逢，她这就要见财起意，杀人夺宝？不太可能吧？要是‘山上’人人如此，岂不是早就天下大乱了？”</p>
+<p>老人叹了口气，山下王朝和山上仙家，双方貌合神离，其实是相看两相厌的立场。</p>
+<p>锦衣少年有些心灰意冷，“算啦算啦，把这笔烂账算在一个丫头头上，不算大丈夫所为。”</p>
+<p>少女走到他身前，左手按住刀柄。</p>
+<p>锦衣少年笑了笑，侧过身，示意少女先行。</p>
+<p>黑衣少女也稍稍放缓脚步，微微侧身，帷帽后的眼神，充满戒备警惕。</p>
+<p>当年迈宦官发现少女用棉布包扎的受伤双手，忍不住眉头紧皱。</p>
+<p>“放肆！”</p>
+<p>骤然间老人一声怒喝，如舌绽春雷，双脚好似一滑，高大身影便来到锦衣少年身前，老人后背轻轻一靠，以巧劲将少年推在小巷墙壁上，同时左手张开五指。</p>
+<p>手心处传来一记沉闷的撞击声。</p>
+<p>原来是有人以石子作为暗器，砸向锦衣少年的头颅侧面。</p>
+<p>声势惊人，力道几乎足以贯穿一堵墙壁。</p>
+<p>老人砰然捏碎手心拳头大小的石子，却不是杀向那名刺客，而是右手一拳轰向那个黑衣少女。</p>
+<p>悬刀少女略作犹豫，强行压抑下拔刀出鞘的本能，而是歪过脑袋，刚好躲过这势大力沉的刚猛一拳。</p>
+<p>拳风之烈，瞬间吹乱少女的帷帽薄纱。</p>
+<p>高大老人变直拳为横扫，拳头正好砸向少女的脑袋。</p>
+<p>拳势圆转如意，毫无凝滞。</p>
+<p>少女只得迅速抬起双臂，双手手背叠放在一起，护在耳畔之外，呈现出十字交错的防御姿态，挡在拳路前方。</p>
+<p>下一刻，少女整个人侧滑出去十数步。</p>
+<p>少女轻轻吐出一口浊气，伸出手心鲜血渗透棉布更多的那只手，扶正了头顶有些歪斜的帷帽。</p>
+<p>她有些生气。</p>
+<p>少女转过身，望着那个左右张望了一下的高大老人，一板一眼说道：“如果不是我，就已经是个死人了。”</p>
+<p>老人置若罔闻，只是相较之前，这位对于刺杀偷袭可谓经验丰富的老宦官，已经将少女的危害程度，下降为第二位，第一把交椅，则让位给了小巷另一侧的出手之人。</p>
+<p>当然，小巷除了主仆二人，真正的外人，也就只有两个。</p>
+<p>小巷那边，站着个高高瘦瘦的蒙面人。</p>
+<p>手臂却极其粗壮，隆起肌肉如铁球。</p>
+<p>他腰间悬挂两只袋子，装着满满当当的圆状物体。</p>
+<p>他就站在原地，好像在说，之前的偷袭，其实只是提醒罢了。</p>
+<p>yīn冷的视线，掠过少女身上的时候。</p>
+<p>男人咧了咧嘴角，吐了吐舌头，眼神炙热。</p>
+<p>少女呵呵一笑，说了三个字。</p>
+<p>“回来！”</p>
+<p>话音刚落。</p>
+<p>一剑过头颅。</p>
+<p>飞剑来到少女身边，环绕她急速旋转，如稚童撒娇。</p>
+<p>她没好气道：“滚！”</p>
+<p>飞剑一闪而逝。</p>
+<p>主仆二人，呆若木鸡。</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0%E7%9B%B8%E9%80%A2/" title="第十三章 相逢">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">上一页</span>
+            <span class="max-w-48 truncate">第十三章 相逢</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B8%80%E5%8D%B7%E7%AC%BC%E4%B8%AD%E9%9B%80/%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%E5%B0%91%E5%A5%B3%E5%92%8C%E9%A3%9E%E5%89%91/" title="第十一章 少女和飞剑">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal">下一页</span>
+            <span class="max-w-48 truncate">第十一章 少女和飞剑</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 | 仓鼠阁</title>
+
+    
+<link href="/imgs/avatar.jpg" rel="icon" type="image/x-icon" />
+
+
+<link rel="canonical" href="https://fengqianxia.github.io/" />
+
+
+
+<meta name="author" content="仓鼠阁" />
+<meta name="description" content="" />
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="https://fengqianxia.github.io/">
+  <meta property="og:site_name" content="仓鼠阁">
+  <meta property="og:title" content="仓鼠阁">
+  <meta property="og:locale" content="zh_Hans">
+  <meta property="og:type" content="website">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="仓鼠阁">
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+     
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/imgs/avatar.jpg" alt="仓鼠阁" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://fengqianxia.github.io/" class="text-lg font-semibold cursor-pointer">
+          仓鼠阁
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="搜索">
+    <ion-icon name="search"></ion-icon>
+    搜索
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="搜索">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+
+
+
+
+<div class="dream-grid">
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E5%85%AD%E5%8D%81%E4%B8%89%E7%AB%A0%E5%8E%BB%E8%80%8C%E5%A4%8D%E8%BF%94/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default2_hu56d6269342fd058767a3ed6bb73cdd00_189957_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default2.jpg" alt="/images/default2.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百六十三章 去而复返</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    <p>男人摊开双手，掌心朝上，轻轻晃了两下。</p>
+<p>久别重逢，示意剑气长城的自家人，尤其是对自己心心念念的好姑娘们，给点表示。</p>
+<p>原本陷入沉寂的整座剑气长城，城头之上，顿时口哨、嘘声四起。</p>
+<p>女子大剑仙陆芝低下眉眼，懒得看那男人，她真是没眼看。</p>
+<p>背对城墙的男人点了点头，很满意，自己还是这么受欢迎。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E5%85%AD%E5%8D%81%E4%BA%8C%E7%AB%A0%E5%9B%B4%E6%9D%80%E4%B8%80%E4%BA%BA%E5%92%8C%E4%B8%80%E4%BA%BA%E5%9B%B4%E6%9D%80/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default1_hu0a025718d8a4107614c89b6074607ba1_542459_2560x1440_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default1.jpg" alt="/images/default1.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百六十二章 围杀一人和一人围杀</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    <p>只闻其声，不见其人。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E5%85%AD%E5%8D%81%E4%B8%80%E7%AB%A0%E9%9B%80%E5%9C%A8%E7%AC%BC%E4%B8%AD/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default4_hu63edf6dbb3c8df1787664e056eca70c7_484759_2560x1440_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default4.jpg" alt="/images/default4.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百六十一章 雀在笼中</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    陈平安一路独自往南凿阵，所到之处，术法、灵器倾泻而下，下起了一阵阵的滂沱大雨。
+然后陈平安终于碰到了一个硬茬，是一位披挂鲜红锁子甲的矮小汉子，偏戴了一顶凤翅紫金冠，插有两根长尾雉的极长翎子，好似浩然天下那些市井戏台上的花俏装束。
+敢在剑气长城战场上这么招摇过市的，除了不怕死，肯定还有不怕死的资格，这位妖族修士身形极快，近乎缩地符，转瞬之间就从数里地之外，来到了陈平安身侧，一拳直接破开陈平安庇护周身的浑厚拳意，砸在陈平安太阳穴上，打得陈平安横飞出去数十丈。
+陈平安一掌拍地，飘然旋转，起身站定，后者如影随形，与陈平安互换一拳。
+双方几乎同时倒滑出去，在大地之上犁出一条没过膝盖的沟壑，后者抖了抖出拳的右手手腕，左手双指扯下一根翎子，开口言语，竟是剑气长城的方言，“你就是新任隐官？武夫远游境了？拳头不轻，难怪能先输曹慈三场，再赢郁狷夫三场。”
+他抬起右手，示意围杀而至的妖族大军都退后，将战场让给自己与剑气长城的年轻隐官。
+陈平安伸出大拇指，抹去嘴角血丝，再以手心揉了揉一侧太阳穴，力道真不小，对手应该是位山巅境，妖族的武夫境界，靠着先天体魄坚韧的优势，所以都比较不纸糊。只是九境武夫，身负武运，不该这么送死才对，穿着也好，出拳也罢，对手都过于“无所谓”了。
+陈平安很快了然，便难得在战场上与敌人言语，“你是蛮荒天下的最强八境武夫？要找机会破境，获得武运？”
+那身材矮小的汉子松开手中那根翎子，砰然弹起，点头笑道：“如何？你我问拳一场？我要说不会有谁掺和，你肯定不信，我估计也管不住一些个鬼鬼祟祟的剑修死士，没关系，只要你点头，接下来这场武夫问拳，妨碍我出拳的，连你在内皆是我敌，一并杀了。”
+陈平安伸出一手，指了指剑气长城那边，笑道：“城池里边，有位教我拳法的九境前辈，你可以去那边问拳。”
+那矮小汉子眼神阴沉，自己极有诚意，这位如今声名显赫的年轻隐官，却很不上道啊。
+陈平安说道：“最后陪你聊几句，一位武夫，不管输给谁，哪怕他是曹慈，都谈不上虽败犹荣，输了就是输了。以此可见，蛮荒天下的最强远游境武夫，不谈拳头硬不硬，只说武夫气魄心胸，确实很不咋的。你要是得了‘最强’二字，跻身九境，那就是天大的笑话了。”
+双方对话，其实都无甚意思。
+只是各自算计都不小，那矮小汉子故作豪迈，要单独问拳陈平安，不过是要以年轻隐官作为武道踏脚石，一旦就此破境，除了蛮荒天下的武运馈赠，还可以攫取剑气长城的一份武运底蕴。
+至于陈平安，当然是在暗中寻找那位蛮荒天下的百剑仙第一人，先前三教圣人两次造就金色长河，陈平安两场出城厮杀，与对方都打过交道，交手看似点到即止，都未出全力，但是细微处环环相扣，谁率先在某个环节出现纰漏，谁也就死了，而且死法注定不会如何慷慨壮烈，只会让境界不高的观战剑修觉得莫名其妙。
+那矮小汉子好像也没了勾心斗角的兴致，以靴子轻轻拨弄地面砂砾，“站着聊完了，等下我给你躺下说话的机会。对了，我叫侯夔门。”
+陈平安一手负后，微微转头，伸出手指，指了指自己太阳穴，示意有本事朝这边再来一拳。
+突然有了个想法，可以试试看。
+试试看的前提，就是先让对方试试看。
+侯夔门自然不会客气。
+侯夔门一拳递出之后，稍作犹豫，没有趁胜追击，只是站在原地，看着那个被自己一拳打飞出去的年轻人。
+根本没有躲避更没有还手的年轻人一脚重重踏地，止住身形，笑望向侯夔门，神色之中，略有讥讽。
+侯夔门方才担心有诈，便收力几分。
+一个以算计著称于六十军帐的年轻隐官，总不至于傻到站着被自己打死才对。
+所以一拳功成之后，便有一丝后悔，如果这一拳不是试探，而是倾力递出，这会儿那个年轻人还能站着？
+只是为何对方到底硬挨自己一拳？
+陈平安指了指自己心口位置，“再来一拳。”
+侯夔门抬起双臂，双指分别捻住翎子，他这身装束，鲜红锁子甲，与那紫金冠和两根熠熠生辉的翎子，可不是什么寻常的山上器物，而是一整套的上古兵家重宝，只不过炼化之后改变了相貌而已。半仙兵品秩，攻守兼备，名为剑笼，能够拘押剑仙飞剑片刻，没了本命飞剑的剑仙，一旦被他近身，那就要乖乖与他侯夔门比拼体魄了。
+侯夔门松开两根翎子，身形一闪，来到那个一心求死的同辈武夫身前，一拳递出，随后年轻隐官整个人摔在了远处。
+陈平安站起身，吐了一口血水，瞥了眼侯夔门，用家乡小镇方言骂了一句娘。
+原本是打算让这位八境巅峰武夫帮助自己打破七境瓶颈，不曾想这个侯夔门两次出拳，都磨磨蹭蹭，这让在北俱芦洲狮子峰习惯了李二拳头分量的陈平安，简直就像是白挨了两记妇人挠脸。
+如今的剑气长城，流传着一句公道话，看年轻隐
+官打人，或是看他被打，都是赏心悦目的事情。
+那侯夔门神色复杂。
+陈平安以蛮荒天下的大雅言问道：“你到底是要杀隐官立功，还是要与武夫问拳破境？！”
+侯夔门深呼吸一口气，双拳轻轻敲击一次，沉声道：“最后一拳，你要不死，就算我输。陈平安，我知道你一样有所求，没关系，就看谁拳法更高！这一拳，你只管还手。”
+陈平安皱了皱眉头。
+隐约之间，侯夔门的磅礴拳意，在他四周凝聚出一份模糊气象，类似圣人坐镇小天地。
+早年在书简湖，当初与青峡岛章靥同行远游，陈平安就发现自己能够依稀瞧出些迹象了。
+陈平安抖了抖袖子，卷起双袖轻轻舒展铺开。
+一瞬间。
+年轻隐官和侯夔门所处战场上，尘土飞扬，遮天蔽日。
+漫天风沙里夹杂着向四面八方迸射的细密拳意，乱如万千极小飞剑溅射。
+刹那之后，大地震颤，风沙四散，只见那侯夔门一手死死捂住脖子，鲜血从指缝间渗出，一手握拳，环顾四周。
+最后侯夔门看到了一位妖族修士身后，那个年轻隐官左手短刀刺入剑修死士后背心，再以右手短刀在脖子上轻轻一抹。
+侯夔门已经无法顺畅言语，含糊不清道：“陈平安，你作为隐官，我亲身领教了你的本事，只是身为纯粹武夫，真是让人失望，太让我失望了。”
+原来先前问拳，年轻隐官硬扛侯夔门一拳，却袖中出刀，直接由下往上，刺入后者脖颈，不但如此，左手一拍刀柄，侯夔门如果不是重重踏地，拔高身形，然后撤退数步，差点就要被锋刃搅烂唇舌，再被刀尖当场捅穿头颅。
+若是浩然天下的纯粹武夫，没有天生坚韧体魄支撑，受此重伤，断然是无法言语半个字了。
+陈平安将自己身前剑修死士的那具尸体轻轻推开，聚音成线，与侯夔门微笑道：“你先后三次出拳，哪一次符合纯粹武夫的身份。你要是第一拳就足够纯粹，我根本不介意与你互换三拳，说不定还能各自破境，那才是真正的谁生谁死，只看拳高低。”
+当陈平安现身之后，战场又自行腾出一大片空地来。
+年轻隐官，双手反持短刀，轻轻松开，又轻轻握住。
+这是与于禄学来的一个小习惯。
+至于持刀姿势，则是脱胎于梳水国剑水山庄瞧见的一种佩刀姿势。其实在山下江湖上，刺客刀客也有此举，但是在陈平安眼中，意思不够，是个死架子。
+侯夔门到底是只知道年轻隐官，太不清楚陈平安的厮杀习惯。
+当他开始拖泥带水的时候，一定是在追求什么后手。
+不然所有的言语，至多只会在分出生死之后。
+侯夔门没有就此撤退，拳意不减反增，很好。
+陈平安收起那对得自北俱芦洲割鹿山刺客之手的双刀入袖，站立不动。
+侯夔门不知施展了什么秘法，脖颈附近鲜血停止流淌，双臂下垂，亦是纹丝不动。
+这才是名副其实的武夫问拳，该有的心境。
+在那之后，只要是两道身影所到之处，必然殃及池鱼一大片。
+两位各在武学瓶颈的纯粹武夫，就像两把剑仙飞剑，肆意切割战场，满地的残肢断骸。
+侯夔门的出拳越来越“轻快”，拳意却越来越重。
+拳拳皆有那九境武夫的气象雏形，这就是破境大契机。
+不知为何，那个年轻隐官已是公认的剑修，却始终没有祭出飞剑，甚至连背后剑匣里边的长剑都没有动用任何一把。
+战场极远处，一位与年轻隐官作为同道中人的“中年男子”，看似被妖族大军裹挟，浩浩荡荡往剑气长城那边涌去，他一直在留心陈平安和侯夔门的厮杀，大致看出了些端倪，在犹豫要不要打乱陈平安的算盘。
+只是当他视线扫过几个方位，距离不近，掂量一番，他便放弃了出手，就不与那座天才辈出的甲申帐抢战功了。
+侯夔门一身血肉模糊，堂堂八境巅峰武夫，身披重宝，与明明相差一境的晚辈武夫，一场问拳，竟会沦为这般田地，匪夷所思。
+满脸血污的侯夔门蓦然站定，低头轻笑，大快人心，抬起头，死死盯住那个同样突然收拳的年轻人。
+侯夔门似乎是在说，等我九境，武运傍身，再来打你这个确实不太讲理的金身境瓶颈，就该轮到我侯夔门不讲理了，任你有那乱七八糟的算计，还能得逞？还能活着离开这处战场？有本事你陈平安也破境一个？！
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E5%85%AD%E5%8D%81%E7%AB%A0%E5%B1%85%E4%B8%AD%E6%AD%A6%E5%A4%AB/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default3_hu6a0df562d613fbdedf7180f7f013eef1_206638_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default3.jpg" alt="/images/default3.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百六十章 居中武夫</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    <p>刘羡阳就真的只是回乡看一趟，看完之后，就乘坐落魄山那条名为“翻墨”的龙舟渡船，无法直达老龙城，需要在宝瓶洲中部一处梳水国附近的仙家渡口中转，沿着那条走龙道南下。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E4%BA%94%E5%8D%81%E4%B9%9D%E7%AB%A0%E5%86%8D%E7%BF%BB%E4%B8%80%E7%BF%BB%E8%80%81%E9%BB%84%E5%8E%86/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default2_hu56d6269342fd058767a3ed6bb73cdd00_189957_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default2.jpg" alt="/images/default2.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百五十九章 再翻一翻老黄历</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    顾璨到了州城宅邸大门口，门口蹲着两尊出自仙家之手的白玉狮子，气势威严，便是饿极了的乞丐见着了，应该再没有那靠近大门乞讨的胆子。
+顾璨没有着急敲门。
+柳赤诚与柴伯符就只好跟着站在街上喝西北风。
+顾璨走上纤尘不染的台阶，伸手去扯兽首门环，停下手指，动作凝滞片刻，是那公侯府门才能够使用的金漆椒图铺首，顾璨心中叹息，不该如此僭越的，哪怕家中有一块太平无事牌镇宅，问题不大，州城刺史官邸应该是得了窑务督造署那边的秘档消息，才没有与这栋宅子计较此事，只是这种事情，还是要与娘亲说一声，没必要在门面上如此大手大脚，容易节外生枝。
+顾璨叩响门环，后退一步，一个衣衫贵气的门房开了门，见着了穿着普通的顾璨，神色不悦，皱眉问道：“城里哪家的子弟，还是衙门当差的？”
+顾璨愣了一下，才记起如今自己这副模样，变化有点大了，对方又不是青峡岛老人，认不得自己也正常。当年娘亲带着一起离开书简湖的贴身婢女，这些年也都修行顺遂，先后成为了中五境练气士，境界不高，却也不太会掺和府上杂事。关于她们的修行，顾璨早年与娘亲的书信往来上，都有过详细提点，还帮着挑选了数件山上宝物，她们只需要按部就班修行、炼化本命物、破境即可。
+门房迅速瞥了眼年轻男子身后台阶下的两人，一位文弱书生，一个少年白头的孩子，瞬间便自认为掂量出三人的家底了。
+门房男子是位遮掩了实力的纯粹武夫，五境，在寻常江湖上，也确实是好把式，在任何一个藩属小国，开创个门派都绰绰有余，当门房当护院，屈尊了，估计还是有钱能使鬼推磨的缘故，要么就是个惹了祸的躲门户，来此避难，最坏的结果，无非是对方心怀叵测，放长线钓大鱼，与山泽野修勾连，贪图这栋豪宅的丰厚家产，顾璨这些年走惯了江湖，见过不少环环相扣的江湖骗局，还故意远远旁观，从头到尾目睹了两场蜂、雀局，一户为富不仁的人家，就此家破人亡，顾璨在那伙匪人得手分赃的时候现身，与他们请教了些门道，对方藏藏掖掖，言语不爽快，顾璨就让曾掖施展了术法，鸠占鹊巢，自取了学问。另外一户门风瞧着不错的，顾璨就随手帮忙解了围。
+顾璨笑道：“我叫顾璨，这是我家。”
+门房男子立即变了一副嘴脸，低头弯腰让出道路，“见过少东家，小的这就去与夫人禀报。”
+顾璨跨过门槛，摆手道：“不用，就几步路，不劳烦你通报。”
+那门房男子笑容谄媚，“小的方才乍一看，都要误以为少东家是书院君子贤人了。”
+门房男子早已摸清楚这户人家的家底，家主是位修道中人，远游多年未归，此事府上说得语焉不详，估计是见不得光，少东家是个在外求学的读书种子，所以只剩下个穿金戴玉、极有钱财的妇道人家，那位夫人每次提起儿子，倒是十分得意，如果不是妇人身边的两位贴身丫鬟，竟是修道有成的练气士，他们早就动手了，这么大一笔横财，几辈子都花不完。所以这一年来，他们专门拉了一位道上朋友入伙，让他在其中一位婢女身上花心思。
+顾璨笑道：“好眼光。”
+柳赤诚点头道：“真是极好。”
+柴伯符瞥了眼那个纯粹武夫，可怜，真是可怜，那么多条发财路，偏偏一头撞入这户人家。一窝自以为精明的狐狸，闯入龙潭虎穴瞎蹦跶，不是找死是什么。
+柳赤诚一巴掌按住柴伯符脑袋，“龙伯老弟，怎么回事？一声不吭，是觉得咱们顾少爷不配君子贤人？”
+柴伯符如同五雷轰顶，各大关键气府震颤起来，好不容易稳固下来的龙门境，岌岌可危！柴伯符连忙说道：“顾少爷配得起，配得上。”
+寻常歹人，出手之前都是先咋呼几句吓唬人，可身边这位性情乖张的前辈，都是先动手再讲理的。
+不过相处久了，柴伯符的向道之心愈发坚定，自己一定要成为中土神洲白帝城的谱牒弟子。
+门房男子关了门，蓦然觉得脖颈后边一凉，原来是身材修长的顾璨伸手攥住了此人脖子，将后者脑袋抵住大门，顾璨五指之间，已经渗出血丝，足可见下手之狠辣，轻声问道：“关起门来，就不担心给外人看笑话了。说吧，里里外外，总共几个人？境界最高的，是何方神圣？”
+顾璨突然收起手，直接转过身，笑望向远处，就那么将后背让给那个纯粹武夫。
+一位妇人快步跑来，几次踩到了拖曳在地的裙摆，见着了多年未见的顾璨，她一下子便热泪盈眶。
+吃苦活命，享福挣钱，归根结底，还不是为了这个没良心只会往家里寄家书的小王八蛋。
+顾璨快步走去，夫人抱住儿子，哽咽起来，顾璨轻轻拍打着娘亲的后背，神色如常，笑望向那两个一切荣华富贵且来自他顾璨的婢女。
+那两个年轻女子，只是与顾璨对视一眼，便立即低下头去，手脚发凉，如坠冰窟。
+妇人松开了顾璨，擦了擦眼泪，开始仔细打量起自己儿子，先是欣慰，只是不知是否想起了顾璨一人在外，得吃多少苦头？妇人便又捂嘴呜咽起来，心中埋怨自己，埋怨那个莫名其妙就当了大山神的死鬼男人，埋怨那个陈平安撇下了顾璨一人，打杀了那个炭雪，埋怨老天爷不长眼，为何要让顾璨这么遭灾受苦。
+顾璨与娘亲到了厅堂那边叙旧之后，第一次踏足了属于自己的那座书房，柳赤诚带着龙伯老弟在宅邸四处闲逛，顾璨喊来了两位婢女，还有那个一直不敢动手拼死的门房。
+顾璨搬了条椅子背靠窗户，手肘抵在椅把手上，单手托腮，问道：“树大招风，在所难免。我不在此事上苛求你们两个，毕竟我娘亲也有不妥的地方。只是做人忘本，就不太好了。我娘亲可知道外人潜入府邸设局一事？”
+两位婢女早已跪在地上。
+一位婢女满脸茫然。
+另外一位婢女点头道：“我与夫人说过，夫人说就当是无聊解闷了。”
+顾璨犹豫了一下，问道：“我爹有没有安排后手？”
+婢女沉声道：“老爷十分担心夫人的安危，不但与本地城隍阁老爷打过招呼，还在一处院门的门神上边施展了神通。府上有一位上了岁数的七境武夫，曾是边军出身，家乡在大骊旧山岳地界，故而与老爷相识，被老爷邀请到了这边，如今隐姓埋名，担任护院，一直盯着门房这伙人。”
+那个门房男子脑子一片空白。
+一个能够与龙州城隍爷攀上交情、能够让七境宗师担任护院的“修道之人”？
+为何会被那个小肚鸡肠的妇人，口口声声骂成是一个没用的死鬼？
+顾璨无奈，什么香火情，大骊七境武夫，个个记录在案，朝廷那边盯得很紧，多半是与那落魄山山神宋煜章差不多的存在了，庇护顾府是真，不过更多还是一种光明正大的监视。那个顾璨已经毫无印象的山神父亲，自然不会将这等内幕说破，害她白白担心。
+顾璨看着那个还想着如何活命的纯粹武夫，没来由说了一句，“幕后人兴许真是高人，至于你，就算了，估计到底是谁布局，有没有布局，到现在仍是不清楚。”
+顾璨自言自语道：“人为财死，鸟为食亡，天底下的傻子怎么就这么多呢。”
+有个微笑嗓音响起，“这难道不是好事？棋局之上，胡乱丢掷棋子，何谈先手。年轻些的聪明人，才能出人头地，后来者居上。”
+顾璨肃然起身，屋内无人，顾璨依旧恭恭敬敬，抱拳作揖。
+一位白衣男子出现在顾璨身边，“收拾一下，随我去白帝城。动身之前，你先与柳赤诚一起去趟黄湖山，见见那位这一世名为贾晟的老道人。他老人家要是愿意现身，你便是我的小师弟，要是不愿意见你，你就安心当我的记名弟子。”
+白衣男子手中持有一幅卷轴，是幅破旧的《搜山图》，交给顾璨，“你带着此物，去往黄湖山。”
+来这府邸之前，男子从林守一那边取回这副搜山图，作为回礼，帮助林守一补齐了那部本就出自白帝城的《云上琅琅书》，赠送了中下两卷。林守一虽是书院学子，但是在修行路上，十分迅猛，早年跻身洞府境极快，专攻下五境的《云上书》上卷，功莫大焉，秘籍中所载雷法，是正宗的五雷正法，但这并不是《云上书》的最大精妙，开辟大道，修行无碍，才是《云上琅琅书》的根本宗旨。撰写此书之人，正是领略过龙虎山雷法的白帝城城主，亲笔删减、完善，裁减掉了许多繁复枝叶。
+世间何处最云上？
+自然是那白帝城。
+至于那部上卷道书，为何会辗转落入林守一手中，当然是阿良的手笔，读书人借书、有借无还的那种，所以说当时林守一一眼相中此书，可谓道缘极佳。
+既然是阿良的馈赠，白帝城也就不计较林守一那点“无心之举，偷师之实”的山上犯忌了。
+不过那个林守一，竟然在他报出名号之后，依旧不愿多说关于搜山图来源的半个字。
+这才是白帝城城主愿意赠送《云上书》最后一卷的原因，本来给个中卷，林守一就该沦为棋子，遭受一劫。
+顾璨闻言后面无表情，心中却震动不已，他知道那贾晟！
+落魄山记名供奉，一个运道好才能在骑龙巷混吃混喝的目盲老道士，收了两个安分守己的弟子，瘸腿年轻人，赵登高，是个妖族，田酒儿，鲜血是最好的符箓材质。据说贾晟前些年搬去了黄湖山结茅修行。
+落魄山竟然有此人蛰伏，那朱敛、魏檗就都不曾认出此人的半点蛛丝马迹？
+“如果我不来此地，落魄山所有人，一辈子都不会知道有这么一号人。那贾晟到死就都会只是贾晟，可能在那贾晟的修道中途，会顺理成章地去往第五座天下。哪天兵解离世，哪天再换皮囊，循环往复，乐此不疲。”
+白衣男子笑道：“不用多想，是他一贯的游戏人间罢了。早年收剑之后，就彻底变了个人。擅长自欺，不喜欺人。死于山上山下的横祸灾殃很多次，也不见他出手自保一次。浩然天下九洲，每洲都
+会待上几百年。再者我虽是他名义上的弟子，白帝城却是我一手创建，与他无关。”
+顾璨突然说道：“那我便不用拜访黄湖山了，不打搅老前辈的清修，只管跟随城主去往中土神洲。”
+白衣男子笑道：“能这么讲，那就真该去见见了。”
+顾璨问道：“屋内三人，如何处置？”
+两位婢女，一个门房，三人纹丝不动。
+白衣男子看了眼三人，伸出一只手掌，三人连那纯粹武夫在内，都被迫阴神远游，浑浑噩噩，痴痴呆呆，双脚离地，缓缓晃荡到白衣男子身前停步，他伸手在三人眉心处随便指点了两下，三尊阴神先后退回身躯，顾璨凝神望去，发现那三人各自的眉心处作为起始点，皆有丝线开始蔓延开来。
+然后三人蓦然“清醒”过来，身为纯粹武夫的门房突然热泪盈眶，跪地不起，“少主！”
+一位婢女使劲磕头，“奴婢拜见宗主！”
+另外一位婢女则伏地不起，伤心欲绝道：“老爷恕罪。”
+白衣男子一拂袖，三人当场晕厥过去，笑着解释道：“仿佛酣睡已久，梦醒时分，人还是那般人，既删减又增补了些人生阅历罢了。”
+顾璨额头渗出汗水。
+这就是白帝城的魔道手段！
+直到这一刻，他才明白为何每次柳赤诚提及此人，都会那么敬畏。
+对方随随便便，就能让一个人不再是原来之人，却又深信不疑是自己。
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E4%BA%94%E5%8D%81%E5%85%AB%E7%AB%A0%E5%86%8D%E6%9D%A5%E4%B8%80%E7%A2%97%E9%98%B3%E6%98%A5%E9%9D%A2/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default1_hu0a025718d8a4107614c89b6074607ba1_542459_2560x1440_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default1.jpg" alt="/images/default1.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百五十八章 再来一碗阳春面</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    <p>杨家铺子，李二，郑大风，苏店，石灵山，这些弟子都已经陆陆续续出远门，杨老头乐得清闲，在前边守着铺子的杨暑，是个听不懂人话的，杨老头懒得多说一个字。当然杨暑也不愿意与那个糟老头扯上关系，老王八趴窝，还真把自己当个人物了，若不是杨家祖上念旧，就铺子这冷清生意，一年到头能挣几个钱？换成他杨暑当家做主，早就该好好算算账。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E4%BA%94%E5%8D%81%E4%B8%83%E7%AB%A0%E5%AD%A6%E5%A1%BE%E9%82%A3%E8%BE%B9/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default2_hu56d6269342fd058767a3ed6bb73cdd00_189957_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default2.jpg" alt="/images/default2.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百五十七章 学塾那边</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    <p>一到炎炎夏日就像撑起一把荫凉大伞的老槐树，没了，铁锁井被私家圈禁起来，让老人们心心念念的甘甜的井水，喝不着了，神仙坟少了好多的蛐蛐声，一脚下去吱呀作响的老瓷山再也爬不上去，所幸春天里犹有桃叶巷的一树树桃花，深红可爱，浅红也可爱。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E4%BA%94%E5%8D%81%E5%85%AD%E7%AB%A0%E9%AB%98%E5%A4%84%E6%97%A0%E4%BA%BA/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default2_hu56d6269342fd058767a3ed6bb73cdd00_189957_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default2.jpg" alt="/images/default2.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百五十六章 高处无人</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    <p>裴钱打开院门，周米粒手持行山杖，肩挑小扁担，扁担上一头挑一麻袋瓜子，黑衣小姑娘在跟门口石狮子聊天呢，一个叽叽喳喳，一个沉默无言，很投缘。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E4%BA%94%E5%8D%81%E4%BA%94%E7%AB%A0%E5%B9%B4%E8%BD%BB%E6%9C%B1%E6%95%9B/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default3_hu6a0df562d613fbdedf7180f7f013eef1_206638_400x300_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default3.jpg" alt="/images/default3.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百五十五章 年轻朱敛</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    <p>清风城外，一处荒郊野岭的小山坡，一棵孤零零的山野桃树下，大眼瞪小眼。</p>
+<p>柳赤诚狠狠瞪眼，不耽误伸手擦拭脸上的血迹。</p>
+<p>柳赤诚身上那件粉色道袍，能与桃花争艳。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/%E5%89%91%E6%9D%A5/%E7%AC%AC%E4%B9%9D%E5%8D%B7%E5%A4%A9%E4%B8%8A%E6%9C%88/%E7%AC%AC%E5%85%AD%E7%99%BE%E4%BA%94%E5%8D%81%E5%9B%9B%E7%AB%A0%E8%B0%81%E5%8F%AF%E5%A5%89%E9%A5%B6%E5%A4%A9%E4%B8%8B%E5%85%88/">
+  
+  <figure>
+    
+    
+    <picture>
+      <source srcset="/images/default4_hu63edf6dbb3c8df1787664e056eca70c7_484759_2560x1440_resize_q75_h2_box.webp" type="image/webp" />
+      <img src="/images/default4.jpg" alt="/images/default4.jpg" />
+    </picture>
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">第六百五十四章 谁可奉饶天下先</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期一, 7月 8, 2024
+    
+    </p>
+
+    <p>李宝瓶牵马而行，寻访之人，是同乡长辈，是她爷爷的棋友，一个自称打遍福禄街棋道无敌手，一个号称桃叶巷第一高手，双方对弈，每次都很郑重其事，好像赌上了各自街巷的名声，不过李宝瓶不爱下棋，两位长辈下棋功夫高不高，不好说，倒是悔棋的借口理由，每次都换花样，与齐先生没法比。</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">仓鼠阁</span>
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+  </div>
+  
+</div>
+
+
+
+<div class="flex justify-center mt-8">
+  <div class="join grid grid-cols-2">
+  
+  <a href="/page/9/" title=上一页 class="join-item btn btn-outline btn-sm">
+    上一页
+  </a>
+  
+  
+  <a href="/page/11/" title="下一页" class="join-item btn btn-outline btn-sm">
+    下一页
+  </a>
+  
+</div>
+
+</div>
+
+
+
+
+            
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+            
+              <div>
+  
+  <p>
+    © 2023 - 2024 仓鼠阁
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">你好啊，旅行者！</div>
+
+        <div class="prose dark:prose-invert">
+          <p><img src="https://picgo-1.pages.dev//%E7%8C%AB%E5%A8%98.gif" alt="猫娘"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
