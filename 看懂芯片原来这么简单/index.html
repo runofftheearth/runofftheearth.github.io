@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>看懂芯片原来这么简单 | 果壳中的宇宙</title><meta name="description" content="追求源于热爱."><meta name="keywords" content="Blog ,Writing ,中文博客"><link rel="alternate" hreflang="zh" href="https://guoke.co/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/" /><link rel="alternate" hreflang="x-default" href="https://guoke.co/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/" /><meta property="og:url" content="https://guoke.co/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/">
+  <meta property="og:site_name" content="果壳中的宇宙">
+  <meta property="og:title" content="看懂芯片原来这么简单">
+  <meta property="og:description" content="内容摘要 本书是介绍芯片知识的科普漫画图书，内容来源于华为麒麟公众号中的热门科普漫画“看懂芯片原来这么简单”系列。">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-20T07:20:28+08:00">
+    <meta property="article:modified_time" content="2026-07-20T07:20:28+08:00">
+    <meta property="article:tag" content="书籍">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="看懂芯片原来这么简单">
+  <meta name="twitter:description" content="内容摘要 本书是介绍芯片知识的科普漫画图书，内容来源于华为麒麟公众号中的热门科普漫画“看懂芯片原来这么简单”系列。">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/css/global.bundle.min.8d7c60174f0e8231efab6ca5c193cbfc5f1192aa91e6e5f3eaac0f51563b6fb3.css" integrity="sha256-jXxgF08OgjHvq2ylwZPL/F8RkqqR5uXz6qwPUVY7b7M=" crossorigin="anonymous"><script>(function () {
+    const theme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    if (theme === 'dark' ||
+        (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    }
+})();</script><script>(function () {
+  // Click-to-play YouTube embed: replace .youtube-lite with iframe on click (or Enter key)
+  function activate(el) {
+    const id = el.dataset.id;
+    if (!id) return;
+    const iframe = document.createElement('iframe');
+    iframe.width = '100%';
+    iframe.height = '100%';
+    iframe.style.border = 0;
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&autoplay=1';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    // Clear content and insert iframe
+    el.innerHTML = '';
+    el.appendChild(iframe);
+  }
+
+  document.addEventListener('click', function (e) {
+    const el = e.target.closest('.youtube-lite');
+    if (!el) return;
+    // If this lite element is inside a youtube-card, prefer modal behavior (do not replace inline)
+    if (el.closest && el.closest('.youtube-card')) return;
+    activate(el);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const el = e.target.closest('.youtube-lite');
+    if (!el) return;
+    // If inside a youtube-card, let the modal handler handle keyboard activation
+    if (el.closest && el.closest('.youtube-card')) return;
+    e.preventDefault();
+    activate(el);
+  });
+})();</script><script>(function () {
+  // Initialize modal after DOM is ready to avoid early-execution errors
+  function init() {
+    try {
+      if (document.querySelector('.article-video-modal__overlay')) return; // prevent double init
+
+      // don't create modal elements if there are no youtube cards on the page
+      if (!document.querySelector('.youtube-card, .youtube-lite, .play-btn')) return;
+
+      const overlay = document.createElement('div');
+      overlay.className = 'article-video-modal__overlay article-lightbox__overlay';
+
+      const box = document.createElement('div');
+      box.className = 'article-video-modal__box';
+      const closeBtn = document.createElement('div');
+      closeBtn.className = 'article-lightbox__close';
+      closeBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+
+      box.appendChild(closeBtn);
+      overlay.appendChild(box);
+
+      // Append to body (body should exist because init runs after DOMContentLoaded)
+      document.body.appendChild(overlay);
+
+      function openModal(id) {
+        // remove any existing iframe or controls
+        const existingFrame = box.querySelector('iframe');
+        const existingCtrl = box.querySelector('.article-lightbox__playbtn');
+        const existingFallback = box.querySelector('.article-lightbox__fallback');
+        if (existingFrame) existingFrame.remove();
+        if (existingCtrl) existingCtrl.remove();
+        if (existingFallback) existingFallback.remove();
+
+        const container = document.createElement('div');
+        container.className = 'article-lightbox__video';
+
+        // Use standard YouTube embed with autoplay=1 so if login is required the iframe shows the login flow
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + id + '?rel=0&autoplay=1';
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.width = '100%';
+        iframe.height = '100%';
+        iframe.style.border = '0';
+        container.appendChild(iframe);
+
+        box.appendChild(container);
+
+        // Add controls: login to YouTube (opens auth in new window) and a reload/play button to retry playback inside modal
+        const controls = document.createElement('div');
+        controls.className = 'article-lightbox__controls';
+
+        const loginUrl = 'https://accounts.google.com/ServiceLogin?continue=' + encodeURIComponent('https://www.youtube.com/watch?v=' + id);
+        const loginBtn = document.createElement('button');
+        loginBtn.className = 'article-lightbox__login';
+        loginBtn.type = 'button';
+        loginBtn.innerText = '在 YouTube 登录并打开';
+        loginBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          const w = window.open(loginUrl, 'yt_login', 'width=900,height=700');
+          if (w) w.focus();
+        });
+
+        const reloadBtn = document.createElement('button');
+        reloadBtn.className = 'article-lightbox__reload';
+        reloadBtn.type = 'button';
+        reloadBtn.innerText = '刷新并播放';
+        reloadBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          // force iframe reload with autoplay
+          const ifr = box.querySelector('iframe');
+          if (ifr) {
+            ifr.src = 'https://www.youtube.com/embed/' + id + '?rel=0&autoplay=1';
+            ifr.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay');
+          }
+        });
+
+        controls.appendChild(loginBtn);
+        controls.appendChild(reloadBtn);
+        box.appendChild(controls);
+
+        overlay.style.display = 'flex';
+        // trigger CSS transition
+        overlay.offsetHeight;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', _esc);
+      }
+
+      function closeModal() {
+        overlay.classList.remove('active');
+        setTimeout(() => {
+          overlay.style.display = 'none';
+          // remove iframe to stop playback
+          const v = box.querySelector('.article-lightbox__video');
+          if (v) v.remove();
+          document.body.style.overflow = '';
+        }, 300);
+        document.removeEventListener('keydown', _esc);
+      }
+
+      function _esc(e) { if (e.key === 'Escape') closeModal(); }
+
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal();
+      });
+      closeBtn.addEventListener('click', closeModal);
+
+      document.addEventListener('click', function (e) {
+        // Support clicks on .youtube-card, .youtube-lite or .play-btn
+        const playBtn = e.target.closest('.play-btn');
+        const lite = e.target.closest('.youtube-lite');
+        const card = e.target.closest('.youtube-card') || (lite && lite.closest('.youtube-card')) || (playBtn && playBtn.closest('.youtube-card'));
+        if (!card) return;
+        // If the click is on an ordinary link inside the card, respect it
+        if (e.target.closest('a') && !e.target.closest('.play-btn') && !e.target.closest('.youtube-lite')) return;
+        const id = card.dataset.id || card.querySelector('.youtube-lite')?.dataset?.id;
+        if (!id) return;
+        e.preventDefault();
+        openModal(id);
+      });
+
+      // allow keyboard activation when focus is inside the card or on the lite element
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const active = document.activeElement;
+        const card = active?.closest?.('.youtube-card') || active?.closest?.('.youtube-lite') && active.closest('.youtube-card') ;
+        if (!card) return;
+        e.preventDefault();
+        const id = card.dataset.id || card.querySelector('.youtube-lite')?.dataset?.id;
+        if (!id) return;
+        openModal(id);
+      });
+
+    } catch (err) {
+      // fail gracefully and log for debugging
+      console.warn('video-modal init error:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();</script><link rel="stylesheet" href="/css/article.bundle.min.f9494ccd1db2fc5851bd7dd2bb11bb7f5cff326d00da18f1250f49a51fbd5c01.css" integrity="sha256-&#43;UlMzR2y/FhRvX3SuxG7f1z/Mm0A2hjxJQ9JpR&#43;9XAE=" crossorigin="anonymous"><script src="/js/article/lightbox.2fcfd676a80d4d7d991baf85af3506429c7951b00ce1804940eb144269e007f1.js" integrity="sha256-L8/WdqgNTX2ZG6&#43;FrzUGQpx5UbAM4YBJQOsUQmngB/E=" crossorigin="anonymous"defer></script><script src="/js/article/clickcopy.5bbf4d054a73a21043f7d84298fc4772b74b329b7609640ee165a537d054c93c.js" integrity="sha256-W79NBUpzohBD99hCmPxHcrdLMpt2CWQO4WWlN9BUyTw=" crossorigin="anonymous"defer></script><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3OfTfbpwqM5xf8dD",ck:"3OfTfbpwqM5xf8dD"})</script></head>
+
+<body class="min-h-screen flex flex-col gap-y-4 bg-background text-foreground transition-colors"><div class="h-card p-author hidden">
+    <span class="p-name">言别离</span>
+
+    <img class="u-photo" src="https://guoke.co/img/avatar.png" alt="言别离"><p class="p-note">夕晴照雪霁无瑕.</p><a class="u-url u-uid" href="https://guoke.co/">https://guoke.co/</a><span class="p-category">金克斯的含义就是金克斯</span><span class="p-category">如无必要勿增实体</span></div><header class="sticky top-0 left-0 right-0 bg-background/80 backdrop-blur z-[var(--herm-zidx-header)]">
+    <div class="container mx-auto px-4 flex items-center justify-between h-[var(--herm-header-height)] relative">
+        
+        <div class="flex-1 flex justify-start">
+            <a rel="me" href="/" class="shrink-0">
+                <img src="/img/avatar.png" alt="avatar"
+                    class="w-8 h-8 rounded-full object-cover ring-2 ring-background shadow-sm">
+            </a>
+        </div>
+
+        
+        <nav class="hidden md:flex flex-shrink-0" id="header-menu" aria-label="Main navigation">
+            <ul
+                class="flex items-center bg-muted/50 backdrop-blur rounded-full px-4 h-9 gap-6 text-sm font-medium text-muted-foreground"><li class="relative group">
+                    <a aria-label="Menu 归档" href="https://guoke.co/"
+                        class="hover:text-primary transition-colors">
+                        归档
+                    </a><ul class="flex flex-col overflow-hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 invisible 
+                       group-hover:opacity-100 group-hover:visible transition-all duration-200
+                       w-32 py-1 rounded-lg border border-border/50 backdrop-blur
+                       shadow-lg shadow-muted/5"><li>
+                            <a aria-label="时间" href="https://guoke.co/posts" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
+                              ">时间</a>
+                        </li><li>
+                            <a aria-label="分类" href="https://guoke.co/categories" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
+                              ">分类</a>
+                        </li><li>
+                            <a aria-label="标签" href="https://guoke.co/tags" class="block px-2 py-1.5 text-center text-muted-foreground/70 hover:text-primary hover:bg-muted/40 transition-colors
+                              ">标签</a>
+                        </li></ul></li><li class="relative group">
+                    <a aria-label="Menu 友链" href="https://guoke.co/links"
+                        class="hover:text-primary transition-colors">
+                        友链
+                    </a></li><li class="relative group">
+                    <a aria-label="Menu 关于" href="https://guoke.co/about"
+                        class="hover:text-primary transition-colors">
+                        关于
+                    </a></li><li class="relative group">
+                    <a aria-label="Menu 热搜" href="https://resou.guoke.co/"
+                        class="hover:text-primary transition-colors">
+                        热搜
+                    </a></li></ul>
+        </nav>
+
+        
+        <div class="md:hidden" id="header-mobilemenu">
+            
+            <input type="checkbox" id="header-mobilemenu__check" class="hidden" tabindex="-1">
+
+            
+            <label for="header-mobilemenu__check" id="header-mobilemenu__toggle" aria-label="Toggle menu"
+                class="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-full bg-background/80 text-muted-foreground/70 hover:bg-muted/50 transition-colors cursor-pointer z-[var(--herm-zidx-header)] relative"
+                role="button">
+                <span class="header-mobilemenu__toggle--open i-carbon-menu w-4 h-4" aria-hidden="true"></span>
+                <span class="header-mobilemenu__toggle--close i-carbon-close w-4 h-4" aria-hidden="true"></span>
+            </label>
+
+            
+            <nav id="header-mobilemenu__panel"
+                class="fixed top-[var(--herm-header-height)] left-0 right-0 bg-background/95 backdrop-blur border-b border-border/50 z-[var(--herm-zidx-dropdown)]">
+                <div class="container max-w-container-content mx-auto px-4 py-4">
+                    <ul class="px-4 space-y-4"><li>
+                            <a aria-label="归档" href="https://guoke.co/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                    ">归档</a><ul class="mt-2 ml-4 space-y-3"><li>
+                                    <a aria-label="时间" href="https://guoke.co/posts" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
+                            ">时间</a>
+                                </li><li>
+                                    <a aria-label="分类" href="https://guoke.co/categories" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
+                            ">分类</a>
+                                </li><li>
+                                    <a aria-label="标签" href="https://guoke.co/tags" class="block text-sm text-muted-foreground/70 hover:text-primary transition-colors
+                            ">标签</a>
+                                </li></ul></li><li>
+                            <a aria-label="友链" href="https://guoke.co/links" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                    ">友链</a></li><li>
+                            <a aria-label="关于" href="https://guoke.co/about" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                    ">关于</a></li><li>
+                            <a aria-label="热搜" href="https://resou.guoke.co/" class="block text-base font-medium text-muted-foreground hover:text-primary transition-colors
+                    ">热搜</a></li></ul>
+                </div>
+            </nav>
+        </div>
+
+        
+        <div class="absolute left-1/2 -translate-x-1/2 opacity-0 transition-all duration-300 max-w-[50%] sm:max-w-[60%]"
+            id="header-title">
+            <button class="text-base font-medium truncate" onclick="window.scrollTo({ top: 0, behavior: 'smooth'});"
+                aria-label="返回顶部">看懂芯片原来这么简单</button>
+        </div>
+
+        
+        <div class="flex-1 flex justify-end">
+            <div class="flex items-center gap-2"><label for="toc-toggle" class="header-button hidden md:inline-flex" aria-label="切换目录显示" role="button">
+                    <i class="i-carbon-table-of-contents w-4 h-4"></i>
+                </label><a href="/search" class="header-button" aria-label="搜索">
+                    <i class="i-carbon-search w-4 h-4" aria-hidden="true"></i>
+                </a>
+
+                <button id="header-btns__theme" class="header-button" aria-label="切换主题">
+                    <i class="i-carbon-sun w-4 h-4 block dark:hidden" aria-hidden="true"></i>
+                    <i class="i-carbon-moon w-4 h-4 hidden dark:block" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header><script>const THEME_KEY = 'theme';
+const THEMES = ['light', 'dark'];
+let currentTheme = null;
+
+const getTheme = () => {
+    if (currentTheme) return currentTheme;
+    const saved = localStorage.getItem(THEME_KEY);
+    return (THEMES.includes(saved)) ? saved : 'light';
+};
+
+const setTheme = (theme) => {
+    const html = document.documentElement;
+    THEMES.forEach(t => html.classList.remove(t));
+    html.classList.add(theme);
+    currentTheme = theme;
+    localStorage.setItem(THEME_KEY, theme);
+};
+
+const bindThemeToggle = () => {
+    const btn = document.getElementById('header-btns__theme');
+    btn?.addEventListener('click', () => setTheme(currentTheme === 'dark' ? 'light' : 'dark'));
+};
+
+const handleNavScroll = () => {
+    const headerMenu = document.getElementById('header-menu');
+    const headerTitle = document.getElementById('header-title');
+    const mobileMenu = document.getElementById('header-mobilemenu');
+    const threshold = 100;
+
+    const updateNav = () => {
+        const y = window.scrollY;
+        if (!headerMenu || !headerTitle) return;
+
+        const isScrolled = y > threshold;
+        headerMenu.style.opacity = isScrolled ? '0' : '1';
+        headerMenu.style.pointerEvents = isScrolled ? 'none' : 'auto';
+        mobileMenu.style.opacity = isScrolled ? '0' : '1';
+        mobileMenu.style.pointerEvents = isScrolled ? 'none' : 'auto';
+        headerTitle.style.opacity = isScrolled ? '1' : '0';
+        headerTitle.style.pointerEvents = isScrolled ? 'auto' : 'none';
+    };
+
+    window.addEventListener('scroll', updateNav);
+    updateNav();
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTheme(getTheme());
+    bindThemeToggle();
+    handleNavScroll();
+});
+</script><main class="flex-grow anim-fadein">
+        <span class="sr-only">主要内容区域</span>
+<div class="container relative max-w-[var(--herm-main-width-wd)] mx-auto px-4 pt-[var(--herm-content-offset)]"><link rel="stylesheet" href="/css/article/toc.css"><input type="checkbox" id="toc-toggle" class="toc-toggle__checkbox hidden" tabindex="-1" aria-hidden="true">
+
+<aside class="toc-sidebar hidden lg:block left-4 h-full">
+    <div class="sticky top-[var(--herm-toc-offset)]">
+        <div class="text-base flex flex-col gap-4 ">
+            <h2 class="font-medium text-foreground/80">目录</h2>
+            <nav id="toc-main" class="toc-main text-foreground/70"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#内容摘要">内容摘要</a></li>
+    <li><a href="#序">序</a></li>
+    <li><a href="#第一部分-概念篇初识芯片">第一部分 概念篇：初识芯片</a>
+      <ul>
+        <li><a href="#第一章-芯片是什么了解芯片的前世今生">第一章 芯片是什么？了解芯片的前世今生</a></li>
+        <li><a href="#第二章-探索内芯世界芯片是如何设计的">第二章 探索内“芯”世界，芯片是如何设计的？</a></li>
+      </ul>
+    </li>
+    <li><a href="#第二部分-基础篇解构芯片">第二部分 基础篇：解构芯片</a>
+      <ul>
+        <li><a href="#第三章-存储器memory数据们的安身之处">第三章 存储器（Memory）：数据们的安身之处</a></li>
+        <li><a href="#第四章-cpu芯片中的指挥家">第四章 CPU：芯片中的“指挥家”</a></li>
+        <li><a href="#第五章-gpu芯片中的艺术家">第五章 GPU：芯片中的“艺术家”</a></li>
+        <li><a href="#第六章-isp芯片中的拍照担当">第六章 ISP：芯片中的“拍照担当”</a></li>
+        <li><a href="#第七章-npuai应用的智慧核心">第七章 NPU：AI应用的“智慧核心”</a></li>
+        <li><a href="#第八章-dsp数字信号的速算家">第八章 DSP：数字信号的“速算家”</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></nav><script src="/js/article/toc-sync.js" defer></script></div>
+    </div>
+</aside><div class="max-w-[var(--herm-main-width-nr)] mx-auto flex flex-col gap-y-8 h-entry">
+        <header class="space-y-6">
+            <h1 data-pagefind-meta="title" class="text-2xl md:text-3xl font-bold p-name">看懂芯片原来这么简单</h1><aside class="text-sm text-muted-foreground ml-2 space-y-6">
+    <ul class="flex flex-wrap items-center gap-x-6 gap-y-2">
+        <li class="flex items-center gap-2">
+            <i class="i-carbon-calendar w-4 h-4"></i>
+            <time class="dt-published" datetime=" 2026-07-20T07:20:28&#43;08:00">2026-07-20</time>
+        </li>
+
+        <li class="flex items-center gap-2">
+            <i class="i-carbon-time w-4 h-4"></i>
+            <span>22 分钟阅读</span>
+        </li>
+
+        <li class="flex items-center gap-2">
+            <i class="i-carbon-text-font w-4 h-4"></i>
+            <span>10895 字</span>
+        </li><li class="flex items-center gap-2">
+            <i class="i-carbon-folder w-4 h-4"></i>
+            <span></span>
+        </li></ul><ul class="flex flex-wrap gap-2"><li class="inline-flex items-center gap-1 px-2 py-1 text-xs bg-muted rounded-md text-muted-foreground">
+            <i class="i-carbon-tag w-4 h-4" aria-hidden="true"></i>
+            <span>书籍</span>
+        </li></ul>
+</aside></header><article data-pagefind-body class="prose e-content"><h2 id="内容摘要">内容摘要</h2>
+<p>本书是介绍芯片知识的科普漫画图书，内容来源于华为麒麟公众号中的热门科普漫画“看懂芯片原来这么简单”系列。</p>
+<p>全书通过漫画的形式串联起一个个主题故事，晦涩的芯片知识则由拟人化的“元器件”们徐徐道来，带领读者轻松了解“点沙成芯”的奥秘。全书共分为三个部分，首先介绍芯片的设计与制造，解读芯片的基本概念；然后剖析芯片内部结构，解读CPU、GPU、ISP、NPU等核心部件的功能与作用；最后解读旗舰芯片部分功能的实现方式，如连接芯片们“成团出道”、ISP+NPU硬件级协同等芯片设计领域的知识。本书中没有长篇累牍的技术介绍与理论知识，而是以生活场景作为触点，结合终端体验来阐释芯片原理。对于广大读者朋友来说，这种方式可以帮助大家更轻松地了解芯片科学，感受芯片内的广袤世界。</p>
+<h2 id="序">序</h2>
+<p>集成电路（又称芯片）技术，是社会发展必不可缺的重要技术。大至工业制造、机械设备、物流运输，小至电视机、计算机、手机、智能家居产品，底层都有芯片技术支撑，一颗颗小小的芯片，让我们的生活变得更加智能。随着5G、人工智能、物联网、自动驾驶、大数据、云计算、智慧城市等新兴领域的蓬勃发展，芯片将扮演更加重要的角色，推动人类社会的加速变迁与发展。发展具有自主知识产权的芯片技术是我们中华民族复兴道路上必须迈过的坎儿。</p>
+<p>可以说，芯片是信息产业的基础和核心，芯片产业是国民经济和社会发展的战略性、先导性产业。近年来，我国芯片产业快速发展，在设计、制造、特色工艺的技术研发等方面不断取得突破，和国际先进水平之间的差距也越来越小。这得益于国家政策的大力推动，同时离不开一代又一代科学家、工程师的勤勉与奉献，当然也少不了那些有实力，始终保持科技创新活力的芯片企业的奋斗。华为麒麟芯片在5G和AI等关键技术上实现了领先，为我国电子产品设计等产业的发展提供了驱动力。</p>
+<p>虽然我国芯片产业前景光明，但由于产业技术基础薄弱，我们在人才培养、研发力量、自主专利技术等方面都存在一定的滞后性，加上芯片研发需要充足的资金和周期，所以在相当长的时间内，我们和国际先进水平之间还会保持追赶状态。但要建设科技强国，攻克芯片难题是必经之路，我们要坚定不移地走自主研发的道路。芯片开发是一项长期的、系统的、跨学科的工程，我们必须在自主研发的基础上，保持开放心态，学习全球的优秀技术和研发经验，才能大大缩短我国芯片技术在发展自主研发道路上的距离和时间。</p>
+<p>所幸，现在越来越多的年轻人对集成电路科学和技术感兴趣，很多人不仅热爱科技，而且有很好的创造力和想象力，我们应该提供更好的土壤，让更多人能走近芯片、认识芯片，甚至未来能投身到芯片技术研究和创新中去。</p>
+<p>看懂芯片原来这么简单（漫画版）》作为一本芯片科普书，采用了漫画这样一种非常不错的科普形式，进一步拉近了读者与芯片之间的距离。在本书中，没有长篇累牍的技术介绍与理论知识，反之，晦涩的芯片知识被生动形象的“拟人元器件”们徐徐道来，不仅通俗易懂，也相当有趣。希望广大科技爱好者、关心芯片技术发展的社会大众，能够借助这一类科普书，打开芯片的大门，感受芯片的广袤世界和小小芯片的无穷力量。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E5%BA%8F-01.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<h2 id="第一部分-概念篇初识芯片">第一部分 概念篇：初识芯片</h2>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87-01.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<h3 id="第一章-芯片是什么了解芯片的前世今生">第一章 芯片是什么？了解芯片的前世今生</h3>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F%20%281%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F%20%282%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F%20%283%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F%20%284%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%8A%AF%E7%89%87%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E4%BA%86%E8%A7%A3%E8%8A%AF%E7%89%87%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F%20%285%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><strong>专业词汇拓展</strong></p>
+<p>①晶体管：</p>
+<p>一种半导体元器件，通过不同的电路连接方式可以实现开关、稳压、电信号放大、调制等多种功能。晶体管是芯片中使用最多的元器件，一块现代芯片上通常有几亿至几百亿个晶体管，这些晶体管和其他电路元器件共同构成了不同功能的电路，从而实现芯片的各种功能。</p>
+<p>②SoC：</p>
+<p>片上系统（SoC，System on Chip），表示一块芯片中包含了具备不同功能的集成电路模块，它们构成了一个完整的系统，使得芯片的功能大大增强。</p>
+<p>③集成：</p>
+<p>利用微电子技术将大量电路元器件连接在一起构成具有特定功能电路的过程。一块芯片中可能包含几类不同功能的集成电路。</p>
+<p>④封装：</p>
+<p>芯片制造的最后阶段，利用塑料、树脂、陶瓷或合金等材料将芯片的核心晶圆电路部分保护起来，防止晶圆受到物理损坏或化学腐蚀，同时在包装上提供与晶圆电路相连的引脚，用于连接外部电路。封装完成之后就可以通过引脚对芯片的各项性能参数进行测试。</p>
+<p>⑤能效：</p>
+<p>能源效率的缩写，表示电子元器件发挥的实际作用与所消耗的能量之间的比值。能效越高，表示芯片在同等能源供应下，能够进行更多运算，对于手机来说则能够大大提升续航能力。</p>
+<p>⑥板级面积：</p>
+<p>表示芯片在电路板上所占的面积，芯片所占面积越小，电子设备（例如手机）就能够在一定大小的电路板上容纳更多芯片，从而实现更多或更强的功能。</p>
+<p>⑦EUV：</p>
+<p>极紫外光（EUV，Extreme Ultraviolet），用极紫外波段的光进行曝光的光刻工艺是极紫外光刻（EUVL，Extreme Ultraviolet Lithography），它是当前最先进的微电子电路加工技术，能够实现5nm工艺集成电路的加工制作。</p>
+<p>⑧Modem：</p>
+<p>调制解调器，一种数字通信中进行数字信号和模拟信号双向转换的元器件。手机中的Modem主要负责将手机和无线通信网络相连，实现电话、短信、上网等联网功能中的信号转换。</p>
+<h3 id="第二章-探索内芯世界芯片是如何设计的">第二章 探索内“芯”世界，芯片是如何设计的？</h3>
+<p>如今，手几的功能越来越丰富，通话、拍照、玩游戏、听音乐等都被高度集成在一掌可握的移动设备中，为人
+们带来便捷的科技体验。助力实现这一切的就是我们今天的主角——小身材大能量的集成电路芯片 （ IC 芯片 ） 。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%281%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>在指尖大小的集成电路芯片中，有上百亿个晶体管在发挥着以往巨型电路的作用。更加精密的设计与工艺，让集成电路芯片的能耗更低、性能更强，让智能手机、智能手表等便携式移动设备成为可能。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%282%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%283%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%284%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%285%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%286%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>“ 容纳了上百亿个晶体管的芯片，很难用简短的篇幅讲清。但从芯片的构建原理来看，其本质与建筑是非常类似的，只不过房屋是由地基和钢筋水泥组成的，而芯片是由硅晶圆 ④及电路组成的。“</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%287%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%288%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%289%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2810%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2811%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>再详细的讲解也不如亲身体验，请和麒麟君前往 “ 麒麟精装房屋设计中心 ” ，一起探索关于芯片设计的 “ 模拟人生 ” 吧。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2812%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2813%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2814%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2815%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2816%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2817%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2818%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2819%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2820%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2821%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2822%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2823%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2824%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2825%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2826%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2827%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2828%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2829%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2830%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2831%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2832%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2833%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2834%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%E6%A6%82%E5%BF%B5%E7%AF%87%EF%BC%9A%E5%88%9D%E8%AF%86%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%8E%A2%E7%B4%A2%E5%86%85%E2%80%9C%E8%8A%AF%E2%80%9D%E4%B8%96%E7%95%8C%EF%BC%8C%E8%8A%AF%E7%89%87%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1%E7%9A%84%EF%BC%9F%20%2835%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><strong>专业词汇拓展</strong></p>
+<p>①芯片园：</p>
+<p>英文Foundry原意为铸造厂，在半导体行业中则代指专门的晶圆加工厂。它们不进行集成电路设计，只负责进行集成电路制造和晶圆加工。</p>
+<p>②工艺库：</p>
+<p>由晶圆加工厂商提供的集成电路设计范例，用于帮助集成电路工程师进行电路设计。由于各家厂商的加工生产技术各不相同，因此在电路设计过程中需要注意的问题也各不相同。</p>
+<p>③Floorplaning：</p>
+<p>布局规划，集成电路设计中的一个步骤，在实现了初步的电路功能之后，需要确定各个功能模块在芯片中的具体位置，以便更好地将它们连接起来实现芯片功能。</p>
+<p>④硅晶圆：</p>
+<p>用于加工集成电路的高纯度硅片。可以通过蚀刻、掺杂其他元素形成大量的半导体元器件，从而构成高集成度的半导体电路。</p>
+<p>⑤4K：</p>
+<p>屏幕显示分辨率的一种规格，横向共有3840个像素，纵向共有2160个像素，总计约830万个像素。像素越多，屏幕上能够显示的图像就越清晰。类似的常见分辨率规格还有2K（2048像素×1080像素）、FHD（1080p、1920像素×1080像素）、HD（720p、1280像素×720像素）等。</p>
+<p>⑥HDR image：</p>
+<p>高动态范围成像技术（HDR image，High Dynamic Range image），相比于一般的数字成像，HDR图片或视频的曝光动态范围更大，从而能够表现出不同等级的亮度，使得数字图像显得更加真实。</p>
+<p>⑦架构：</p>
+<p>芯片设计方式的一种总结性描述，不同架构的芯片在执行运算时的实现方式略有不同，因此架构对于外围应用的开发至关重要。当前主流的芯片架构包括X86、ARM、RISC-V、MIPS等。</p>
+<p>华为达芬奇架构：</p>
+<p>华为达芬奇架构是华为自研的面向AI计算特征的全新计算架构，具备高算力、高能效、灵活可裁剪的特性，是实现万物智能的重要基础。</p>
+<p>⑧NPU：</p>
+<p>神经网络处理器（NPU，Neural-Network Processing Unit），专门用于硬件加速人工智能相关计算（例如人工神经网络、机器视觉、机器学习）的微处理器，相比于利用CPU进行此类计算，利用NPU能够获得更高的能效和运算能力。</p>
+<p>⑨CPU：</p>
+<p>中央处理器（CPU，Central Processing Unit），现代计算机的主要组成部分，负责执行计算机指令并进行数据的计算，具有控制外围设备的功能。</p>
+<p>⑩GPU：</p>
+<p>图形处理器（GPU，Graphics Processing Unit），计算机中用于辅助进行图形运算的微处理器，通常以独立芯片的形式存在于计算机中，手机上则通常和CPU处于一个芯片中构成SoC。</p>
+<p>⑪接口信号：</p>
+<p>芯片中不同模块在进行计算时可能需要交换一定的信息，这些信息所使用的传输格式规范即称为接口信号。⑫模块架构：这里的架构不同于之前的芯片架构，指的是芯片中各种功能模块集成电路的组成，例如加法运算单元的数量、指令运行的周期、处理器的核心数量等。</p>
+<p>⑫模块架构：</p>
+<p>这里的架构不同于之前的芯片架构，指的是芯片中各种功能模块集成电路的组成，例如加法运算单元的数量、指令运行的周期、处理器的核心数量等。</p>
+<p>⑬ESL：</p>
+<p>电子系统级（ESL，Electronic System-Level），芯片设计中的一个层级，指根据芯片需要实现的功能，利用高级编程语言对芯片进行描述，经过ESL建模之后可以将芯片划分成不同的功能模块，并大致明确各个模块所需的功能单元。具体单元的实现则由寄存器传输级（RTL，Register Transfer Level）设计实现。</p>
+<p>⑭门电路：</p>
+<p>数字电路中用于进行最基本逻辑运算的最小单位。常见的逻辑运算包括与、或、非、异或等，对应的则有与门电路、或门电路、非门电路、异或门电路等。门电路可以通过电阻、电容、二极管、三极管等电路元器件构成。在芯片上利用电路元器件构成大量的逻辑门电路并相互连接，最终实现芯片的运算功能。</p>
+<p>⑮寄存器传输级设计：</p>
+<p>寄存器传输级（RTL，Register Transfer Level）设计，集成电路设计中ESL建模的下一步，主要负责将芯片中的功能单元所需要进行的计算利用逻辑运算方式描述出来，这样在后续设计中就可以利用逻辑门电路对相关运算进行实现，从而实现芯片的物理电路设计。</p>
+<p>⑯时序：</p>
+<p>也叫时钟信号，用于驱动数字电路中的触发器、计数器、寄存器等时序逻辑器件。这类器件通常具有储存和记忆功能，因此时序的准确性对于芯片正确发挥作用至关重要。</p>
+<p>⑰硬件描述语言：</p>
+<p>用于描述电子电路（尤其是数字电路）的功能、行为的语言，能够在寄存器传输级、逻辑门级等多个层级上对数字电路进行描述，并能够进行仿真验证电路的功能。常用的硬件描述语言包括Verilog、VHDL等。</p>
+<p>⑱EDA：</p>
+<p>电子设计自动化（EDA，Electronic Design Automation），通过软件的方式帮助芯片设计师完成超大规模集成电路的设计、集成、验证、物理设计等过程。</p>
+<p>⑲面向对象：</p>
+<p>一种程序设计方法，通常与面向过程的程序设计对比。在面向对象的设计中，通常将数据和计算方法看作一个整体来看待，从而能够更方便地进行完整的系统建模，并且更易于描述事物的自然运行模式。</p>
+<p>⑳仿真器：</p>
+<p>用于测试、验证芯片功能的软件或硬件，可以帮助芯片设计师测试芯片的功能、性能参数等。</p>
+<p>㉑Netlist：</p>
+<p>指的是网表或连线表，在完成了寄存器传输级（RTL，Register Transfer Level）设计之后，需要将逻辑运算利用基础门电路进行实现，这时候描述门电路之间连接的即是网表。</p>
+<p>㉒GDS：</p>
+<p>物理版图（GDS，Graphic Display Systems），经过重重设计之后最终确定的集成电路设计的平面描述，在上面描述半导体掺杂、蚀刻、打孔的位置等信息。代工厂进行芯片加工时是按照物理版图进行的。</p>
+<p>㉓Tapeout：</p>
+<p>指的是流片或出片，芯片设计完成之后，交付加工厂进行生产的最后一个阶段。通常在这个阶段中，各类设计均为最终版，但是由于芯片设计的复杂性，在最终量产之前会在流片阶段生产少量芯片进行测试。如果通过测试，就可以按照设计进行量产了。</p>
+<p>㉔回片：</p>
+<p>在流片过程中，如果需要进行设计上的修改，之后重新进行流片，这个过程就叫作回片。</p>
+<p>㉕裸片：</p>
+<p>裸Die、裸晶圆、裸晶片，指经过加工之后具备了集成电路功能的硅晶片，但此时晶圆上还不具备引脚，因此无法与外部电路连接发挥作用，需要经过封装、测试之后才能成为可以接入电路的芯片。</p>
+<p>㉖蚀刻：</p>
+<p>利用化学手段对硅晶圆表面进行腐蚀，去除不需要的部分，这样去除的部分就可以用于掺杂其他元素形成半导体元器件了。而具体蚀刻的部分则需要通过光刻进行确定。</p>
+<p>㉗光刻：</p>
+<p>在硅晶圆上利用光刻胶绘制集成电路图样的过程，通过光照的方式腐蚀光刻胶，从而确定需要蚀刻的部分，并最终构成大规模的集成电路。</p>
+<p>㉘光刻胶：</p>
+<p>也叫光阻或光阻胶，一种对光敏感的混合液体，用于在硅晶圆上绘制集成电路图样。光刻胶在经过紫外线（UV）、极紫外（EUV）光等光照或辐射后，自身的溶解度会发生变化，从而通过光照区域的选择即可构成不同的区域。</p>
+<p>㉙掩膜：</p>
+<p>即集成电路的底片，上面描绘的图形可以用于在光刻过程中确定需要腐蚀和保留的区域。</p>
+<p>㉚切片：</p>
+<p>将经过光刻、蚀刻的完整硅晶片进行切割，形成单个裸晶圆的过程。</p>
+<h2 id="第二部分-基础篇解构芯片">第二部分 基础篇：解构芯片</h2>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87-01.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<h3 id="第三章-存储器memory数据们的安身之处">第三章 存储器（Memory）：数据们的安身之处</h3>
+<p>通信领域的 “ 扛把子选手&quot;有很多，如基带 ② 、射频芯片③，今天我们先来科普手机中的一个重要部件——存储器。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%281%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%282%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>作为数据的载体，存储器是任何电子设备中都必不可少的单元。然而手机中看似最 “ 明码标价 ” 的部分，却是科技小白们的知识盲点。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%283%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%284%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%285%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>如何分辨内存和闪存，准确喊出它们的名字呢？其实很简单，请见下页图。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%286%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%287%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>内存和闪存分别起什么作用呢？如果用玩具工厂的生产流程来比喻，手机中的核心部件 CPU 、内存、闪存之间的关系如下所示。</p>
+<p>工作台的内存决定了工厂能够同时制多少玩具（ 同时运行的 App 数量 ） ，并且工作台在工作时会置需要处理的材料 （ 数据 ） ，由技术员直接操作工作台 （ CPU 直接处理内存中的数据 ） 。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%288%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>待工作结束后，工作台会清空。这是因为内存属于储器中的易失性存储器 ④ 。 （ VoIatile Memory ， VM ） 。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%289%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>仓库的闪存决定了工厂能够存储多少玩具和材料（ 手机中存储的照片、音乐等文件，以及安装的APP）。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%2810%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>仓库内的物品是不会清空的 （ 数据稳定存在 ） ，除非用户丢弃或转出仓库内的物品 （ 下达删除指令或传输文件 ） 。这是因为闪存属于非易失性存储器 ⑤（ Non—Volatile Memory, NVM ） 。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%2811%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>内存和闪存不同的特性，由它们的”体质“决定的。</p>
+<p>*手机内存的本质是 DRAM ⑥（ Dynamic RAM ，动态随机存取存储器 ） ，由于存储特性， DRAM 需要周期性地充电，数据也会周期性地刷新。因此， DRAM 既 “ 动态 ” 又 “ 随机 ” ，是不牢靠的。</p>
+<p>*手机闪存大多是重量轻、体积小、功率低的 NAND ⑦， NAND在断电后仍然能够保存数据，这样存储数据会非常牢靠，适合作为仓储。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%2812%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>至此，你已经初步认识我们今天的主题——存储器了。接下来，我们从 “ 芯 ” 学习一些存储器小知识。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%2813%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%2814%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>相比健忘的 DRAM 内存， NAND存储器的稳定性对手机用户来说影响更大。想象一下，刚刚旅行归来的你却
+发现手机中存储的照片损坏了，气到砸手机还是轻的。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%2815%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>闪存的性能是由谁决定的呢？我们先来看看闪存的结构组成。闪存的内部可以简化为 3 部分： NAND、控
+制器芯片、接口。</p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%2816%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p><figure class="my-8"><img src="https://tuchuang.guoke.co/guoke/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%20%E5%9F%BA%E7%A1%80%E7%AF%87%EF%BC%9A%E8%A7%A3%E6%9E%84%E8%8A%AF%E7%89%87/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E5%99%A8%EF%BC%88Memory%EF%BC%89%E2%80%8B%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%BB%AC%E7%9A%84%E5%AE%89%E8%BA%AB%E4%B9%8B%E5%A4%84%20%2817%29.webp" alt="" 
+            class="mx-auto rounded-lg block" loading="lazy"  />
+</figure></p>
+<p>这 3 个部分各司其职，但对存储器的稳定性、速率都有直接影响。</p>
+<p>NAND 颗粒相当于存储器的 “ 载体 ” ，直接决定了存储器的容量大小。并且 NAND 的质量在一定程度上影响了存储器的稳定性，也就是读写次数 （ 使用寿命 ） 。</p>
+<p>18</p>
+<p>ControIIer 相当于 NAND 颗粒的 “ 调度员 ” ，对存储器的稳定性有重要影响，同时也关系到数据的传输速度。</p>
+<p>19</p>
+<p>21</p>
+<p>接口，顾名思义是传输数据的通路，对存储器的数据传输速度起决定性作用。</p>
+<p>22</p>
+<p>23</p>
+<p>随着存储技术的发展，存储器标准也逐年更新。比如eMMC、UFS。</p>
+<p>24</p>
+<p>eMMC 的为 &ldquo;embedded MuIti Media Card ”即嵌入式的多媒体存储卡。它是由 MMC 协会所订立的，主要是针对手机或平板电脑等产品的内嵌式存储器标准规格。</p>
+<p>25</p>
+<p>小插曲：为什么 eMMC 的首字母小写呢？因为 eMMC 技术前身是 MMC （ 一种类似 SD 卡的卡片 ） ，后来
+了突出这个设备是嵌在电路板上的，在前面加上了embedded （ 嵌入式 ） 。</p>
+<p>26</p>
+<p>UFS 全称为 Universal Flash Storage, 是 JEDEC（ 固态技术协会 ） 制定的标准规格。这种标准与eMMC 的区别主要在于接囗。 eMMC 采用的是 8bit 并行接口，随着技术升级，标准理论值最高可以达到 3200 Mbit/s ，但这一速率仍然无法满足膨胀的传输需求。因此在接口串化的探索中， UFS 出现了。</p>
+<p>27</p>
+<p>举个例子， eMMC 采用的半双通、并行通道，可以理解为一条单向的道路，并且车辆必须并行⑧。即使不同大小和速度的车辆也必须保持同一步调并排前进，效率自然受到影响。</p>
+<p>28</p>
+<p>而 UFS 采用的全双通、串行通道，可以理解为正逆双向道路，不仅可以同时双向发车，而且串行⑨通道让车辆不再并排前行，将车辆串成一列，速度更快。</p>
+<p>29</p>
+<p>从发展角度来看，UFS 是接替 eMMC 技术的升级版。二者互不兼容，但作用与扮演的角色完全相同。</p>
+<p>30</p>
+<p>海量信息的涌动，形成了互联时代的浪涛。更大的数据体量也对存储器的存储效率提出了更高的要求，下面我们通过两个常见的传输任务， “ 刁难 ” 一下手机闪存，看看华为 Mate30 系列、华为 P40 系列等手机能否经得住综合传输考验呢？</p>
+<p>31</p>
+<p>32</p>
+<p><strong>专业词汇拓展</strong></p>
+<p>①DSP：</p>
+<p>数字信号处理器（DSP，Digital Signal Processor），是一种专门用于进行复杂数学运算的微处理器，通常用于辅助CPU进行音频处理、射频信号处理、图像信号处理等运算。</p>
+<p>②基带：</p>
+<p>在这里指基带芯片，指专门用于生成或解码基带信号的芯片。基带信号则是现代数字通信信息传输的载体，基带芯片能够在基带信号与语音信息或多媒体信息之间进行双向转换。</p>
+<p>③射频芯片：</p>
+<p>射频即无线电，射频芯片负责将基带调制后的信号进行放大经由天线发射，或将接收到的无线电信号进行滤波得到基带信号交给基带芯片进行解调。</p>
+<p>④易失性存储器：</p>
+<p>或称随机存储器（Random Access Memory），指断电之后所存信息会丢失的存储电路。手机和计算机中的内存，以及CPU芯片内部的缓存等通常是这类存储器。</p>
+<p>⑤非易失性存储器：</p>
+<p>只读存储器（Read-Only Memory）就属于非易失性存储器，指断电之后所存信息依然保留的存储电路，手机中的闪存，计算机中的固态硬盘、U盘等通常都是非易失性存储器。</p>
+<p>⑥DRAM：</p>
+<p>动态随机存取存储器（Dynamic Random Access Memory），一种构造相对简单的随机存储电路，它的缺点在于需要周期充电刷新才能保证所存信息准确，但是由于构造简单，因此集成密度相比于静态随机存储器要高得多，可以大大提升随机存储设备的容量。</p>
+<p>⑦NAND：</p>
+<p>NAND是闪存的略称，一种可以多次擦写的非易失性存储器，成本比老式的EEPROM要低得多，因此现在使用十分广泛。手机、U盘、固态硬盘、轻薄型笔记本电脑中都可以看到NAND的身影。</p>
+<p>⑧并行：</p>
+<p>电路或计算机中用于描述信号传输或计算方式的形容词，用于表示同时进行这一特征。</p>
+<p>⑨串行：</p>
+<p>与并行相同，同样用于描述信号传输或计算方式，表示按照时间顺序先后进行这一特征。</p>
+<h3 id="第四章-cpu芯片中的指挥家">第四章 CPU：芯片中的“指挥家”</h3>
+<h3 id="第五章-gpu芯片中的艺术家">第五章 GPU：芯片中的“艺术家”</h3>
+<p><strong>专业词汇拓展</strong></p>
+<p>①视频加速解码：</p>
+<p>将存储在电子设备中经过编码压缩的视频数据进行还原，呈现在显示屏幕上的过程。</p>
+<h3 id="第六章-isp芯片中的拍照担当">第六章 ISP：芯片中的“拍照担当”</h3>
+<p>了解了性能担当 CPU 、 GPU 之后， SoC 芯片中还有一位不可或缺的成员一拍照担当 ISP 。</p>
+<p>01</p>
+<p>AP 即应用处理器，它的英文全称是 Application Processor.
+BP 即基带处理器，它的英文全称是 Baseband Processor.</p>
+<p>02</p>
+<p>ISP 即 lmage SignaI Processor 的缩写，主要用来处理前端图像信号，它能够将光信号变成电信号，是图像处理的核心器件。因此，其性能会直接影响手机的拍照、摄像效果。</p>
+<p>03</p>
+<p>04</p>
+<p>镜头 （ Lens ） 会首先把被摄景物投影在图像传感器 (Sensor) 上。与此同时，影像处理器 （ ISP ） 会通过测光、测距算出合适的参数并指示镜头对焦。</p>
+<p>05</p>
+<p>12</p>
+<p>虚化效果非常考验 ISP 的算法，人物主体和背景，才能实现更准确的背景虚化。</p>
+<p>13</p>
+<p>AI人像留色是对画面的实时 AI 处理，精准识别人物和环境，电影特效触手可及。</p>
+<p>14</p>
+<p>17</p>
+<p>麒麟 990 系列的 ISP 支持 4K 分辨率延时摄影，是传统延时摄影分辨率 （ 1080p ） 的 4 倍，视频效果更清晰。</p>
+<p>18</p>
+<p>采用更高效的编解码技术，支持 H.265 编码格式，生成相同质量的视频，文件大小较比 H.264编码格式①大幅缩小，能够有效节省手机存储空间，让 4K 超高清延时摄影这一专业摄影功能在智能手机上实现。</p>
+<p>19</p>
+<p>超高速摄影需要摄像头与 SoC 芯片之间支持高速的数据传输，华为自研麒麟 ISP 5.0 拥有高像素吞吐率，支持超高帧率②的庞大计算量。</p>
+<p>20</p>
+<p>21</p>
+<p>ISP 在 SoC 中总是表现得默默无闻，但它却是手机拍照必不可少的单元。智能手机之所以能拥有越来越丰富、智慧的专业拍摄功能，ISP 技术的升级起到了重要作用。</p>
+<p>22</p>
+<p><strong>专业词汇拓展</strong></p>
+<p>①编码格式：</p>
+<p>指将视频信息压缩存储在电子设备中的方式，常见的视频编码格式有H.264、HEVC、VP9、AV1等。</p>
+<p>②帧率：</p>
+<p>一帧代表连续动画过程中的一幅静止图画，连续的帧就构成了我们看到的动画和视频。帧率表示的就是设备或视频每秒能够展示的帧的数量，单位通常为赫兹（Hz）或帧/秒（FPS），能够用于衡量视频的质量或显示设备的性能。</p>
+<p>③运动估计：</p>
+<p>在拍摄视频时，根据拍摄到的图像对画面中移动的元素进行预测，从而减少视频编码过程中需要处理的数据量，实现高效的视频编码。</p>
+<p>④运动补偿：</p>
+<p>在拍摄的视频前后帧中寻找重复冗余的部分，消除之后可以提高视频编码过程中的压缩比。</p>
+<p>⑤插帧：</p>
+<p>利用手机的运算能力，绘制与视频中前后帧近似的图像，然后填充到视频中，从而达到提升视频帧率，使动态画面更加流畅的目的。</p>
+<h3 id="第七章-npuai应用的智慧核心">第七章 NPU：AI应用的“智慧核心”</h3>
+<p>01</p>
+<p>在手机 SoC 的大家庭里，除了擅长处理任务和发号施令的 CPU 、擅长图形处理的 GPU ，还有擅长处理人工智能任务的 NPU （ 神经网络处理器 ） ，而NPU 就是人工智能芯片 “ 更聪明&quot;的硬件基础。</p>
+<p>02</p>
+<p>03</p>
+<p>华为自研架构 NPU ，采用 3DCube, 针对矩阵运算做加速，大幅提升单位功耗下的 AI 算力，相比传统 CPU 和
+GPU ，实现了数量级提升，在算力更强的同时，实现更优能效。</p>
+<p>04</p>
+<p>05</p>
+<p>06</p>
+<p>07</p>
+<p>AI (Artificial lnte 山 gence) 即我们常说的人工智能，科幻电影中具备高智商的机器人就是 AI 的一种存在形式，但其实，我们日常生活中用到的语音识别、智能摄影等功能中都有 AI 的身影， AI 是大家的老朋友啦。</p>
+<p>08</p>
+<p>09</p>
+<p>如今， AI 已融入生活的方方面面，不仅带来丰富的 AI 应用，还让手机的日常操作更加智能。</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>麒麟 990 5G 为 HiAl 3.0 开放平台注入新的能量，推动开放能力进一步升级， AI 应用生态的发展是万物互联智能世界的开端。</p>
+<p><strong>专业词汇拓展</strong></p>
+<p>①算力：</p>
+<p>描述芯片或计算机运算能力的名词，常通过每秒的浮点运算速度或定点运算速度来衡量。</p>
+<h3 id="第八章-dsp数字信号的速算家">第八章 DSP：数字信号的“速算家”</h3>
+<p>很久很久以前，在森林的深处有一座名为“麒麟”的神秘工坊。工坊由CPU创办，起初只有CPU、Memory、Modem3位合作伙伴，后来，随着订单量增加、产品复杂度提升，GPU、ISP、NPU、DSP等成员相继加入。在工作中，大家各司其职，工坊的发展也越来越好。</p>
+<p>01</p>
+<p>欣欣向荣的工坊，在发展过程中也并非一帆风顺。比如，在年轻成员DSP加入前，工坊也曾遇到困境，当时到底发生了什么呢？这要从数字时代对工坊的挑战说起。</p>
+<p>02</p>
+<p>03</p>
+<p>数字时代悄然来临，更高清的语音、融合虚拟与现实的 AR 图像、 5 G 高速传输等为智能手机带来了更多新奇体验。然而与此同时，这些以数字为载体的任务体量成倍增长，对芯片处理能力提出了更高要求。</p>
+<p>04</p>
+<p>神秘工坊作为科技领域的专业团队，直面重重困难，当机立断选择转型。然而，工坊的生产能力却受到挑战。</p>
+<p>05</p>
+<p>当交工在即，工坊众人愁容满面的时候，惊喜来临了。工坊的外援神秘博士突然出现，为大家推荐了一位新成员。</p>
+<p>06</p>
+<p>然而出乎意料的是，次日抵达工坊的新成员是一位 “ 小个子 ”。</p>
+<p>07</p>
+<p>08</p>
+<p>手下见真章， DSP 来到大家为它收拾的新工位，开始工作，第一天的成果就令工坊众人感到惊喜。</p>
+<p>09</p>
+<p>工作结束后， DSP 做了自我介绍，并为大家解惑。</p>
+<p>10</p>
+<p>11</p>
+<p>DSP 作为一种应时代需求而生的微处理器，虽 “麻雀虽小、五脏俱全 ” ，但由于架构、指令集之间的差异，其能力与 CPU 大相径庭。 CPU长控制、处理多样化的重载任务， DSP 则擅长各种与数字信号相关的运算。</p>
+<p>12</p>
+<p>CPU 与 DSP 相比，就像专业的厨师套刀和精的削皮刀一样。厨师套刀能够处理更多样的任务，但削皮效率却远不如削皮刀。而削皮刀能够高效削皮，却无法胜任更多样化的工作。</p>
+<p>13</p>
+<p>那么 DSP 是如何修炼数字信号处理能力，成功加入“ 麒麟工坊 ” 的呢？我们从处理器的必修课——架构、核心、指令集 3 个角度来解读。</p>
+<p>14</p>
+<p>DSP 作为一种 “ 专精型 ” 微处理器，内部采用的是哈佛结构。在这一结构中，程序存储器和数据存储器采用不同的总线①，通过指令、数据分开的方式，两条总线能够重叠访问两个空间。这样一来， DSP 就具有更大的存储器带宽②，数据的移动和交换更加方便，非常适合处理数字信号任务。</p>
+<p>15</p>
+<p>16</p>
+<p>DSP 的核心频率③是比较低的，因为一般来讲，以更高的频率运行时钟需要更高的电压，会导致功耗的迅速增长。因此，为了兼顾高性能与低能耗， DSP 选择执行复杂的并行计算，在更短时间内以更高性能、更低功耗完成任务。</p>
+<p>17</p>
+<p>18</p>
+<p>了提高常用信号处理算法的效率， DSP 还具专门的硬件乘法器④，加入了单周期乘加指令、序加减指令、块重复指令等，甚至将很多常用的多操作组成的序列专门设计成一个指令，使每个时钟周期能完成的工作最大化，极大地
+提高了数字信号处理的速度。</p>
+<p>19</p>
+<p>现在，你了解 DSP 的能力了吗？它最值得称道的两大特色就是强大的处理能力和超低的功耗。</p>
+<p>20</p>
+<p>DSP 到来后不久，工坊内的老员工都非常认可其能力，并且向博士申请再加入一位 DSP 。— 位 DSP 主要参与 AP部分，负责相机、 AR、语音等方面的任务；另一位 DSP 参与 B P 部分，主要负责基带中的数字信号处理任务。</p>
+<p>21</p>
+<p>22</p>
+<p>首先是 AP 部分，如今随着手机相机像素越来越高、摄像头越来越多，相机算法压力也越来越大， DSP 能够配合 ISP 完成更先进的成像及视觉相关的庞大复杂算法，提高拍摄体验。</p>
+<p>23</p>
+<p>另外，在玩法方面， D S P 也令手机相机可以更好地玩转 AR 应用。如华为 P40 系列与敦煌合作，在 “ 华为应用市场 ” 搜索下载 “ 华为 AR 地图 ”即可在敦煌莫高窟、上海南京路外滩等地体验&quot;AR 敦煌 ” &ldquo;AR 外滩 ” 。这一应用不仅在景区内加入了实景引导，还打破时间与空间的界限，比如 &ldquo;AR 敦煌 ” 可以让文物走出洞窟，探索弘扬敦煌文化的新途径。</p>
+<p>24</p>
+<p>另外，在 B P 部分， 5G 的快速发展使通信系统与上一代相比在性能上有巨大提升，但其功耗也越来越高，工坊也压力倍增。 DSP 通过其专长，使基带内的数字信号处理部分走上快车道，保证5G 时代依然能够实现性能与能效的同步升级。</p>
+<p>25</p>
+<p>看到这里，想必你已经明白了，故事中的工坊就是麒麟 SoC 。设计 SoC 最基本的前提就是在最恰当的处理引擎上运行相应的任务，以此实现更高的性能和能效比。</p>
+<p>26</p>
+<p>看似 “ 小巧 ” 的 DSP, 却是从 “ 芯 ” 赋能体验升级的重要一环。未来， DSP 也将持续升级专业能力，与 CPU 、GPU 等伙伴们一同应对更多的时代挑战。</p>
+<p>27</p>
+<p><strong>专业词汇拓展</strong></p>
+<p>①总线：</p>
+<p>计算机或芯片内部各种功能部件之间交换信息的公共通信线路，通常由导线构成，按照总线上传输的信号不同可以划分出数据总线、地址总线和控制总线等类别。根据规格的不同也有不同的技术名称，例如PCI、PCIE、SATA、USB等。</p>
+<p>②带宽：</p>
+<p>指数字信号的传输速率，手机或计算机与网络之间、芯片之间或芯片内部集成电路之间进行的数据交换均可以用带宽进行衡量，常用单位为bit/s。</p>
+<p>③核心频率：</p>
+<p>指微处理器的工作频率，与单位时间内处理器能够进行的运算数量呈正相关，通常可以用于衡量微处理器的工作性能。</p>
+<p>④硬件乘法器：</p>
+<p>专门用于进行乘法运算的数字电路，由于通用逻辑门电路只有在进行加法运算时效率较高，因此需要快速进行乘法运算时通常需要配备专门电路进行。</p></article><section aria-labelledby="license-heading" class="p-6 md:p-8 rounded-xl border border-border/40 backdrop-blur bg-muted/20 flex items-center gap-x-8">
+
+    <i class="i-carbon-scales w-2rem h-2rem text-primary/70 shrink-0" aria-hidden="true"></i>
+
+    <div class="space-y-2">
+        <h2 id="license-heading" class="font-medium">License</h2>
+
+        <p class="text-sm text-muted-foreground space-x-1">
+            <span>许可协议</span>
+            <a href=https://creativecommons.org/licenses/by-sa/4.0/deed.zh-Hans
+                target="_blank" rel="noopener noreferrer license"
+                class="font-mono text-xs bg-muted/50 px-2 py-1 rounded hover:text-foreground/80">CC BY-SA 4.0</a>
+        </p>
+
+        <p class="text-sm text-muted-foreground space-x-1">
+            <span>原文链接</span>
+            <a href="https://guoke.co/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/"
+                class="license-link font-mono text-xs bg-muted/50 px-2 py-1 rounded hover:text-foreground/80">https://guoke.co/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/</a>
+        </p>
+    </div>
+</section>
+        <nav class="w-full mt-4" aria-label="文章导航">
+            <div class="flex flex-col sm:flex-row items-center sm:justify-between gap-4"><a href="/%E9%AD%85%E6%97%8F16sprom1973flyme9%E7%B3%BB%E7%BB%9F%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD/" aria-label="上一篇: 魅族16sPro(m1973)flyme9系统固件下载" class="post-nav__link post-nav__prev inline-flex w-full sm:w-auto justify-start items-center gap-3 px-3 py-2 rounded-md bg-muted/10 hover:bg-muted transition-colors max-w-full">
+                    <i class="i-carbon-chevron-left w-4 h-4" aria-hidden="true"></i>
+                    <div class="truncate text-sm text-left">
+                        <div class="text-xs text-muted-foreground">上一篇</div>
+                        <div class="font-medium">魅族16sPro(m1973)flyme9系统固件下载</div>
+                    </div>
+                </a><a href="/%E8%8B%B9%E6%9E%9C%E5%8E%86%E5%B9%B4%E5%8F%91%E5%B8%83%E4%BC%9A/" aria-label="下一篇: 苹果历年发布会" class="post-nav__link post-nav__next inline-flex w-full sm:w-auto justify-end items-center gap-3 px-3 py-2 rounded-md bg-muted/10 hover:bg-muted transition-colors sm:ml-auto max-w-full">
+                    <div class="truncate text-sm text-right sm:text-right">
+                        <div class="text-xs text-muted-foreground">下一篇</div>
+                        <div class="font-medium">苹果历年发布会</div>
+                    </div>
+                    <i class="i-carbon-chevron-right w-4 h-4" aria-hidden="true"></i>
+                </a></div>
+        </nav>
+
+
+<div class="mt-8 md:mt-12 pt-4 md:pt-8 border-t border-border/40">
+    <div class="flex items-center gap-2 mb-8 mx-2">
+        <div class="i-carbon-chat w-5 h-5 text-primary/80"></div>
+        <h2 class="text-lg font-medium">评论</h3>
+    </div>
+    <link rel="stylesheet" href="/css/article/comments/twikoo.min.bc09b866fdc66c4238061d442483a0156e07e41c3997d46be71f1fffc02215d0.css" integrity="sha256-vAm4Zv3GbEI4Bh1EJIOgFW4H5Bw5l9Rr5x8f/8AiFdA=" crossorigin="anonymous"><div id="twikoo"></div>
+
+
+<script src="https://cdn.jsdmirror.com/npm/twikoo@1.6.44/dist/twikoo.min.js" crossorigin="anonymous" defer></script>
+<script>
+    window.addEventListener('load', () => {
+        try {
+            console.log('Twikoo: envId=', 'https:\/\/twikoo.guoke.co');
+            if (typeof twikoo === 'undefined') {
+                console.error('Twikoo script not loaded. Check network/CDN and the script URL.');
+                return;
+            }
+
+            twikoo.init({
+                envId: 'https:\/\/twikoo.guoke.co',
+                el: '#twikoo',
+                lang: 'zh-CN',
+                
+                path: location.pathname
+            });
+            console.log('Twikoo: init called');
+        } catch (e) {
+            console.error('Twikoo init error:', e);
+        }
+    });
+</script><script src="/js/article/twikoo-owo.5554ee7aca5ca1c54a073a87d0fa5c9ad8f1d7c8115add1f9a9d11f74e89bb45.js" integrity="sha256-VVTuespcocVKBzqH0Ppcmtjx18gRWt0fmp0R906Ju0U=" crossorigin="anonymous"defer></script>
+</div>
+</div><div id="article-readprog" class="
+        fixed right-4 bottom-20 md:right-8 w-12 h-12 rounded-full 
+        backdrop-blur z-50 shadow-lg border border-border/20
+        flex items-center justify-center text-sm font-medium tabular-nums
+        transition-all duration-300 opacity-0 translate-y-24
+        data-visible:opacity-100 data-visible:translate-y-0
+    " aria-label="阅读进度">
+    0%
+</div><script src="/js/article/reading-progress.c3851b928ecafc8c70fa59e73d708523d48d3cab685b1cfe9bdf3398cd72524e.js" integrity="sha256-w4Ubko7K/Ixw&#43;lnnPXCFI9SNPKtoWxz&#43;m98zmM1yUk4=" crossorigin="anonymous"defer></script></div></main><footer border="t border/50" class="mt-auto py-4 backdrop-blur">
+    <div m="x-auto" p="x-4" flex="~ col" gap="6" class="container">
+        <div text="sm muted-foreground/70" gap="3" m="t-3" class="hidden md:flex items-center"><div class="flex items-center gap-2">
+    <i class="i-carbon-time w-4 h-4"></i>
+    <span>已被世界欠拟合</span>
+    <span class="tabular-nums font-mono tracking-wider" id="runningtime" data-start-date="2022/07/20 00:00:00"></span>
+</div><script src="/js/global/runtime.9e9d6de2edbc0c1fd1e49fe58f78438aec2e85362f4d69d1494d517bdd32611b.js" integrity="sha256-np1t4u28DB/R5J/lj3hDiuwuhTYvTWnRSU1Re90yYRs=" crossorigin="anonymous"defer></script><span w="1" h="1" rounded="full" bg="muted-foreground/30"></span><div class="flex items-center gap-2">
+    <i class="i-carbon-text-font w-4 h-4"></i>
+    <span>
+        共 <span class="tabular-nums font-mono">249509</span> 字，写完一本简·奥斯汀的《傲慢与偏见》了!</span>
+</div>
+</div>
+
+        <div text="sm muted-foreground/60" flex="~ col md:row" gap="3" class="items-center justify-between"><div class="flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
+    <div class="inline-flex items-center">
+        <span class="i-mdi-copyleft w-4 h-4 mr-1.5"></span>
+        <span>
+            2026 言别离
+        </span>
+    </div>
+
+    <span> <a href="https://guoke.co" target="_blank" rel="noopener noreferrer"
+            class="hover:text-primary transition-colors">言别离·时雨下天渐凉</a></span>
+    <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/3OfTfbpwqM5xf8dD/quote.js?theme=#1690FF,#333333,#999999,#333333,#FFFFFF,#1690FF,14&f=14&display=0,0,1,1,0,0,0,1"></script>
+
+    
+    
+    <div class="hidden md:inline-flex items-center gap-3">
+        
+        
+    </div>
+    
+
+    
+</div>
+<div class="flex flex-col md:flex-row items-center gap-y-2
+            md:divide-x md:divide-gray-300/60 md:dark:divide-gray-600/60"><a href="/changelogs/" 
+        class="inline-flex items-center px-2 md:px-4 hover:text-primary transition-colors">
+        <span>日志</span>
+    </a><a href="/copyright/" 
+        class="inline-flex items-center px-2 md:px-4 hover:text-primary transition-colors">
+        <span>copyright</span>
+    </a><a href="https://icp.gov.moe/?keyword=20240549" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center px-2 md:px-4 hover:text-primary transition-colors">
+            <img src="https://tuchuang.guoke.co/hermeneutics/static/img/ico64.png" alt="" class="w-4 h-4 mr-2 inline-block" />
+        <span>萌ICP备20240549号</span>
+    </a></div></div>
+    </div>
+</footer><script src="/vendor/instantpage.min.c1abca35430b525f9334c62bc065ace80a98c6ca2b9f180fdb969934b71fd254.js" integrity="sha256-wavKNUMLUl&#43;TNMYrwGWs6AqYxsornxgP25aZNLcf0lQ=" crossorigin="anonymous"></script></body>
+
+</html>
