@@ -36,8 +36,9 @@ body{overflow-x:hidden}
 .quick-search-icon{font-size:21px;line-height:1}
 .quick-label{font-size:11px;font-weight:700}
 kbd{min-width:19px;padding:1px 5px;border:1px solid var(--line);border-radius:4px;background:var(--soft);font:10px "DM Mono",monospace;text-align:center}
-.theme-toggle{width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:10px;background:transparent;color:var(--text);font-size:19px;cursor:pointer}
+.theme-toggle{width:30px;height:30px;display:grid;place-items:center;border:0;border-radius:9px;background:transparent;color:var(--text);cursor:pointer;transition:background .2s}
 .theme-toggle:hover{background:var(--soft)}
+.theme-toggle svg{display:block;width:16px;height:16px}
 .theme-dark-icon{display:none}
 :root[data-theme=dark] .theme-light-icon{display:none}
 :root[data-theme=dark] .theme-dark-icon{display:block}
@@ -181,6 +182,7 @@ kbd{min-width:19px;padding:1px 5px;border:1px solid var(--line);border-radius:4p
 .footer-group>a:hover{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
 .footer-legal{display:flex;justify-content:space-between;gap:24px;padding-top:20px;padding-bottom:23px;border-top:1px solid var(--line);font-size:12px;font-weight:600;line-height:16px}
 .footer-legal a{margin-left:5px}
+.moe-icp-icon{display:inline-block!important;width:1em!important;height:1em!important;margin-right:.15em;object-fit:contain;vertical-align:-.15em}
 .footer-credits{text-align:right;color:var(--muted);font-size:12px;font-weight:400;line-height:16px}
 .footer-credits a{display:block}
 .footer-credits a:hover{text-decoration:underline}
