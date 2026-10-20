@@ -1,0 +1,36 @@
+.page-content {
+  max-width:850px;
+  padding-bottom:90px;
+  font-size:15px;
+  line-height:1.9
+}
+
+.page-content h2 {
+  margin:2em 0 .7em;
+  font-size:23px
+}
+
+.page-content p {
+  margin:1em 0
+}
+
+.page-content ul,.page-content ol {
+  padding-left:1.5em
+}
+
+.page-content li {
+  margin:.45em 0
+}
+
+.page-content a {
+  color:var(--accent);
+  text-decoration:underline;
+  text-underline-offset:3px
+}
+
+.page-content blockquote {
+  padding:.5em 1.2em;
+  border-left:3px solid var(--accent);
+  color:var(--muted);
+  background:var(--soft)
+}

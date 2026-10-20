@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="记录日常学习与开发中的点滴收获。分享编程实践、学习笔记和个人感悟。">
+    <meta name="color-scheme" content="light dark">
+    <title>Flyme · 果壳中的宇宙</title>
+    <link id="site-favicon" rel="icon" href="/assets/images/favicon-yingying-transparent.png?v=3" type="image/png">
+    <script>
+      (() => {
+        const darkMode = window.matchMedia("(prefers-color-scheme: dark)");
+        const favicon = document.getElementById("site-favicon");
+        const updateFavicon = () => {
+          favicon.href = darkMode.matches
+            ? "/assets/images/favicon-yingying-dark.png?v=3"
+            : "/assets/images/favicon-yingying-transparent.png?v=3";
+        };
+        updateFavicon();
+        darkMode.addEventListener("change", updateFavicon);
+      })();
+    </script>
+    <link rel="apple-touch-icon" href="/assets/images/qlAD-avatar.jpg">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/refine.css?v=30">
+    <link rel="stylesheet" href="/css/sections.css?v=10">
+    
+    
+  </head>
+  <body>
+    <header class="site-header" data-site-header>
+      <div class="header-glass"></div>
+      <nav class="nav-wrap" aria-label="主导航">
+        <a class="brand" href="/" aria-label="Home">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span class="brand-word">果壳中宇宙</span>
+        </a>
+        <div class="nav-links">
+          <a href="/blog/">博客</a>
+          <a href="/today-i-learned/">T.I.L</a>
+          <a href="/stats/">统计</a>
+          <details class="nav-dropdown">
+            <summary class="nav-dropdown-trigger">我的
+              <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M14.5 7.40192C16.5 8.55662 16.5 11.4434 14.5 12.5981L8.5 16.0622C6.5 17.2169 4 15.7735 4 13.4641L4 6.5359C4 4.2265 6.5 2.78312 8.5 3.93782L14.5 7.40192Z"/></svg>
+            </summary>
+            <div class="dropdown-menu"><a href="/links/">友情链接</a></div>
+          </details>
+        </div>
+        <div class="nav-actions">
+          <a class="travelling-link" href="https://www.travellings.cn/go.html" target="_blank" rel="noopener noreferrer" title="开往" aria-label="开往">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" role="img" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.5 22H14.5M8 2H16M12 5V2M4 12H20M17 19L18.5 22M7 19L5.5 22M8.5 15.5H8.51M15.5 15.5H15.51M8.8 19H15.2C16.8802 19 17.7202 19 18.362 18.673C18.9265 18.3854 19.3854 17.9265 19.673 17.362C20 16.7202 20 15.8802 20 14.2V9.8C20 8.11984 20 7.27976 19.673 6.63803C19.3854 6.07354 18.9265 5.6146 18.362 5.32698C17.7202 5 16.8802 5 15.2 5H8.8C7.11984 5 6.27976 5 5.63803 5.32698C5.07354 5.6146 4.6146 6.07354 4.32698 6.63803C4 7.27976 4 8.11984 4 9.8V14.2C4 15.8802 4 16.7202 4.32698 17.362C4.6146 17.9265 5.07354 18.3854 5.63803 18.673C6.27976 19 7.11984 19 8.8 19ZM9 15.5C9 15.7761 8.77614 16 8.5 16C8.22386 16 8 15.7761 8 15.5C8 15.2239 8.22386 15 8.5 15C8.77614 15 9 15.2239 9 15.5ZM16 15.5C16 15.7761 15.7761 16 15.5 16C15.2239 16 15 15.7761 15 15.5C15 15.2239 15.2239 15 15.5 15C15.7761 15 16 15.2239 16 15.5Z"/>
+            </svg>
+          </a>
+          <span class="nav-separator"></span>
+          <button class="quick-access-trigger" type="button" data-quick-open aria-label="打开快速访问" title="快速访问 Shift+Q"><span class="quick-search-icon">⌕</span><span class="quick-label">快速访问</span><kbd>Q</kbd></button>
+          <button class="theme-toggle" type="button" aria-label="切换深色模式" title="切换明暗主题（Shift+D）"><span class="theme-light-icon">☼</span><span class="theme-dark-icon">☾</span></button>
+          <button class="mobile-menu-toggle" type="button" aria-label="展开菜单" aria-expanded="false" data-mobile-toggle>☰</button>
+        </div>
+      </nav>
+      <div class="mobile-nav" data-mobile-nav>
+        <a href="/blog/">博客</a><a href="/today-i-learned/">T.I.L</a><a href="/stats/">统计</a><a href="/links/">友情链接</a>
+      </div>
+    </header>
+    <main>
+      
+  <section class="page-hero content-width"><p class="eyebrow">BROWSE BY TOPIC</p><h1>Flyme<span class="heading-dot">.</span></h1><p>4 篇相关文章</p></section>
+  <section class="content-width taxonomy-posts"><article class="taxonomy-row"><time>2025.12.07</time><a href="/blog/%E9%AD%85%E6%97%8F16sprom1973flyme9%E7%B3%BB%E7%BB%9F%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD/">魅族16sPro(m1973)flyme9系统固件下载</a><span>→</span></article><article class="taxonomy-row"><time>2025.12.07</time><a href="/blog/%E9%AD%85%E6%97%8F16sprom1973flyme8%E7%B3%BB%E7%BB%9F%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD/">魅族16sPro(m1973)flyme8系统固件下载</a><span>→</span></article><article class="taxonomy-row"><time>2025.12.07</time><a href="/blog/%E9%AD%85%E6%97%8F16sprom1973flyme7%E7%B3%BB%E7%BB%9F%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD/">魅族16sPro(m1973)flyme7系统固件下载</a><span>→</span></article><article class="taxonomy-row"><time>2021.06.05</time><a href="/blog/%E9%AD%85%E6%97%8Fflyme9%E5%AE%89%E5%8D%9310%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8C%E4%B8%89%E4%BB%B6%E5%A5%97%E6%96%B9%E6%B3%95/">魅族FLyme9安卓10安装谷歌三件套方法</a><span>→</span></article></section>
+
+    </main>
+    <footer class="site-footer">
+      <div class="footer-main content-width">
+        <div class="footer-about">
+          <p class="footer-heading">关于我</p>
+          <p>我是言别离，一名小小的 <strong>计算机爱好者</strong>，致力于探索能改变世界的代码。</p>
+          <div class="footer-socials"><a href="https://github.com/runofftheearth" target="_blank" rel="noopener" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" fill="currentColor" width="20" height="20"><title>GitHub Icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a><a href="https://space.bilibili.com/37696304" target="_blank" rel="noopener" aria-label="Bilibili">哔</a></div>
+        </div>
+        <div class="footer-groups">
+          <div class="footer-group"><p>导航</p><a href="/posts/">博客</a><a href="/today-i-learned/">日记</a><a href="/stats/">统计</a></div>
+          <div class="footer-group"><p>我的</p><a href="/essay/">回忆录</a><a href="/album/">相册集</a><a href="/media/">书影音</a></div>
+          <div class="footer-group"><p>协议</p><a href="/copyright/">版权信息</a><a href="/privacy-policy/">隐私政策</a><a href="/cookies/">Cookies</a></div>
+          <div class="footer-group"><p>服务</p><a href="https://foreverblog.cn/go.html" target="_blank" rel="noopener">十年之约 ↗</a><a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener">开往 ↗</a><a href="https://status.qladgk.com/status/qlad" target="_blank" rel="noopener">Status ↗</a></div>
+        </div>
+      </div>
+      <div class="footer-legal content-width">
+        <div class="footer-copyright">© 2026, 言别离 版权所有<br><span>ICP: <a href="https://icp.gov.moe/?keyword=20240549" target="_blank" rel="noopener noreferrer">萌ICP备20240549号</a></span></div>
+        <div class="footer-credits"><a href="https://github.com/enjidev/enji.dev" target="_blank" rel="noopener">查看作者原仓库</a><a href="/update/">查看 gkBlog 更新</a><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-ND</a></div>
+      </div>
+    </footer>
+    <div class="focus-indicator" data-focus-indicator>专注模式已开启 · Shift+F 退出</div>
+    <dialog class="quick-dialog" data-quick-dialog aria-label="快速访问">
+      <div class="quick-dialog-backdrop" data-quick-close></div>
+      <section class="quick-panel">
+        <button class="quick-close" type="button" data-quick-close aria-label="关闭快速访问">×</button>
+        <div class="quick-panel-main">
+          <div class="quick-recent">
+            <div class="quick-recent-heading">
+              <p class="quick-panel-title">最近文章</p>
+              <label class="quick-search-box">
+                <span aria-hidden="true">⌕</span>
+                <input type="search" data-quick-search data-search-index-url="/search-index.json" placeholder="搜索文章标题、摘要、标签或全文…" aria-label="搜索文章" autocomplete="off" spellcheck="false">
+                <kbd>↵</kbd>
+              </label>
+            </div>
+            <p class="quick-search-status" data-quick-search-status role="status" aria-live="polite" hidden></p>
+            <div data-quick-recent-list>
+              
+                <a class="quick-post" href="/blog/hello%E7%AE%97%E6%B3%95/"><span>10.17</span><b>Hello算法</b><span>↗</span></a>
+              
+                <a class="quick-post" href="/blog/windows%E4%B8%8Arime%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/"><span>08.07</span><b>Windows上Rime输入法的一些配置</b><span>↗</span></a>
+              
+                <a class="quick-post" href="/blog/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/"><span>07.20</span><b>看懂芯片原来这么简单</b><span>↗</span></a>
+              
+                <a class="quick-post" href="/blog/%E8%8B%B9%E6%9E%9C%E5%8E%86%E5%B9%B4%E5%8F%91%E5%B8%83%E4%BC%9A/"><span>01.11</span><b>苹果历年发布会</b><span>↗</span></a>
+              
+                <a class="quick-post" href="/blog/%E6%B0%B4%E4%BB%99%E5%8D%81%E5%AD%97%E9%99%A2/"><span>12.12</span><b>水仙十字院</b><span>↗</span></a>
+              
+            </div>
+            <div class="quick-search-results" data-quick-search-results hidden>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="hello算法 序 knowledge is not free, you have to pay attention.
+最早的算法：古代的计数方法和工具的制作步骤等。
+同样，数据结构无处不在：大到社会网络，小到地铁线路，许多系统都可以建模为“图”；大到一个国家，小到一个家庭，社会的主要组织形式呈现出“树”的特征；冬天的衣服就像“栈”，最先穿上的最后才能脱下；羽毛球筒则如同“队列”，一端放入、另一端取出；字典就像一个“哈希表”，能够快速查找目标词条。
+python 编程" href="/blog/hello%E7%AE%97%E6%B3%95/" hidden>
+                  <span class="quick-search-date">10.17</span>
+                  <span class="quick-search-copy"><b>Hello算法</b><small>序 knowledge is not free, you have to pay attention.
+最早的算法：古代的计数方法和工具的制作步骤等。
+同样，数据结构无处不在：大到社会网络，小到地铁线路，许多系统都可以建模为“图”；大到一个国家，小到一个家庭，社会的主要组织形式呈现出“树”的特征；冬天的衣服就像“栈”，最先穿上的最后才能脱下；羽毛球筒则如同“队列”，一端放入、另一端取出；字典就像一个“哈希表”，能够快速查找目标词条。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="windows上rime输入法的一些配置  rime 输入法" href="/blog/windows%E4%B8%8Arime%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E4%B8%80%E4%BA%9B%E9%85%8D%E7%BD%AE/" hidden>
+                  <span class="quick-search-date">08.07</span>
+                  <span class="quick-search-copy"><b>Windows上Rime输入法的一些配置</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="看懂芯片原来这么简单 内容摘要 本书是介绍芯片知识的科普漫画图书，内容来源于华为麒麟公众号中的热门科普漫画“看懂芯片原来这么简单”系列。
+书籍 " href="/blog/%E7%9C%8B%E6%87%82%E8%8A%AF%E7%89%87%E5%8E%9F%E6%9D%A5%E8%BF%99%E4%B9%88%E7%AE%80%E5%8D%95/" hidden>
+                  <span class="quick-search-date">07.20</span>
+                  <span class="quick-search-copy"><b>看懂芯片原来这么简单</b><small>内容摘要 本书是介绍芯片知识的科普漫画图书，内容来源于华为麒麟公众号中的热门科普漫画“看懂芯片原来这么简单”系列。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="苹果历年发布会   " href="/blog/%E8%8B%B9%E6%9E%9C%E5%8E%86%E5%B9%B4%E5%8F%91%E5%B8%83%E4%BC%9A/" hidden>
+                  <span class="quick-search-date">01.11</span>
+                  <span class="quick-search-copy"><b>苹果历年发布会</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="水仙十字院  原神 游戏" href="/blog/%E6%B0%B4%E4%BB%99%E5%8D%81%E5%AD%97%E9%99%A2/" hidden>
+                  <span class="quick-search-date">12.12</span>
+                  <span class="quick-search-copy"><b>水仙十字院</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="魅族16spro(m1973)flyme9系统固件下载  魅族16spro flyme" href="/blog/%E9%AD%85%E6%97%8F16sprom1973flyme9%E7%B3%BB%E7%BB%9F%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD/" hidden>
+                  <span class="quick-search-date">12.07</span>
+                  <span class="quick-search-copy"><b>魅族16sPro(m1973)flyme9系统固件下载</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="魅族16spro(m1973)flyme8系统固件下载  魅族16spro flyme" href="/blog/%E9%AD%85%E6%97%8F16sprom1973flyme8%E7%B3%BB%E7%BB%9F%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD/" hidden>
+                  <span class="quick-search-date">12.07</span>
+                  <span class="quick-search-copy"><b>魅族16sPro(m1973)flyme8系统固件下载</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="魅族16spro(m1973)flyme7系统固件下载  魅族16spro flyme" href="/blog/%E9%AD%85%E6%97%8F16sprom1973flyme7%E7%B3%BB%E7%BB%9F%E5%9B%BA%E4%BB%B6%E4%B8%8B%E8%BD%BD/" hidden>
+                  <span class="quick-search-date">12.07</span>
+                  <span class="quick-search-copy"><b>魅族16sPro(m1973)flyme7系统固件下载</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="windows10生命周期结束？steam不再支持windows10时才是！ 为什么不升级windows11？
+右键菜单有延迟。另外，还是喜欢方方正正的页面。
+" href="/blog/windows10%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%BB%93%E6%9D%9Fsteam%E4%B8%8D%E5%86%8D%E6%94%AF%E6%8C%81windows10%E6%97%B6%E6%89%8D%E6%98%AF/" hidden>
+                  <span class="quick-search-date">10.14</span>
+                  <span class="quick-search-copy"><b>Windows10生命周期结束？steam不再支持windows10时才是！</b><small>为什么不升级Windows11？
+右键菜单有延迟。另外，还是喜欢方方正正的页面。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="时光   " href="/blog/%E6%97%B6%E5%85%89/" hidden>
+                  <span class="quick-search-date">04.23</span>
+                  <span class="quick-search-copy"><b>时光</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="一个github账号下创建多个github pages页面的方法 准备一个域名方便一些。
+git " href="/blog/%E4%B8%80%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7%E4%B8%8B%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AAgithub-pages%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%96%B9%E6%B3%95/" hidden>
+                  <span class="quick-search-date">03.14</span>
+                  <span class="quick-search-copy"><b>一个github账号下创建多个github pages页面的方法</b><small>准备一个域名方便一些。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="成都  四川 成都 中国" href="/blog/%E6%88%90%E9%83%BD/" hidden>
+                  <span class="quick-search-date">03.09</span>
+                  <span class="quick-search-copy"><b>成都</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="暂停营业 不定期更新ฅ/ᐠ｡ᆽ｡ᐟ \
+" href="/blog/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%93%BE%E6%8E%A5%E6%A0%87%E9%A2%98public%E4%BC%98%E5%85%88%E6%98%BE%E7%A4%BA%E7%94%A8%E8%8B%B1%E6%96%87%E4%BC%9A%E8%A7%A3%E5%86%B3%E9%93%BE%E6%8E%A5%E4%B9%B1%E7%A0%81/" hidden>
+                  <span class="quick-search-date">11.11</span>
+                  <span class="quick-search-copy"><b>暂停营业</b><small>不定期更新ฅ/ᐠ｡ᆽ｡ᐟ \
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="原来我们一直都没有好好说再见   " href="/blog/%E5%8E%9F%E6%9D%A5%E6%88%91%E4%BB%AC%E4%B8%80%E7%9B%B4%E9%83%BD%E6%B2%A1%E6%9C%89%E5%A5%BD%E5%A5%BD%E8%AF%B4%E5%86%8D%E8%A7%81/" hidden>
+                  <span class="quick-search-date">10.22</span>
+                  <span class="quick-search-copy"><b>原来我们一直都没有好好说再见</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="静态博客工作流  typora picgo github cloudflare 博客" href="/blog/%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/" hidden>
+                  <span class="quick-search-date">10.10</span>
+                  <span class="quick-search-copy"><b>静态博客工作流</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="猫头鹰noctua home系列产品平替 🦉noctua推出家庭、办公室和多种用途通风的home系列产品线，家庭套装价格99美元。这一套既能清凉一夏又可以当桌面摆件，除了贵没有缺点。
+桌搭 我的桌面" href="/blog/%E7%8C%AB%E5%A4%B4%E9%B9%B0noctua-home%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E5%B9%B3%E6%9B%BF/" hidden>
+                  <span class="quick-search-date">07.24</span>
+                  <span class="quick-search-copy"><b>猫头鹰Noctua HOME系列产品平替</b><small>🦉Noctua推出家庭、办公室和多种用途通风的HOME系列产品线，家庭套装价格99美元。这一套既能清凉一夏又可以当桌面摆件，除了贵没有缺点。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="是bug么？windows 10家庭版可以通过商店免费升级到专业版 不知道是不是bug，在搜索office时，偶然顺手搜了下windows，没有购买过windows专业版，登录微软账户，点开后页面后没有购买页面，而是安装页面。升级完成以后查看激活信息，部分产品密钥是3v66t。
+" href="/blog/%E6%98%AFbug%E4%B9%88windows-10%E5%AE%B6%E5%BA%AD%E7%89%88%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E5%95%86%E5%BA%97%E5%85%8D%E8%B4%B9%E5%8D%87%E7%BA%A7%E5%88%B0%E4%B8%93%E4%B8%9A%E7%89%88/" hidden>
+                  <span class="quick-search-date">07.24</span>
+                  <span class="quick-search-copy"><b>是bug么？Windows 10家庭版可以通过商店免费升级到专业版</b><small>不知道是不是bug，在搜索office时，偶然顺手搜了下Windows，没有购买过Windows专业版，登录微软账户，点开后页面后没有购买页面，而是安装页面。升级完成以后查看激活信息，部分产品密钥是3V66T。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="暗黑破坏神4裸连方法 适逢英伟达推出活动，可以免费兑换3个xgp会员，暗黑4也加入到xgp里，正好可以进行体验。国内游玩暗黑4需要开加速器，这里可以通过修改hosts文件实现裸连，但是要稳定游玩还是建议购买加速器相关服务。
+暴雪 游戏" href="/blog/%E6%9A%97%E9%BB%91%E7%A0%B4%E5%9D%8F%E7%A5%9E4%E8%A3%B8%E8%BF%9E%E6%96%B9%E6%B3%95/" hidden>
+                  <span class="quick-search-date">06.05</span>
+                  <span class="quick-search-copy"><b>暗黑破坏神4裸连方法</b><small>适逢英伟达推出活动，可以免费兑换3个xgp会员，暗黑4也加入到xgp里，正好可以进行体验。国内游玩暗黑4需要开加速器，这里可以通过修改hosts文件实现裸连，但是要稳定游玩还是建议购买加速器相关服务。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="nvidia低版本驱动下载方法 进入英伟达显卡驱动官网，选择自己显卡对应的型号，点击任意版本驱动进入下载页面，可以通过更改下载链接的版本号，来实现下载旧版本的显卡驱动。
+驱动 软件" href="/blog/nvidia%E4%BD%8E%E7%89%88%E6%9C%AC%E9%A9%B1%E5%8A%A8%E4%B8%8B%E8%BD%BD%E6%96%B9%E6%B3%95/" hidden>
+                  <span class="quick-search-date">06.05</span>
+                  <span class="quick-search-copy"><b>NVIDIA低版本驱动下载方法</b><small>进入英伟达显卡驱动官网，选择自己显卡对应的型号，点击任意版本驱动进入下载页面，可以通过更改下载链接的版本号，来实现下载旧版本的显卡驱动。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="淘宝购买游戏注意事项  steam 游戏" href="/blog/%E6%B7%98%E5%AE%9D%E8%B4%AD%E4%B9%B0%E6%B8%B8%E6%88%8F%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" hidden>
+                  <span class="quick-search-date">05.23</span>
+                  <span class="quick-search-copy"><b>淘宝购买游戏注意事项</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="在本地配置多个github账号  git " href="/blog/%E5%9C%A8%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgithub%E8%B4%A6%E5%8F%B7/" hidden>
+                  <span class="quick-search-date">04.10</span>
+                  <span class="quick-search-copy"><b>在本地配置多个github账号</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="windows之间实现文件网络共享  windows 折腾" href="/blog/windows%E4%B9%8B%E9%97%B4%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E7%BD%91%E7%BB%9C%E5%85%B1%E4%BA%AB/" hidden>
+                  <span class="quick-search-date">03.17</span>
+                  <span class="quick-search-copy"><b>Windows之间实现文件网络共享</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="4 联想lenovo小新i2000黑苹果首发体验之旅  黑苹果 折腾" href="/blog/4-%E8%81%94%E6%83%B3lenovo%E5%B0%8F%E6%96%B0i2000%E9%BB%91%E8%8B%B9%E6%9E%9C%E9%A6%96%E5%8F%91%E4%BD%93%E9%AA%8C%E4%B9%8B%E6%97%85/" hidden>
+                  <span class="quick-search-date">06.30</span>
+                  <span class="quick-search-copy"><b>4 联想Lenovo小新I2000黑苹果首发体验之旅</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="3.8 配置uefi  黑苹果 折腾" href="/blog/3.8-%E9%85%8D%E7%BD%AEuefi/" hidden>
+                  <span class="quick-search-date">06.30</span>
+                  <span class="quick-search-copy"><b>3.8 配置UEFI</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="3.7 配置platformlnfo  黑苹果 折腾" href="/blog/3.7-%E9%85%8D%E7%BD%AEplatformlnfo/" hidden>
+                  <span class="quick-search-date">06.29</span>
+                  <span class="quick-search-copy"><b>3.7 配置Platformlnfo</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="3.6 配置nvram  黑苹果 折腾" href="/blog/3.6-%E9%85%8D%E7%BD%AEnvram/" hidden>
+                  <span class="quick-search-date">06.29</span>
+                  <span class="quick-search-copy"><b>3.6 配置NVRAM</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="3.5 配置misc  黑苹果 折腾" href="/blog/3.5-%E9%85%8D%E7%BD%AEmisc/" hidden>
+                  <span class="quick-search-date">06.29</span>
+                  <span class="quick-search-copy"><b>3.5 配置Misc</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="3.4 配置kernel  黑苹果 折腾" href="/blog/3.4-%E9%85%8D%E7%BD%AEkernel/" hidden>
+                  <span class="quick-search-date">06.28</span>
+                  <span class="quick-search-copy"><b>3.4 配置Kernel</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="3.3 配置deviceproperties  黑苹果 折腾" href="/blog/3.3-%E9%85%8D%E7%BD%AEdeviceproperties/" hidden>
+                  <span class="quick-search-date">06.28</span>
+                  <span class="quick-search-copy"><b>3.3 配置DeviceProperties</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="mac下通过clashx实现全局透明代理 通过clashx将一台闲置设备设置成网关，实现多设备的科学上网。
+clash 软件" href="/blog/mac%E4%B8%8B%E9%80%9A%E8%BF%87clashx%E5%AE%9E%E7%8E%B0%E5%85%A8%E5%B1%80%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86/" hidden>
+                  <span class="quick-search-date">06.27</span>
+                  <span class="quick-search-copy"><b>Mac下通过ClashX实现全局透明代理</b><small>通过ClashX将一台闲置设备设置成网关，实现多设备的科学上网。
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="3.2 配置booter  黑苹果 折腾" href="/blog/3.2-%E9%85%8D%E7%BD%AEbooter/" hidden>
+                  <span class="quick-search-date">06.23</span>
+                  <span class="quick-search-copy"><b>3.2 配置Booter</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="3.1 配置acpi  黑苹果 折腾" href="/blog/3.1-%E9%85%8D%E7%BD%AEacpi/" hidden>
+                  <span class="quick-search-date">06.23</span>
+                  <span class="quick-search-copy"><b>3.1 配置ACPI</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.8 kexts微调  黑苹果 折腾" href="/blog/2.8-kexts%E5%BE%AE%E8%B0%83/" hidden>
+                  <span class="quick-search-date">06.20</span>
+                  <span class="quick-search-copy"><b>2.8 Kexts微调</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.7 初步配置  黑苹果 折腾" href="/blog/2.7-%E5%88%9D%E6%AD%A5%E9%85%8D%E7%BD%AE/" hidden>
+                  <span class="quick-search-date">06.20</span>
+                  <span class="quick-search-copy"><b>2.7 初步配置</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.6 oc编辑器  黑苹果 折腾" href="/blog/2.6-oc%E7%BC%96%E8%BE%91%E5%99%A8/" hidden>
+                  <span class="quick-search-date">06.20</span>
+                  <span class="quick-search-copy"><b>2.6 OC编辑器</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.5 drives说明  黑苹果 折腾" href="/blog/2.5-drives%E8%AF%B4%E6%98%8E/" hidden>
+                  <span class="quick-search-date">06.19</span>
+                  <span class="quick-search-copy"><b>2.5 Drives说明</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.4.2 macos12蓝牙设置  黑苹果 折腾" href="/blog/2.4.2-macos12%E8%93%9D%E7%89%99%E8%AE%BE%E7%BD%AE/" hidden>
+                  <span class="quick-search-date">06.19</span>
+                  <span class="quick-search-copy"><b>2.4.2 macOS12蓝牙设置</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.4.1 usb定制  黑苹果 折腾" href="/blog/2.4.1-usb%E5%AE%9A%E5%88%B6/" hidden>
+                  <span class="quick-search-date">06.19</span>
+                  <span class="quick-search-copy"><b>2.4.1 USB定制</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.4 准备kexts  黑苹果 折腾" href="/blog/2.4-%E5%87%86%E5%A4%87kexts/" hidden>
+                  <span class="quick-search-date">06.19</span>
+                  <span class="quick-search-copy"><b>2.4 准备Kexts</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.3 准备acpi  黑苹果 折腾" href="/blog/2.3-%E5%87%86%E5%A4%87acpi/" hidden>
+                  <span class="quick-search-date">06.18</span>
+                  <span class="quick-search-copy"><b>2.3 准备ACPI</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.2 oc文件结构  黑苹果 折腾" href="/blog/2.2-oc%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/" hidden>
+                  <span class="quick-search-date">06.17</span>
+                  <span class="quick-search-copy"><b>2.2 OC文件结构</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="2.1 bios设置  黑苹果 折腾" href="/blog/2.1-bios%E8%AE%BE%E7%BD%AE/" hidden>
+                  <span class="quick-search-date">06.17</span>
+                  <span class="quick-search-copy"><b>2.1 BIOS设置</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="1.2 写入镜像 写入镜像实际上也有很多工具，这里推荐一个后来居上的工具 balenaethcher
+黑苹果 折腾" href="/blog/1.2-%E5%86%99%E5%85%A5%E9%95%9C%E5%83%8F/" hidden>
+                  <span class="quick-search-date">06.17</span>
+                  <span class="quick-search-copy"><b>1.2 写入镜像</b><small>写入镜像实际上也有很多工具，这里推荐一个后来居上的工具 balenaEthcher
+</small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="1.1 黑苹果单oc分区引导镜像制作  黑苹果 折腾" href="/blog/1.1-%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%8D%95oc%E5%88%86%E5%8C%BA%E5%BC%95%E5%AF%BC%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C/" hidden>
+                  <span class="quick-search-date">06.16</span>
+                  <span class="quick-search-copy"><b>1.1 黑苹果单OC分区引导镜像制作</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="git文档  git " href="/blog/git%E6%96%87%E6%A1%A3/" hidden>
+                  <span class="quick-search-date">07.23</span>
+                  <span class="quick-search-copy"><b>git文档</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+                
+                
+                
+                <a class="quick-search-result" data-search-text="魅族flyme9安卓10安装谷歌三件套方法  魅族16spro flyme" href="/blog/%E9%AD%85%E6%97%8Fflyme9%E5%AE%89%E5%8D%9310%E5%AE%89%E8%A3%85%E8%B0%B7%E6%AD%8C%E4%B8%89%E4%BB%B6%E5%A5%97%E6%96%B9%E6%B3%95/" hidden>
+                  <span class="quick-search-date">06.05</span>
+                  <span class="quick-search-copy"><b>魅族FLyme9安卓10安装谷歌三件套方法</b><small></small></span>
+                  <span class="quick-search-arrow" aria-hidden="true">↗</span>
+                </a>
+              
+            </div>
+            <div class="quick-keys"><span>打开快速访问 <kbd>Shift Q</kbd></span><span>切换主题 <kbd>Shift D</kbd></span><span>专注模式 <kbd>Shift F</kbd></span></div>
+          </div>
+          <div class="quick-shortcuts"><p class="quick-panel-title">控制中心</p><div class="quick-control-grid"><button type="button" data-theme-control><span class="control-icon">◐</span><span data-theme-label>暗模式：关闭</span></button><button type="button" data-focus-control><span class="control-icon">◉</span><span data-focus-label>专注模式：关闭</span></button></div><p class="quick-panel-title quick-navigation-title">快速导航</p><a href="/blog/">所有文章 <span>↗</span></a><a href="/categories/">文章分类 <span>↗</span></a><a href="/tags/">标签索引 <span>↗</span></a><a href="/about-me/">关于我 <span>↗</span></a><a href="https://github.com/runofftheearth" target="_blank" rel="noopener">GitHub <span>↗</span></a><div class="quick-note">静态预览版 · 互动数据功能暂未迁移</div></div>
+        </div>
+      </section>
+    </dialog>
+    
+    
+    <script src="/js/theme.js?v=12" defer></script>
+  </body>
+</html>
